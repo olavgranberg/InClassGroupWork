@@ -27,7 +27,7 @@ if (userId===1){
 let tasksCount;
 
 
-// Function with if/else sentence that shows the amount of tasks
+// Function with if/else sentence that shows the amount of tasks in taskdiv and answerdiv
 function taskCountFunction(tasksCount) {
 if (tasksCount===undefined){
   document.getElementById("taskABullet").remove();
@@ -120,44 +120,47 @@ document.getElementById("button1").addEventListener("click", function(){
 tasksCount=1;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
-  document.getElementById("header").style.visibility = "visible";
-  document.getElementById("taskDivId").style.visibility = "visible";
-  document.getElementById("roleDiv").style.visibility = "visible";
-  document.getElementById("answerDiv").style.visibility = "visible";
+    document.getElementById("workspace").style.visibility = "visible";
 });
 document.getElementById("button2").addEventListener("click", function(){
 tasksCount=2;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
-  document.getElementById("header").style.visibility = "visible";
-  document.getElementById("taskDivId").style.visibility = "visible";
-  document.getElementById("roleDiv").style.visibility = "visible";
-  document.getElementById("answerDiv").style.visibility = "visible";
+    document.getElementById("workspace").style.visibility = "visible";
 });
 document.getElementById("button3").addEventListener("click", function(){
 tasksCount=3;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
-  document.getElementById("header").style.visibility = "visible";
-  document.getElementById("taskDivId").style.visibility = "visible";
-  document.getElementById("roleDiv").style.visibility = "visible";
-  document.getElementById("answerDiv").style.visibility = "visible";
+    document.getElementById("workspace").style.visibility = "visible";
 });
 document.getElementById("button4").addEventListener("click", function(){
 tasksCount=4;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
-  document.getElementById("header").style.visibility = "visible";
-  document.getElementById("taskDivId").style.visibility = "visible";
-  document.getElementById("roleDiv").style.visibility = "visible";
-  document.getElementById("answerDiv").style.visibility = "visible";
+  document.getElementById("workspace").style.visibility = "visible";
 });
 document.getElementById("button5").addEventListener("click", function(){
 tasksCount=5;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
-  document.getElementById("header").style.visibility = "visible";
-  document.getElementById("taskDivId").style.visibility = "visible";
-  document.getElementById("roleDiv").style.visibility = "visible";
-  document.getElementById("answerDiv").style.visibility = "visible";
+  document.getElementById("workspace").style.visibility = "visible";
+
 });
+
+// Igen BJarke OMG
+function addQuestion(){
+    var ul = document.getElementById("dynamic-list");
+    var question= document.getElementById("newQuestion");
+    var li = document.createElement("li");
+    li.setAttribute('id',newQuestion.value);
+    li.appendChild(document.createTextNode(question.value));
+    ul.appendChild(li);
+  }
+
+function removeQuestion(){
+  var ul = document.getElementById("dynamic-list");
+  var question = document.getElementById("newQuestion");
+  var item = document.getElementById(question.value);
+  ul.removeChild(item);
+}

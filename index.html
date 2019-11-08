@@ -6,6 +6,18 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
+
+  <div class="taskButtonsDiv" id="taskButtonsDiv">
+    <h2> Vælg antal opgaver </h2>
+  <button class="button1" id="button1" onclick=myFunction() value =1 >1</button>
+  <button class="button2" id="button2">2</button>
+  <button class="button3" id="button3">3</button>
+  <button class="button4" id="button4">4</button>
+  <button class="button5" id="button5">5</button>
+
+  </div>
+
+  <div id="workspace">
   <h1 id="header"> This is our workspace </h1>
 <div class="roleDiv" id="roleDiv">
 
@@ -15,14 +27,7 @@
 
 </div>
 
-<div class="taskButtonsDiv" id="taskButtonsDiv">
-<button class="button1" id="button1" onclick=myFunction() value =1 >1</button>
-<button class="button2" id="button2">2</button>
-<button class="button3" id="button3">3</button>
-<button class="button4" id="button4">4</button>
-<button class="button5" id="button5">5</button>
 
-</div>
 <div class="taskDiv" id="taskDivId">
   <h3>Task</h3>
 
@@ -37,7 +42,20 @@
     <p id="taskEBullet">e)</p><p id="taskEConteneditable" contenteditable="true"> </p>
 
 </div>
-<div class="discussionDiv" ></div>
+<div class="discussionDiv" >
+  <h3 id='QuestionsForFurtherDiscussions'>Questions for further discussions</h3>
+
+
+  <div class="addingNewQuestions">
+  <ul id="dynamic-list"></ul>
+      <input type="text" id="newQuestion"/>
+      <button onclick="addQuestion()">add question</button>
+      <button onclick="removeQuestion()">remove question</button>
+  </div>
+</div>
+
+
+
 <div class="presentingDiv"></div>
 <div class="qoutesAndLitteratureDiv"></div>
 <div class="answerDiv" id="answerDiv">
@@ -55,7 +73,7 @@
 
 </div>
 
-
+</div>
 <script src="script.js"></script>
 </body>
 </html>
