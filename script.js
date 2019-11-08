@@ -149,18 +149,18 @@ tasksCount=5;
 });
 
 // Igen BJarke OMG
-function addQuestion(){
+function addPresentationPoint(){
     var ul = document.getElementById("dynamic-list");
-    var question= document.getElementById("newQuestion");
+    var point= document.getElementById("newPresentationPoint");
     var li = document.createElement("li");
-    li.setAttribute('id',newQuestion.value);
-    li.appendChild(document.createTextNode(question.value));
+    li.setAttribute('id',newPresentationPoint.value);
+    li.appendChild(document.createTextNode(point.value));
     ul.appendChild(li);
   }
 
-function removeQuestion(){
+function removePresentationPoint(){
   var ul = document.getElementById("dynamic-list");
-  var question = document.getElementById("newQuestion");
-  var item = document.getElementById(question.value);
+  var point = document.getElementById("newPresentationPoint");
+  var item = document.getElementById(point.value);
   ul.removeChild(item);
 }

@@ -155,7 +155,7 @@ margin-bottom: 50px;
 
 
 /* Bjarke har ikke lavet en kommentar*/
-.discussionDiv{
+.presentingDiv{
   position:absolute;
   top:100px;
   left:330px;
@@ -165,13 +165,27 @@ margin-bottom: 50px;
 }
 
 
-#QuestionsForFurtherDiscussions {
+.presentingDiv h3{
 text-align: center;
 }
 
-.addingNewQuestions {
+.addingNewPresentationPoints {
 text-align: center;
 }
-.addingNewQuestions li{
+.addingNewPresentationPoints li{
 text-align: left;
+}
+
+.addedQuesteionForFurtherDiscussions {
+  position:absolute;
+margin-left:5%;
+  bottom:10px;
+  border: solid;
+  height: 100px;
+  width: 90%;
+
+
+}
+.addedQuesteionForFurtherDiscussions h5{
+  margin:2px;
 }
