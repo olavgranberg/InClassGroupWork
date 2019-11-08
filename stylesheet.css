@@ -1,0 +1,150 @@
+/* Workspace */
+
+/* Header */
+#header{
+  visibility: hidden;
+  text-align:center;
+}
+/* Role div style */
+.roleDiv{
+  visibility: hidden;
+  border-style: solid;
+  height: 250px;
+  width: 15%;
+  margin:0;
+  padding: 0;
+margin-bottom: 50px;
+}
+#roleDivHeader {
+  text-align: center;
+  padding-bottom: 10px;
+  margin:2px;
+  padding: 2px;
+
+}
+#roleDivDescription{
+  margin:2px;
+  padding: 2px;
+
+}
+
+
+/* Task div style */
+.taskDiv{
+  visibility: hidden;
+  border-style: solid;
+  height: 300px;
+  width: 20%;
+  padding: 0;
+
+}
+.taskDiv p{
+  margin:2px;
+  padding: 2px;
+}
+.taskDiv h3{
+  text-align: center;
+  margin:2px;
+  padding: 2px;
+}
+
+.taskButtonsDiv{
+  border:solid;
+  width: 30%;
+  margin-bottom: 30px;
+  position: absolute;
+  left:33%;
+
+}
+
+.button1 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {
+  background-color: #008CBA; /* Blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button3 {
+  background-color: #f44336; /* Red */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button4 {
+  background-color: #e7e7e7; color: black; /* Gray */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button5 {
+  background-color: yellow; /* Yellow */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.showHiddenFiles{
+  visibility: visible;
+}
+.hiddenFiles{
+visibility: hidden;
+}
+
+
+/* Answer div */
+
+.answerDiv{
+visibility: hidden;
+  border-style: solid;
+  height: 400px;
+  width: 40%;
+  padding: 0;
+  position: absolute;;
+float:left;
+  left: 500px;
+  top:100px;
+
+
+}
+
+.answerDiv p{
+
+  margin:2px;
+  padding: 2px;
+
+}
