@@ -1,6 +1,12 @@
 /* Workspace */
 
+body{
+  background-color: grey;
+}
 
+p{
+  display: inline;
+}
 /* Initiator */
 .taskButtonsDiv{
   border:solid;
@@ -10,6 +16,8 @@
   left:33%;
   top: 40%;
   text-align: center;
+  background-color: lightblue;
+  background-color: white;
 
 }
 
@@ -77,8 +85,9 @@
 
 /* Header */
 #header{
-
+  color:white;
   text-align:center;
+
 }
 
 #workspace{
@@ -87,13 +96,14 @@
 /* Role div style */
 
 .roleDiv{
-
+background-color: white;
   border-style: solid;
-  height: 250px;
+  position: absolute;
+  height: 30%;
   width: 15%;
-  margin:0;
   padding: 0;
-margin-bottom: 50px;
+  left: 1%;
+  top:8%;
 }
 #roleDivHeader {
   text-align: center;
@@ -111,11 +121,14 @@ margin-bottom: 50px;
 
 /* Task div style */
 .taskDiv{
-
+background-color: white;
   border-style: solid;
-  height: 300px;
-  width: 20%;
+  position: absolute;
+  height: 60%;
+  width: 15%;
   padding: 0;
+  left: 1%;
+  top:39%;
 
 }
 .taskDiv p{
@@ -133,15 +146,14 @@ margin-bottom: 50px;
 /* Answer div */
 
 .answerDiv{
-
+background-color: white;
   border-style: solid;
-  height: 600px;
-  width: 30%;
+  position: absolute;
+  height: 60%;
+  width: 47%;
   padding: 0;
-  position: absolute;;
-  float:left;
-  left: 950px;
-  top:100px;
+  right: 1%;
+  top:8%;
 
 
 }
@@ -156,12 +168,14 @@ margin-bottom: 50px;
 
 /* Bjarke har ikke lavet en kommentar*/
 .presentingDiv{
-  position:absolute;
-  top:100px;
-  left:330px;
+  background-color: white;
   border-style: solid;
-  height: 500px;
-  width: 30%;
+  position: absolute;
+  height: 50%;
+  width: 34%;
+  padding: 0;
+  left: 17%;
+  top:8%;
 }
 
 
@@ -188,4 +202,38 @@ margin-left:5%;
 }
 .addedQuesteionForFurtherDiscussions h5{
   margin:2px;
+}
+
+
+/* DiscussionDiv */
+
+.discussionDiv{
+  background-color: white;
+    border:solid;
+    width: 34%;
+    height:40%;
+    margin-bottom: 30px;
+    position: absolute;
+    left:17%;
+    top: 59%;
+
+
+
+}
+
+
+
+/* ReferenceDiv */
+.qoutesAndLitteratureDiv{
+background-color: white;
+    border:solid;
+    width: 47%;
+    height:30%;
+    margin-bottom: 30px;
+    position: absolute;
+    right:1%;
+    top: 69%;
+
+
+
 }
