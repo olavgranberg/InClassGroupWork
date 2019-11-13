@@ -152,8 +152,10 @@ tasksCount=5;
 
 
 // --------------------- Create a discussion question --------------- //
+
 // Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
+var myULLList = document.getElementById("myUL");
+var myNodelist = myULLList.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -163,7 +165,7 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 // Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
+var myNodelist = myULLList.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -218,3 +220,86 @@ function newElement() {
     }
   }
 }
+
+// --------------------- Create a presenting --------------- //
+
+
+
+// Create a "close" button and append it to each list item
+var myULLListPresentingDiv = document.getElementById("myULPresentingDiv");
+var myNodelistPresentingDiv = myULLListPresentingDiv.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelistPresentingDiv.length; i++) {
+  var spanmyNodelistPresentingDiv = document.createElement("SPAN");
+  var txtmyNodelistPresentingDiv = document.createTextNode("\u00D7");
+  span.className = "closemyNodelistPresentingDiv";
+  span.appendChild(txtmyNodelistPresentingDiv);
+  myNodelistPresentingDiv[i].appendChild(spanmyNodelistPresentingDiv);
+}
+
+// Click on a close button to hide the current list item
+var closemyNodelistPresentingDiv = document.getElementsByClassName("closemyNodelistPresentingDiv");
+var i;
+for (i = 0; i < closemyNodelistPresentingDiv.length; i++) {
+  closemyNodelistPresentingDiv[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+
+// Create a new list item when clicking on the "Add" button
+function newElementPresentingDiv() {
+  var li = document.createElement("li");
+  var inputValuemyNodelistPresentingDiv ='• ' + document.getElementById("myInputPresentingDiv").value;
+  var t = document.createTextNode(inputValuemyNodelistPresentingDiv);
+  li.appendChild(t);
+  if (inputValuemyNodelistPresentingDiv === '• ') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myULPresentingDiv").appendChild(li);
+  }
+  document.getElementById("myInputPresentingDiv").value = "";
+
+  var spanmyNodelistPresentingDiv = document.createElement("SPAN");
+  var txtmyNodelistPresentingDiv = document.createTextNode("\u00D7");
+  spanmyNodelistPresentingDiv.className = "closemyNodelistPresentingDiv";
+  spanmyNodelistPresentingDiv.appendChild(txtmyNodelistPresentingDiv);
+  li.appendChild(spanmyNodelistPresentingDiv);
+
+  for (i = 0; i < closemyNodelistPresentingDiv.length; i++) {
+    closemyNodelistPresentingDiv[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+
+
+
+//------------------------------------ Trafic lifhgt ----------------------------------- //
+var green=document.getElementsByClassName("green")[0];
+var red=document.getElementsByClassName("red")[0];
+var yellow=document.getElementsByClassName("yellow")[0];
+
+document.addEventListener("keyup", function(){
+let charCount = document.getElementById('taskAConteneditableAnswer').innerHTML;
+console.log(charCount);
+if (charCount.length <= 80) {
+
+  green.style.opacity=.2;
+  yellow.style.opacity=.2;
+  red.style.opacity=1;
+}
+else if (charCount.length >= 81 && charCount.length < 160) {
+  green.style.opacity=.2;
+  yellow.style.opacity=1;
+  red.style.opacity=.2;
+}
+else {
+  green.style.opacity=1;
+  yellow.style.opacity=.2;
+  red.style.opacity=.2;
+}
+
+});

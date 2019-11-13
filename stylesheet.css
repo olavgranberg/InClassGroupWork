@@ -105,6 +105,11 @@ background-color: white;
   left: 1%;
   top:8%;
 }
+.roleDiv p{
+  padding:5px;
+
+}
+
 #roleDivHeader {
   text-align: center;
   padding-bottom: 10px;
@@ -112,11 +117,7 @@ background-color: white;
   padding: 2px;
 
 }
-#roleDivDescription{
-  margin:2px;
-  padding: 2px;
 
-}
 
 
 /* Task div style */
@@ -158,9 +159,12 @@ background-color: white;
 
 }
 
+.answerDiv h3{
+  margin:10px;
+}
 .answerDiv p{
 
-  margin:2px;
+  margin:10px;
   padding: 2px;
 
 }
@@ -228,13 +232,13 @@ background-color: white;
 }
 
 /* Remove margins and padding from the list */
-ul {
+.discussionDiv ul {
   margin-top: 10%;
   padding: 0;
 }
 
 /* Style the list items */
-ul li {
+.discussionDiv ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -251,24 +255,24 @@ ul li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+.discussionDiv ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+.discussionDiv ul li:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+.discussionDiv ul li.checked {
   background: #888;
   color: #fff;
 
 }
 
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+.discussionDiv ul li.checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -310,7 +314,7 @@ ul li.checked::before {
 }
 
 /* Style the input */
-input {
+.discussionDiv input {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -336,4 +340,117 @@ input {
 
 .addBtn:hover {
   background-color: #bbb;
+
+
+
+
+  /* Bjarke */
 }
+#isiqfor{
+    border: 2px solid black;
+    padding: 10px 3px;
+    width: 60px;
+}
+#isiqfor>div{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: .2;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.red{
+    background-color: red;
+}
+
+
+
+/* Styling af presentingpoints*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+.presentingDiv ul {
+  margin-top: 10%;
+  padding: 0;
+
+}
+
+/* Style the list items */
+.presentingDiv ul li {
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  background-color: white;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Style the close button */
+.closemyNodelistPresentingDiv {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.closemyNodelistPresentingDiv:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.headerPresentingDiv {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.presentingDiv .headerPresentingDiv:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+.presentingDiv input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtnPresentingDiv {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtnPresentingDiv:hover {
+  background-color: #bbb;
