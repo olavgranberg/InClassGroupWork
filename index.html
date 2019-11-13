@@ -44,34 +44,41 @@
 </div>
 
 
-<div class="discussionDiv" >
-  <h1> DiscussionDIV</h1>
-
-</div>
-
-
-<!--Change to presnting Div. Remove the 'Remove Question buttom', add placeholder, add maxLength,
-look at midas example how to remove questions. -->
 <div class="presentingDiv">
-  <h3>Presentation Points</h3>
+<!--
+  <h2 style="margin:5px">Presenting notes</h2>
+
+  <input type="text" id="myInputpresentingDiv" placeholder="Max 60 chars">
+  <span onclick="newElementpresentingDiv()" class="addBtnpresentingDiv">Add</span>
 
 
-  <div class="addingNewPresentationPoints">
-  <ul id="dynamic-list"></ul>
-      <input type="text" id="newPresentationPoint"/>
-      <button onclick="addPresentationPoint()">Add point</button>
-      <button onclick="removePresentationPoint()">Remove point</button>
-  </div>
+  <ul id="myUL" class="myUL">
 
+  </ul>
+-->
+<div id="presentingDivDiscussionFindings"><p>Checked discussion questions goes to this div</p>
 
-  <div class='addedQuesteionForFurtherDiscussions'>
-    <h5> the questions for further diucussion should be addid to this div! </h5>
-  </div>
 </div>
+</div>
+
+<div class="discussionDiv" >
+  <h2 style="margin:5px">Discussion</h2>
+  <input type="text" id="myInput" placeholder="Write your discussion questions here..">
+  <span onclick="newElement()" class="addBtn">Add</span>
+
+
+  <ul id="myUL" class="myUL">
+
+  </ul>
+
+</div>
+
+
 
 
 <div class="qoutesAndLitteratureDiv">
 <h1>Qoutes and litterature</div>
+
 <div class="answerDiv" id="answerDiv">
   <h3>Answers</h3>
 
