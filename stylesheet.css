@@ -179,6 +179,11 @@ background-color: white;
   outline: none !important;
 }
 
+.answerDiv textarea{
+overflow: scroll;
+width: 90%;
+}
+
 /* Bjarke har ikke lavet en kommentar*/
 .presentingDiv{
   background-color: white;
@@ -238,7 +243,7 @@ background-color: white;
   top:50%;
   left:2%;
   visibility: hidden;
-  
+
 }
 
 table {

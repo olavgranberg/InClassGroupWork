@@ -33,118 +33,134 @@ if (tasksCount===undefined){
   document.getElementById("taskABullet").remove();
   document.getElementById("taskAConteneditable").remove();
   document.getElementById("taskABulletAnswer").remove();
-  document.getElementById("taskAConteneditableAnswer").remove();
+  document.getElementById("textareaA").remove();
 
   document.getElementById("taskBBullet").remove();
   document.getElementById("taskBConteneditable").remove();
   document.getElementById("taskBBulletAnswer").remove();
-  document.getElementById("taskBConteneditableAnswer").remove();
+  document.getElementById("textareaB").remove();
 
   document.getElementById("taskCBullet").remove();
   document.getElementById("taskCConteneditable").remove();
   document.getElementById("taskCBulletAnswer").remove();
-  document.getElementById("taskCConteneditableAnswer").remove();
+  document.getElementById("textareaC").remove();
 
   document.getElementById("taskDBullet").remove();
   document.getElementById("taskDConteneditable").remove();
   document.getElementById("taskDBulletAnswer").remove();
-  document.getElementById("taskDConteneditableAnswer").remove();
+  document.getElementById("textareaD").remove();
 
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("taskEConteneditableAnswer").remove();
+  document.getElementById("textareaE").remove();
 
 } else if (tasksCount===1){
 
   document.getElementById("taskBBullet").remove();
   document.getElementById("taskBConteneditable").remove();
   document.getElementById("taskBBulletAnswer").remove();
-  document.getElementById("taskBConteneditableAnswer").remove();
+  document.getElementById("textareaB").remove();
 
   document.getElementById("taskCBullet").remove();
   document.getElementById("taskCConteneditable").remove();
   document.getElementById("taskCBulletAnswer").remove();
-  document.getElementById("taskCConteneditableAnswer").remove();
+  document.getElementById("textareaC").remove();
 
   document.getElementById("taskDBullet").remove();
   document.getElementById("taskDConteneditable").remove();
   document.getElementById("taskDBulletAnswer").remove();
-  document.getElementById("taskDConteneditableAnswer").remove();
+  document.getElementById("textareaD").remove();
 
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("taskEConteneditableAnswer").remove();
+  document.getElementById("textareaE").remove();
 
 } else if (tasksCount===2){
   document.getElementById("taskCBullet").remove();
   document.getElementById("taskCConteneditable").remove();
   document.getElementById("taskCBulletAnswer").remove();
-  document.getElementById("taskCConteneditableAnswer").remove();
+  document.getElementById("textareaC").remove();
 
   document.getElementById("taskDBullet").remove();
   document.getElementById("taskDConteneditable").remove();
   document.getElementById("taskDBulletAnswer").remove();
-  document.getElementById("taskDConteneditableAnswer").remove();
+  document.getElementById("textareaD").remove();
 
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("taskEConteneditableAnswer").remove();
+  document.getElementById("textareaE").remove();
 
 } else if (tasksCount===3){
   document.getElementById("taskDBullet").remove();
   document.getElementById("taskDConteneditable").remove();
   document.getElementById("taskDBulletAnswer").remove();
-  document.getElementById("taskDConteneditableAnswer").remove();
+  document.getElementById("textareaD").remove();
 
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("taskEConteneditableAnswer").remove();
+  document.getElementById("textareaE").remove();
 
 
 } else if (tasksCount===4){
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("taskEConteneditableAnswer").remove();
-
+  document.getElementById("textareaE").remove();
 } else{
 }
 return;
 }
 
+// ------------------------- control visbilite of answers boxes and sizes them according to the number of tasks ------------------------
 document.getElementById("button1").addEventListener("click", function(){
 tasksCount=1;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
     document.getElementById("workspace").style.visibility = "visible";
+      document.getElementById('textareaA').style.height = '350px';
 });
 document.getElementById("button2").addEventListener("click", function(){
 tasksCount=2;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
     document.getElementById("workspace").style.visibility = "visible";
+    document.getElementById('textareaA').style.height = '175px';
+    document.getElementById('textareaB').style.height = '175px';
 });
 document.getElementById("button3").addEventListener("click", function(){
 tasksCount=3;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
     document.getElementById("workspace").style.visibility = "visible";
+    document.getElementById('textareaA').style.height = '100px';
+    document.getElementById('textareaB').style.height = '100px';
+    document.getElementById('textareaC').style.height = '100px';
+
 });
 document.getElementById("button4").addEventListener("click", function(){
 tasksCount=4;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
+  document.getElementById('textareaA').style.height = '75px';
+  document.getElementById('textareaB').style.height = '75px';
+  document.getElementById('textareaC').style.height = '75px';
+  document.getElementById('textareaD').style.height = '75px';
 });
 document.getElementById("button5").addEventListener("click", function(){
 tasksCount=5;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
+  document.getElementById('textareaA').style.height = '55px';
+  document.getElementById('textareaB').style.height = '55px';
+  document.getElementById('textareaC').style.height = '55px';
+  document.getElementById('textareaD').style.height = '55px';
+  document.getElementById('textareaE').style.height = '55px';
 
 });
 
