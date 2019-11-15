@@ -233,6 +233,13 @@ background-color: white;
 .qoutesAndLitteratureDiv h3{
   margin:10px;
 }
+#pElementsQoutesAndLitterature{
+  position: absolute;
+  top:50%;
+  left:2%;
+  visibility: hidden;
+  
+}
 
 table {
   font-family: arial, sans-serif;
@@ -250,8 +257,13 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+#buttonAddWebOrBook{
+  visibility:hidden;
+  position:absolute;
+  right:10px;
+}
 
-/* Styling af discussion*/
+/* -----------------Styling af discussion-------------------- */
 
 * {
   box-sizing: border-box;

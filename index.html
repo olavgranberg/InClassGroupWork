@@ -9,7 +9,7 @@
 
   <div class="taskButtonsDiv" id="taskButtonsDiv">
     <h2> Select the number of tasks </h2>
-  <button class="button1" id="button1" onclick=myFunction() value =1 >1</button>
+  <button class="button1" id="button1">1</button>
   <button class="button2" id="button2">2</button>
   <button class="button3" id="button3">3</button>
   <button class="button4" id="button4">4</button>
@@ -80,18 +80,35 @@
 <!--          REFERENCE            -->
 <!-- onclick=myFunction() -->
 <div class="qoutesAndLitteratureDiv">
+
+<div id="descriptionsForTableP">
+  <p>
+</div>
+  <div id="pElementsQoutesAndLitterature">
+  <p id="tablePQoute" contenteditable="true"> Qoute...</p>
+</br>
+  <p id="tablePTitle" contenteditable="true"> Title..</p>
+  </br>
+  <p id="tablePAuthor" contenteditable="true"> Author..</p>
+  </br>
+  <p id="tablePPageOrLink" contenteditable="true"> Page or link...</p>
+  </br>
+  <p id="tablePQouteYear" contenteditable="true"> Year</p>
+</div>
+
   <h3>Qoutes and litterature</h3>
-    <button id="buttonBook" onclick="buttonBookFunction">Book</button>
-    <button id="buttonWeb" onclick="buttonWebFunction">Website</button>
+    <button id="buttonBook">Add reference</button>
+    <button id="buttonAddWebOrBook">Add</button>
     <table id="table">
   <tr>
-    <th>Citat</th>
-    <th>Titel</th>
-    <th>Forfatter</th>
+    <th>Qoute</th>
+    <th>Title</th>
+    <th>Author</th>
     <th>Page or link</th>
     <th>Year</th>
   </tr>
 </table>
+
 
 
 </div>

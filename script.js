@@ -310,12 +310,52 @@ else {
 
 
 //var x = document.getElementById("table"); x.style.display = "none"; //
-function buttonBookFunction() {
+document.getElementById("buttonBook").addEventListener("click", function () {
 
-    alert("you clicked something");
-};
+  document.getElementById("table").style.visibility = "hidden";
+  document.getElementById("buttonBook").style.visibility = "hidden";
 
-function buttonWebFunction() {
-alert("hi");
+  document.getElementById("buttonAddWebOrBook").style.visibility = "visible";
+    document.getElementById("pElementsQoutesAndLitterature").style.visibility = "visible";
+document.getElementById("descriptionsForTableP").style.visibility = "visible";
 
-};
+
+});
+
+
+document.getElementById("buttonAddWebOrBook").addEventListener("click", function () {
+
+      document.getElementById("table").style.visibility = "visible";
+      document.getElementById("buttonBook").style.visibility = "visible";
+      document.getElementById("buttonAddWebOrBook").style.visibility = "hidden";
+      document.getElementById("pElementsQoutesAndLitterature").style.visibility = "hidden";
+      document.getElementById("descriptionsForTableP").style.visibility = "hidden";
+      var tableRef = document.getElementById('table').getElementsByTagName('tbody')[0];
+
+      // Insert a row in the table at the last row
+      var newRow   = tableRef.insertRow();
+
+      // Insert a cell in the row at index 0
+      var newCell  = newRow.insertCell(0);
+      var newCellTwo  = newRow.insertCell(1);
+        var newCellThree  = newRow.insertCell(2);
+          var newCellFour  = newRow.insertCell(3);
+            var newCellFive  = newRow.insertCell(4);
+
+var tablePText=document.getElementById('tablePQoute').innerHTML;
+var tablePTitleText=document.getElementById('tablePTitle').innerHTML;
+var tablePAuthorText=document.getElementById('tablePAuthor').innerHTML;
+var tablePPageOrLinkText=document.getElementById('tablePPageOrLink').innerHTML;
+var tablePQouteYearText=document.getElementById('tablePQouteYear').innerHTML;
+      // Append a text node to the cell
+      var newQoute  = document.createTextNode(tablePText);
+      var newTitle = document.createTextNode(tablePTitleText);
+      var newAuthor = document.createTextNode(tablePAuthorText);
+      var newPageOrLink = document.createTextNode(tablePPageOrLinkText);
+      var newYear = document.createTextNode(tablePQouteYearText);
+      newCell.appendChild(newQoute);
+      newCellTwo.appendChild(newTitle);
+      newCellThree.appendChild(newAuthor);
+      newCellFour.appendChild(newPageOrLink);
+      newCellFive.appendChild(newYear);
+});
