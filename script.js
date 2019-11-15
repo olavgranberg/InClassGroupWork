@@ -307,3 +307,15 @@ else {
 
 
 // ------------------------- QOUTES AND LITTERATURE -------------------------------- //
+
+
+//var x = document.getElementById("table"); x.style.display = "none"; //
+function buttonBookFunction() {
+
+    alert("you clicked something");
+};
+
+function buttonWebFunction() {
+alert("hi");
+
+};
