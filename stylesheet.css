@@ -238,35 +238,71 @@ background-color: white;
 .qoutesAndLitteratureDiv h3{
   margin:10px;
 }
-#pElementsQoutesAndLitterature{
+#formElementsQoutesAndLitterature {
+
+  width: 100px;
+  height: 50px;
   position: absolute;
-  top:50%;
-  left:2%;
+  top:1%;
   visibility: hidden;
 
+
+}
+#formElementsQoutesAndLitterature form{
+
+
+
+}
+#formElementsQoutesAndLitterature input{
+padding-left: 5px;
+padding-right: 5px;
+  height: 30px;
+width:650px;
+  border: 3px solid black;
+  margin:3px;
+}
+
+#buttonAddWebOrBook{
+  cursor:pointer;
+}
+
+#tablePQoute{
+font-style: italic;
 }
 
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+
 }
 
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+
+}
+td{
+max-width: 100px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+
+   }
+
+   td.columnA {
+    width: 30%;
+}
+td.columnB {
+    width: 70%;
 }
 
 tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-#buttonAddWebOrBook{
-  visibility:hidden;
-  position:absolute;
-  right:10px;
-}
+
 
 /* -----------------Styling af discussion-------------------- */
 

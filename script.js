@@ -330,10 +330,12 @@ document.getElementById("buttonBook").addEventListener("click", function () {
 
   document.getElementById("table").style.visibility = "hidden";
   document.getElementById("buttonBook").style.visibility = "hidden";
+  document.getElementById("qoutesAndLitteratureHeader").style.visibility = "hidden";
 
   document.getElementById("buttonAddWebOrBook").style.visibility = "visible";
-    document.getElementById("pElementsQoutesAndLitterature").style.visibility = "visible";
+    document.getElementById("formElementsQoutesAndLitterature").style.visibility = "visible";
 document.getElementById("descriptionsForTableP").style.visibility = "visible";
+
 
 
 });
@@ -343,8 +345,9 @@ document.getElementById("buttonAddWebOrBook").addEventListener("click", function
 
       document.getElementById("table").style.visibility = "visible";
       document.getElementById("buttonBook").style.visibility = "visible";
+      document.getElementById("qoutesAndLitteratureHeader").style.visibility = "visible";
       document.getElementById("buttonAddWebOrBook").style.visibility = "hidden";
-      document.getElementById("pElementsQoutesAndLitterature").style.visibility = "hidden";
+      document.getElementById("formElementsQoutesAndLitterature").style.visibility = "hidden";
       document.getElementById("descriptionsForTableP").style.visibility = "hidden";
       var tableRef = document.getElementById('table').getElementsByTagName('tbody')[0];
 
@@ -358,11 +361,12 @@ document.getElementById("buttonAddWebOrBook").addEventListener("click", function
           var newCellFour  = newRow.insertCell(3);
             var newCellFive  = newRow.insertCell(4);
 
-var tablePText=document.getElementById('tablePQoute').innerHTML;
-var tablePTitleText=document.getElementById('tablePTitle').innerHTML;
-var tablePAuthorText=document.getElementById('tablePAuthor').innerHTML;
-var tablePPageOrLinkText=document.getElementById('tablePPageOrLink').innerHTML;
-var tablePQouteYearText=document.getElementById('tablePQouteYear').innerHTML;
+
+var tablePText=document.getElementById('tablePQoute').value;
+var tablePTitleText=document.getElementById('tablePTitle').value;
+var tablePAuthorText=document.getElementById('tablePAuthor').value;
+var tablePPageOrLinkText=document.getElementById('tablePPageOrLink').value;
+var tablePQouteYearText=document.getElementById('tablePQouteYear').value;
       // Append a text node to the cell
       var newQoute  = document.createTextNode(tablePText);
       var newTitle = document.createTextNode(tablePTitleText);
