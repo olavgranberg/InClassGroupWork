@@ -291,19 +291,15 @@ max-width: 100px;
 
    }
 
-   td.columnA {
-    width: 30%;
-}
-td.columnB {
-    width: 70%;
-}
+
 
 tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-
-
+.deleteButtonsInTable {
+  
+}
 /* -----------------Styling af discussion-------------------- */
 
 * {

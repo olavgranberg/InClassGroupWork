@@ -360,6 +360,7 @@ document.getElementById("buttonAddWebOrBook").addEventListener("click", function
         var newCellThree  = newRow.insertCell(2);
           var newCellFour  = newRow.insertCell(3);
             var newCellFive  = newRow.insertCell(4);
+            var newCellSix  = newRow.insertCell(5);
 
 
 var tablePText=document.getElementById('tablePQoute').value;
@@ -373,9 +374,27 @@ var tablePQouteYearText=document.getElementById('tablePQouteYear').value;
       var newAuthor = document.createTextNode(tablePAuthorText);
       var newPageOrLink = document.createTextNode(tablePPageOrLinkText);
       var newYear = document.createTextNode(tablePQouteYearText);
+      var deleteButtonRow = document.createElement('BUTTON');
+      deleteButtonRow.className += "deleteButtonsInTable";
+      deleteButtonRow.innerHTML += "x";
+
+
+
+      deleteButtonRow.addEventListener('click', function() {
+        var i = deleteButtonRow.parentNode.parentNode.rowIndex;
+          document.getElementById("table").deleteRow(i);
+
+}, false);
+
+
+
       newCell.appendChild(newQoute);
       newCellTwo.appendChild(newTitle);
       newCellThree.appendChild(newAuthor);
       newCellFour.appendChild(newPageOrLink);
       newCellFive.appendChild(newYear);
+      newCellSix.appendChild(deleteButtonRow);
+
+
+
 });

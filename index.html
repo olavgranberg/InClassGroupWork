@@ -91,15 +91,15 @@
 
     <form>
 
-      <input type="text" id="tablePQoute" value="Qoute: ANT er et vigtigt redskab">
+      <input type="text" id="tablePQoute" onfocus="this.value=''"   value="Qoute: ANT er et vigtigt redskab">
 
-      <input type="text" id="tablePTitle" value="Title: En introduktion til STS">
+      <input type="text" id="tablePTitle" onfocus="this.value=''" value="Title: En introduktion til STS">
 
-        <input type="text" id="tablePAuthor"value="Author: Fin Olesen">
+        <input type="text" id="tablePAuthor" onfocus="this.value=''" value="Author: Fin Olesen">
 
-        <input type="text" id="tablePPageOrLink"value="Pagenumber or link: 86">
+        <input type="text" id="tablePPageOrLink" onfocus="this.value=''" value="Pagenumber or link: 86">
 
-        <input type="text" id="tablePQouteYear"value="Year: 2007">
+        <input type="text" id="tablePQouteYear" onfocus="this.value=''" value="Year: 2007">
 
 <input type="button" id="buttonAddWebOrBook" value="Submit">
 
@@ -120,7 +120,7 @@
 
   <h3 id="qoutesAndLitteratureHeader">Qoutes and litterature</h3>
     <button id="buttonBook">Add reference</button>
-  
+
     <table id="table">
   <tr>
     <th>Qoute</th>
@@ -128,6 +128,7 @@
     <th>Author</th>
     <th>Page or link</th>
     <th>Year</th>
+    <th></th>
   </tr>
 </table>
 
