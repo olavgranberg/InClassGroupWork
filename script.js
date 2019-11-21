@@ -440,9 +440,9 @@ waitingRoomUpdate.addEventListener('click', function() {
 
 
   for (i = 0; i < webstrateClients.length; i++){
-
+ var arrayText = webstrateClients[i];
   var node = document.createElement("LI");                 // Create a <li> node
-  var textnode = document.createTextNode(webstrateClients[i].value);         // Create a text node
+  var textnode = document.createTextNode(arrayText);         // Create a text node
   node.appendChild(textnode);                              // Append the text to <li>
   document.getElementById("waitingRoomList").appendChild(node);
 }
