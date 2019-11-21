@@ -138,6 +138,9 @@ tasksCount=2;
     document.getElementById("workspace").style.visibility = "visible";
     document.getElementById('textareaA').style.height = '175px';
     document.getElementById('textareaB').style.height = '175px';
+
+    alert("Your username is" + " " + webstrate.clientId);
+
 });
 document.getElementById("button3").addEventListener("click", function(){
 tasksCount=3;
@@ -147,6 +150,9 @@ tasksCount=3;
     document.getElementById('textareaA').style.height = '100px';
     document.getElementById('textareaB').style.height = '100px';
     document.getElementById('textareaC').style.height = '100px';
+
+
+    alert("Your username is" + " " + webstrate.clientId);
 
 });
 document.getElementById("button4").addEventListener("click", function(){
@@ -158,6 +164,10 @@ tasksCount=4;
   document.getElementById('textareaB').style.height = '75px';
   document.getElementById('textareaC').style.height = '75px';
   document.getElementById('textareaD').style.height = '75px';
+
+
+  alert("Your username is" + " " + webstrate.clientId);
+
 });
 document.getElementById("button5").addEventListener("click", function(){
 tasksCount=5;
@@ -169,6 +179,9 @@ tasksCount=5;
   document.getElementById('textareaC').style.height = '55px';
   document.getElementById('textareaD').style.height = '55px';
   document.getElementById('textareaE').style.height = '55px';
+
+  alert("Your username is" + " " + webstrate.clientId);
+
 
 });
 
