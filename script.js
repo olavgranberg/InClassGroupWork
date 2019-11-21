@@ -432,7 +432,7 @@ buttonAddWebOrBook.addEventListener('click', function() {
 
 let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
-waitingRoomUpdate .addEventListener('click', function() {
+waitingRoomUpdate.addEventListener('click', function() {
 
   var txt= webstrate.clientId.innerHTML;
 
