@@ -436,8 +436,15 @@ let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
 waitingRoomUpdate.addEventListener('click', function() {
 
-  var webstrateClients = webstrate.clients;
+  var list = document.getElementById("waitingRoomList");   // Get the <ul> element with id="myList"
 
+    while (list.hasChildNodes()) {
+      list.removeChild(list.firstChild);
+    }
+  
+  list.removeChild(list.childNodes[0]);
+
+  var webstrateClients = webstrate.clients;
 
   for (i = 0; i < webstrateClients.length; i++){
  var arrayText = webstrateClients[i];
@@ -447,11 +454,6 @@ waitingRoomUpdate.addEventListener('click', function() {
   document.getElementById("waitingRoomList").appendChild(node);
 }
 
-/*
-  var node = document.createElement("LI");                 // Create a <li> node
-  var textnode = document.createTextNode(txt);         // Create a text node
-  node.appendChild(textnode);                              // Append the text to <li>
-  document.getElementById("waitingRoomList").appendChild(node);
-*/
+
 
 }, false);
