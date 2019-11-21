@@ -439,7 +439,7 @@ document.getElementById("waitingRoomList").innerHTML = "";
 
   var webstrateClients = webstrate.clients;
 
-if (webstrateClients.length<5){
+
   for (i = 0; i < webstrateClients.length; i++){
  var arrayText = webstrateClients[i];
   var node = document.createElement("LI");                 // Create a <li> node
@@ -447,9 +447,7 @@ if (webstrateClients.length<5){
   node.appendChild(textnode);                              // Append the text to <li>
   document.getElementById("waitingRoomList").appendChild(node);
   }
-} else{
-  alert("A maximum of 5 people are allowed in this document");
-}
+
 
 
 
