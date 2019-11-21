@@ -56,8 +56,6 @@ if (tasksCount===undefined){
   document.getElementById("textareaE").remove();
 
 
-  var penis = webstrate.clientId();
-  console.log(penis);
 
 } else if (tasksCount===1){
 
@@ -80,6 +78,8 @@ if (tasksCount===undefined){
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
   document.getElementById("textareaE").remove();
+
+
 
 } else if (tasksCount===2){
   document.getElementById("taskCBullet").remove();
@@ -126,6 +126,11 @@ tasksCount=1;
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
     document.getElementById("workspace").style.visibility = "visible";
       document.getElementById('textareaA').style.height = '350px';
+
+
+          var penis = webstrate.clientId();
+          console.log(penis);
+          
 });
 document.getElementById("button2").addEventListener("click", function(){
 tasksCount=2;
