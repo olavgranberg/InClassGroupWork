@@ -195,10 +195,51 @@ background-color: white;
   outline: none !important;
 }
 
-.answerDiv textarea{
-overflow: scroll;
-width: 90%;
+#divContainingOnlyAnswers {
+  height:50%;
+  width:100%;
+  position: relative;
 }
+
+#divContainingOnlyAnswers div {
+border-style: solid;
+width: 98%;
+margin-left: 5px;
+position:relative;
+overflow: scroll;
+margin-top: 5px;
+margin-bottom: 0px;
+
+}
+
+
+#traficLight{
+    border: 2px solid black;
+    padding: 10px 3px;
+    width: 55px;
+    background-color: black;
+    position:absolute;
+    bottom:89%;
+    right: 8%;
+    transform: rotate(90deg);
+}
+#traficLight>div{
+    width:45px;
+    height: 45px;
+    border-radius: 50%;
+    opacity: .2;
+
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.red{
+    background-color: red;
+}
+
 
 /* Bjarke har ikke lavet en kommentar*/
 .presentingDiv{
@@ -432,38 +473,6 @@ tr:nth-child(even) {
 
 .addBtn:hover {
   background-color: #bbb;
-
-
-
-
-  /* Bjarke */
-}
-#isiqfor{
-    border: 2px solid black;
-    padding: 10px 3px;
-    width: 55px;
-    background-color: black;
-    position:absolute;
-    bottom:89%;
-    right: 8%;
-    transform: rotate(90deg);
-}
-#isiqfor>div{
-    width:45px;
-    height: 45px;
-    border-radius: 50%;
-    opacity: .2;
-
-}
-.green{
-    background-color: green;
-}
-.yellow{
-    background-color: yellow;
-}
-.red{
-    background-color: red;
-}
 
 
 

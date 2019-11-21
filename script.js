@@ -33,87 +33,83 @@ if (tasksCount===undefined){
   document.getElementById("taskABullet").remove();
   document.getElementById("taskAConteneditable").remove();
   document.getElementById("taskABulletAnswer").remove();
-  document.getElementById("textareaA").remove();
+  document.getElementById("answerAdiv").remove();
 
   document.getElementById("taskBBullet").remove();
   document.getElementById("taskBConteneditable").remove();
   document.getElementById("taskBBulletAnswer").remove();
-  document.getElementById("textareaB").remove();
+  document.getElementById("answerBdiv").remove();
 
   document.getElementById("taskCBullet").remove();
   document.getElementById("taskCConteneditable").remove();
   document.getElementById("taskCBulletAnswer").remove();
-  document.getElementById("textareaC").remove();
+  document.getElementById("answerCdiv").remove();
 
   document.getElementById("taskDBullet").remove();
   document.getElementById("taskDConteneditable").remove();
   document.getElementById("taskDBulletAnswer").remove();
-  document.getElementById("textareaD").remove();
+  document.getElementById("answerDdiv").remove();
 
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("textareaE").remove();
-
-
+  document.getElementById("answerEdiv").remove();
 
 } else if (tasksCount===1){
 
   document.getElementById("taskBBullet").remove();
   document.getElementById("taskBConteneditable").remove();
   document.getElementById("taskBBulletAnswer").remove();
-  document.getElementById("textareaB").remove();
+  document.getElementById("answerBdiv").remove();
 
   document.getElementById("taskCBullet").remove();
   document.getElementById("taskCConteneditable").remove();
   document.getElementById("taskCBulletAnswer").remove();
-  document.getElementById("textareaC").remove();
+  document.getElementById("answerCdiv").remove();
 
   document.getElementById("taskDBullet").remove();
   document.getElementById("taskDConteneditable").remove();
   document.getElementById("taskDBulletAnswer").remove();
-  document.getElementById("textareaD").remove();
+  document.getElementById("answerDdiv").remove();
 
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("textareaE").remove();
-
-
+  document.getElementById("answerEdiv").remove();
 
 } else if (tasksCount===2){
   document.getElementById("taskCBullet").remove();
   document.getElementById("taskCConteneditable").remove();
   document.getElementById("taskCBulletAnswer").remove();
-  document.getElementById("textareaC").remove();
+  document.getElementById("answerCdiv").remove();
 
   document.getElementById("taskDBullet").remove();
   document.getElementById("taskDConteneditable").remove();
   document.getElementById("taskDBulletAnswer").remove();
-  document.getElementById("textareaD").remove();
+  document.getElementById("answerDdiv").remove();
 
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("textareaE").remove();
+  document.getElementById("answerEdiv").remove();
 
 } else if (tasksCount===3){
   document.getElementById("taskDBullet").remove();
   document.getElementById("taskDConteneditable").remove();
   document.getElementById("taskDBulletAnswer").remove();
-  document.getElementById("textareaD").remove();
+  document.getElementById("answerDdiv").remove();
 
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("textareaE").remove();
+  document.getElementById("answerEdiv").remove();
 
 
 } else if (tasksCount===4){
   document.getElementById("taskEBullet").remove();
   document.getElementById("taskEConteneditable").remove();
   document.getElementById("taskEBulletAnswer").remove();
-  document.getElementById("textareaE").remove();
+  document.getElementById("answerEdiv").remove();
 } else{
 }
 return;
@@ -125,11 +121,10 @@ tasksCount=1;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
+  
     document.getElementById("workspace").style.visibility = "visible";
-      document.getElementById('textareaA').style.height = '350px';
+      document.getElementById('answerAdiv').style.height = '160%';
 
-
-          alert("Your username is" + " " + webstrate.clientId);
 
 });
 document.getElementById("button2").addEventListener("click", function(){
@@ -137,11 +132,10 @@ tasksCount=2;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
-    document.getElementById("workspace").style.visibility = "visible";
-    document.getElementById('textareaA').style.height = '175px';
-    document.getElementById('textareaB').style.height = '175px';
 
-    alert("Your username is" + " " + webstrate.clientId);
+    document.getElementById("workspace").style.visibility = "visible";
+    document.getElementById('answerAdiv').style.height = '85%';
+    document.getElementById('answerBdiv').style.height = '85%';
 
 });
 document.getElementById("button3").addEventListener("click", function(){
@@ -149,13 +143,12 @@ tasksCount=3;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
+
     document.getElementById("workspace").style.visibility = "visible";
-    document.getElementById('textareaA').style.height = '100px';
-    document.getElementById('textareaB').style.height = '100px';
-    document.getElementById('textareaC').style.height = '100px';
+    document.getElementById('answerAdiv').style.height = '55%';
+    document.getElementById('answerBdiv').style.height = '55%';
+    document.getElementById('answerCdiv').style.height = '55%';
 
-
-    alert("Your username is" + " " + webstrate.clientId);
 
 });
 document.getElementById("button4").addEventListener("click", function(){
@@ -163,14 +156,13 @@ tasksCount=4;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
+
   document.getElementById("workspace").style.visibility = "visible";
-  document.getElementById('textareaA').style.height = '75px';
-  document.getElementById('textareaB').style.height = '75px';
-  document.getElementById('textareaC').style.height = '75px';
-  document.getElementById('textareaD').style.height = '75px';
+  document.getElementById('answerAdiv').style.height = '40%';
+  document.getElementById('answerBdiv').style.height = '40%';
+  document.getElementById('answerCdiv').style.height = '40%';
+  document.getElementById('answerDdiv').style.height = '40%';
 
-
-  alert("Your username is" + " " + webstrate.clientId);
 
 });
 document.getElementById("button5").addEventListener("click", function(){
@@ -178,15 +170,13 @@ tasksCount=5;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
+
   document.getElementById("workspace").style.visibility = "visible";
-  document.getElementById('textareaA').style.height = '55px';
-  document.getElementById('textareaB').style.height = '55px';
-  document.getElementById('textareaC').style.height = '55px';
-  document.getElementById('textareaD').style.height = '55px';
-  document.getElementById('textareaE').style.height = '55px';
-
-  alert("Your username is" + " " + webstrate.clientId);
-
+  document.getElementById('answerAdiv').style.height = '33%';
+  document.getElementById('answerBdiv').style.height = '33%';
+  document.getElementById('answerCdiv').style.height = '33%';
+  document.getElementById('answerDdiv').style.height = '33%';
+  document.getElementById('answerEdiv').style.height = '33%';
 
 });
 
@@ -318,30 +308,146 @@ function newElementPresentingDiv() {
 }
 
 
-
 //------------------------------------ Trafic lifhgt ----------------------------------- //
+
+// ----------------------------------Variable to contain the value of textareas ---------//
+let charCount;
+
+ // --------------------------------- function controlling which textareas values the charCount should contain-------------//
+document.addEventListener("keyup", function(){
+  if (tasksCount === 1) {
+  charCount = document.getElementById('textareaA').innerHTML;
+
+  }
+  else if (tasksCount === 2) {
+  charCount = document.getElementById('textareaA').innerHTML
+  + document.getElementById('textareaB').innerHTML;
+  }
+  else if(tasksCount ===3) {
+charCount = document.getElementById('textareaA').innerHTML
++ document.getElementById('textareaB').innerHTML
++ document.getElementById('textareaC').innerHTML;
+}
+else if (tasksCount ===4) {
+  charCount = document.getElementById('textareaA').innerHTML
+  + document.getElementById('textareaB').innerHTML
+  + document.getElementById('textareaC').innerHTML
+  + document.getElementById('textareaD').innerHTML;
+}
+else if (tasksCount ===5) {
+  charCount = document.getElementById('textareaA').innerHTML
+  + document.getElementById('textareaB').innerHTML
+  + document.getElementById('textareaC').innerHTML
+  + document.getElementById('textareaD').innerHTML
+  + document.getElementById('textareaE').innerHTML;
+}
+else {
+  console.log('No number of tasks have been chosen yet!')
+
+}
+});
+
+// -----------------------------------function to control the visuels of the trafic light ------------------//
+//-----------------Consider what to do when the accuired number is reached, but not all answers have been filled-------//
 var green=document.getElementsByClassName("green")[0];
 var red=document.getElementsByClassName("red")[0];
 var yellow=document.getElementsByClassName("yellow")[0];
 
 document.addEventListener("keyup", function(){
-let charCount = document.getElementById('taskAConteneditableAnswer').innerHTML;
-console.log(charCount);
-if (charCount.length <= 80) {
-
+if (tasksCount===1 && charCount.length <= 50) {
   green.style.opacity=.2;
   yellow.style.opacity=.2;
   red.style.opacity=1;
 }
-else if (charCount.length >= 81 && charCount.length < 160) {
+else if (tasksCount===1 && charCount.length >= 51 && charCount.length <= 100) {
   green.style.opacity=.2;
   yellow.style.opacity=1;
   red.style.opacity=.2;
 }
-else {
+else if (tasksCount===1 && charCount.length > 100) {
   green.style.opacity=1;
   yellow.style.opacity=.2;
   red.style.opacity=.2;
+}
+else if(tasksCount===2 && charCount.length <= 80) {
+  green.style.opacity=.2;
+  yellow.style.opacity=.2;
+  red.style.opacity=1;
+}
+else if (tasksCount===2 && charCount.length >= 81 && charCount.length <= 100) {
+  green.style.opacity=.2;
+  yellow.style.opacity=1;
+  red.style.opacity=.2;
+}
+else if (tasksCount===2 && charCount.length > 100
+   && document.getElementById('textareaA').innerHTML.length != 0
+   && document.getElementById('textareaB').innerHTML.length != 0) {
+  green.style.opacity=1;
+  yellow.style.opacity=.2;
+  red.style.opacity=.2;
+}
+else if(tasksCount===3 && charCount.length <= 100) {
+  green.style.opacity=.2;
+  yellow.style.opacity=.2;
+  red.style.opacity=1;
+}
+else if (tasksCount===3 && charCount.length >= 101 && charCount.length <= 150) {
+  green.style.opacity=.2;
+  yellow.style.opacity=1;
+  red.style.opacity=.2;
+}
+else if (tasksCount===3 && charCount.length > 150
+   && document.getElementById('textareaA').innerHTML.length != 0
+   && document.getElementById('textareaB').innerHTML.length != 0
+   && document.getElementById('textareaC').innerHTML.length != 0) {
+  green.style.opacity=1;
+  yellow.style.opacity=.2;
+  red.style.opacity=.2;
+}
+else if(tasksCount===4 && charCount.length <= 130) {
+  green.style.opacity=.2;
+  yellow.style.opacity=.2;
+  red.style.opacity=1;
+}
+else if (tasksCount===4 && charCount.length >= 131 && charCount.length <= 200) {
+  green.style.opacity=.2;
+  yellow.style.opacity=1;
+  red.style.opacity=.2;
+}
+else if (tasksCount===4 && charCount.length > 200
+   && document.getElementById('textareaA').innerHTML.length != 0
+   && document.getElementById('textareaB').innerHTML.length != 0
+   && document.getElementById('textareaC').innerHTML.length != 0
+   && document.getElementById('textareaD').innerHTML.length != 0) {
+  green.style.opacity=1;
+  yellow.style.opacity=.2;
+  red.style.opacity=.2;
+}
+else if(tasksCount===5 && charCount.length <= 180) {
+  green.style.opacity=.2;
+  yellow.style.opacity=.2;
+  red.style.opacity=1;
+}
+else if (tasksCount===5 && charCount.length >= 181 && charCount.length <= 250) {
+  green.style.opacity=.2;
+  yellow.style.opacity=1;
+  red.style.opacity=.2;
+}
+else if (tasksCount===5 && charCount.length > 250
+   && document.getElementById('textareaA').innerHTML.length != 0
+   && document.getElementById('textareaB').innerHTML.length != 0
+   && document.getElementById('textareaC').innerHTML.length != 0
+   && document.getElementById('textareaD').innerHTML.length != 0
+   && document.getElementById('textareaE').innerHTML.length != 0) {
+  green.style.opacity=1;
+  yellow.style.opacity=.2;
+  red.style.opacity=.2;
+}
+else {
+  green.style.opacity=.2;
+  yellow.style.opacity=1;
+  red.style.opacity=.2;
+
 }
 
 });
