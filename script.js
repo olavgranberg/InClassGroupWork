@@ -434,7 +434,7 @@ let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
 waitingRoomUpdate .addEventListener('click', function() {
 
-  var txt= webstrate.clientId.value();
+  var txt= webstrate.clientId.innerHTML;
 
   var node = document.createElement("LI");                 // Create a <li> node
   var textnode = document.createTextNode(txt);         // Create a text node
