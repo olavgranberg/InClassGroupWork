@@ -124,6 +124,7 @@ document.getElementById("button1").addEventListener("click", function(){
 tasksCount=1;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
+  document.getElementById("waitingRoom").style.visibility = "hidden";
     document.getElementById("workspace").style.visibility = "visible";
       document.getElementById('textareaA').style.height = '350px';
 
@@ -135,6 +136,7 @@ document.getElementById("button2").addEventListener("click", function(){
 tasksCount=2;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
+  document.getElementById("waitingRoom").style.visibility = "hidden";
     document.getElementById("workspace").style.visibility = "visible";
     document.getElementById('textareaA').style.height = '175px';
     document.getElementById('textareaB').style.height = '175px';
@@ -146,6 +148,7 @@ document.getElementById("button3").addEventListener("click", function(){
 tasksCount=3;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
+  document.getElementById("waitingRoom").style.visibility = "hidden";
     document.getElementById("workspace").style.visibility = "visible";
     document.getElementById('textareaA').style.height = '100px';
     document.getElementById('textareaB').style.height = '100px';
@@ -159,6 +162,7 @@ document.getElementById("button4").addEventListener("click", function(){
 tasksCount=4;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
+  document.getElementById("waitingRoom").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
   document.getElementById('textareaA').style.height = '75px';
   document.getElementById('textareaB').style.height = '75px';
@@ -173,6 +177,7 @@ document.getElementById("button5").addEventListener("click", function(){
 tasksCount=5;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
+  document.getElementById("waitingRoom").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
   document.getElementById('textareaA').style.height = '55px';
   document.getElementById('textareaB').style.height = '55px';
@@ -423,3 +428,16 @@ var tablePQouteYearText=document.getElementById('tablePQouteYear').value;
 buttonAddWebOrBook.addEventListener('click', function() {
     document.getElementById("referenceForm").reset();
 });
+
+
+let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
+
+waitingRoomUpdate .addEventListener('click', function() {
+
+  var node = document.createElement("LI");                 // Create a <li> node
+  var textnode = document.createTextNode(webstrate.clientId);         // Create a text node
+  node.appendChild(textnode);                              // Append the text to <li>
+  document.getElementById("waitingRoomList").appendChild(node);
+
+
+}, false);

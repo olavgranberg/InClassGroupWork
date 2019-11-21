@@ -7,6 +7,22 @@ body{
 p{
   display: inline;
 }
+
+/* Online waiting room */
+
+#waitingRoom{
+  border:solid;
+  width: 30%;
+  margin-bottom: 30px;
+  position: absolute;
+  left:33%;
+  top: 20%;
+  text-align: center;
+  background-color: lightblue;
+
+
+}
+
 /* Initiator */
 .taskButtonsDiv{
   border:solid;
@@ -17,7 +33,7 @@ p{
   top: 40%;
   text-align: center;
   background-color: lightblue;
-  background-color: white;
+
 
 }
 
