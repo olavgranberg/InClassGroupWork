@@ -56,7 +56,8 @@ if (tasksCount===undefined){
   document.getElementById("textareaE").remove();
 
 
-  alert(webstrate.clientId);
+  var penis = webstrate.clientId();
+  console.log(penis);
 
 } else if (tasksCount===1){
 
