@@ -431,7 +431,7 @@ buttonAddWebOrBook.addEventListener('click', function() {
 
 
 
-document.getElementById("checkList").innerHTML = "";
+
 
 let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
