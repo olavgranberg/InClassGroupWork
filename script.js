@@ -128,7 +128,7 @@ tasksCount=1;
       document.getElementById('textareaA').style.height = '350px';
 
 
-          alert(webstrate.clientId);
+          alert("Your username is" + " " + webstrate.clientId);
 
 });
 document.getElementById("button2").addEventListener("click", function(){
