@@ -128,9 +128,8 @@ tasksCount=1;
       document.getElementById('textareaA').style.height = '350px';
 
 
-          var penis = webstrate.clientId();
-          console.log(penis);
-          
+          console.log(webstrate.clientId);
+        
 });
 document.getElementById("button2").addEventListener("click", function(){
 tasksCount=2;
