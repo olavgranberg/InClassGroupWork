@@ -431,8 +431,6 @@ buttonAddWebOrBook.addEventListener('click', function() {
 
 
 
-
-
 let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
 waitingRoomUpdate.addEventListener('click', function() {
