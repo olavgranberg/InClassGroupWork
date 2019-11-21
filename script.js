@@ -434,12 +434,16 @@ let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
 waitingRoomUpdate.addEventListener('click', function() {
 
-  var txt= webstrate.clientId;
+  var webstrateClientId = webstrate.clientId;
+  var webstrateClients = [];
+  webstrateClients.push(webstrate.clients);
+  alert(webstrateClients);
 
+/*
   var node = document.createElement("LI");                 // Create a <li> node
   var textnode = document.createTextNode(txt);         // Create a text node
   node.appendChild(textnode);                              // Append the text to <li>
   document.getElementById("waitingRoomList").appendChild(node);
-
+*/
 
 }, false);
