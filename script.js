@@ -435,7 +435,7 @@ let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
 waitingRoomUpdate.addEventListener('click', function() {
 
-document.getElementById("waitingRoomUList").innerHTML = "";
+document.getElementById("waitingRoomList").innerHTML = "";
 
 
   var webstrateClients = webstrate.clients;
