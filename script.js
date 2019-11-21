@@ -430,24 +430,27 @@ buttonAddWebOrBook.addEventListener('click', function() {
 });
 
 
+
+
 let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
 waitingRoomUpdate.addEventListener('click', function() {
 
-  var webstrateClientId = webstrate.clientId;
-  var webstrateClients = [];
-  webstrateClients.push(webstrate.clients[i]);
-  alert(webstrateClients);
+  var webstrateClients = webstrate.clients;
 
+  // webstrateClients.push(webstrate.clients);
+  alert(webstrateClients.length);
+
+/*
   for (i = 0; i < webstrateClients.length; i++){
-    alert(webstrateClients.length);
+    webstrateClients.push(webstrate.clients);
   var node = document.createElement("LI");                 // Create a <li> node
   var textnode = document.createTextNode(webstrateClients[i]);         // Create a text node
   node.appendChild(textnode);                              // Append the text to <li>
   document.getElementById("waitingRoomList").appendChild(node);
 }
 
-
+*/
 /*
   var node = document.createElement("LI");                 // Create a <li> node
   var textnode = document.createTextNode(txt);         // Create a text node
