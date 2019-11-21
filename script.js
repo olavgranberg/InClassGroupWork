@@ -436,11 +436,6 @@ let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
 waitingRoomUpdate.addEventListener('click', function() {
 
-  var waitingRoomList = document.getElementById("waitingRoomList");   // Get the <ul> element with id="myList"
-
-    while (waitingRoomList.hasChildNodes()) {
-      waitingRoomList.removeChild(list.firstChild);
-    }
 
   var webstrateClients = webstrate.clients;
 
