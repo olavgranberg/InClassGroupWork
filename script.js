@@ -436,7 +436,7 @@ waitingRoomUpdate.addEventListener('click', function() {
 
   var webstrateClientId = webstrate.clientId;
   var webstrateClients = [];
-  webstrateClients.push(webstrate.clients);
+  webstrateClients.push(webstrate.clientId);
   alert(webstrateClients);
 
   for (i = 0; i < webstrateClients.length; i++){
