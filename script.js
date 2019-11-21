@@ -442,8 +442,6 @@ waitingRoomUpdate.addEventListener('click', function() {
       list.removeChild(list.firstChild);
     }
   
-  list.removeChild(list.childNodes[0]);
-
   var webstrateClients = webstrate.clients;
 
   for (i = 0; i < webstrateClients.length; i++){
