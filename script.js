@@ -436,12 +436,12 @@ let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
 waitingRoomUpdate.addEventListener('click', function() {
 
-  var list = document.getElementById("waitingRoomList");   // Get the <ul> element with id="myList"
+  var waitingRoomList = document.getElementById("waitingRoomList");   // Get the <ul> element with id="myList"
 
-    while (list.hasChildNodes()) {
-      list.removeChild(list.firstChild);
+    while (waitingRoomList.hasChildNodes()) {
+      waitingRoomList.removeChild(list.firstChild);
     }
-  
+
   var webstrateClients = webstrate.clients;
 
   for (i = 0; i < webstrateClients.length; i++){
