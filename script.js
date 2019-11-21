@@ -128,8 +128,8 @@ tasksCount=1;
       document.getElementById('textareaA').style.height = '350px';
 
 
-          console.log(webstrate.clientId);
-        
+          alert(webstrate.clientId);
+
 });
 document.getElementById("button2").addEventListener("click", function(){
 tasksCount=2;
