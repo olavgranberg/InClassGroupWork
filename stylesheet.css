@@ -248,11 +248,7 @@ background-color: white;
 
 
 }
-#formElementsQoutesAndLitterature form{
 
-
-
-}
 #formElementsQoutesAndLitterature input{
 padding-left: 5px;
 padding-right: 5px;
@@ -261,6 +257,11 @@ width:650px;
   border: 3px solid black;
   margin:3px;
 }
+
+
+
+
+
 
 #buttonAddWebOrBook{
   cursor:pointer;
@@ -298,7 +299,7 @@ tr:nth-child(even) {
 }
 
 .deleteButtonsInTable {
-  
+
 }
 /* -----------------Styling af discussion-------------------- */
 

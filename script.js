@@ -55,6 +55,9 @@ if (tasksCount===undefined){
   document.getElementById("taskEBulletAnswer").remove();
   document.getElementById("textareaE").remove();
 
+
+  alert(webstrate.clientId);
+
 } else if (tasksCount===1){
 
   document.getElementById("taskBBullet").remove();
@@ -397,4 +400,8 @@ var tablePQouteYearText=document.getElementById('tablePQouteYear').value;
 
 
 
+});
+
+buttonAddWebOrBook.addEventListener('click', function() {
+    document.getElementById("referenceForm").reset();
 });
