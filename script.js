@@ -440,6 +440,7 @@ waitingRoomUpdate.addEventListener('click', function() {
   alert(webstrateClients);
 
   for (i = 0; i < webstrateClients.length; i++){
+    alert(webstrateClients.length);
   var node = document.createElement("LI");                 // Create a <li> node
   var textnode = document.createTextNode(webstrateClients[i]);         // Create a text node
   node.appendChild(textnode);                              // Append the text to <li>
