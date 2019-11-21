@@ -252,18 +252,7 @@ margin-bottom: 0px;
   left: 17%;
   top:8%;
 }
-#presentingDivDiscussionFindings{
-  height: 25%;
-  width: 90%;
-  border:solid 2px black;
-  opacity:0.5;
-  position: absolute;
-  bottom: 10%;
-  left:5%;
-}
-#presentingDivDiscussionFindings li{
-  margin:10 px;
-}
+
 /* DiscussionDiv */
 
 .discussionDiv{
@@ -314,8 +303,6 @@ width:650px;
   border: 3px solid black;
   margin:3px;
 }
-
-
 
 
 
@@ -474,7 +461,7 @@ tr:nth-child(even) {
 .addBtn:hover {
   background-color: #bbb;
 
-
+}
 
 /* Styling af presentingpoints*/
 
@@ -561,3 +548,4 @@ tr:nth-child(even) {
 
 .addBtnPresentingDiv:hover {
   background-color: #bbb;
+}

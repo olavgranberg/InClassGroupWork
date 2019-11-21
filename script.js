@@ -121,7 +121,7 @@ tasksCount=1;
   taskCountFunction(tasksCount);
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
-  
+
     document.getElementById("workspace").style.visibility = "visible";
       document.getElementById('answerAdiv').style.height = '160%';
 
@@ -466,7 +466,7 @@ document.getElementById("buttonBook").addEventListener("click", function () {
 
   document.getElementById("buttonAddWebOrBook").style.visibility = "visible";
     document.getElementById("formElementsQoutesAndLitterature").style.visibility = "visible";
-document.getElementById("descriptionsForTableP").style.visibility = "visible";
+
 
 
 
@@ -480,7 +480,7 @@ document.getElementById("buttonAddWebOrBook").addEventListener("click", function
       document.getElementById("qoutesAndLitteratureHeader").style.visibility = "visible";
       document.getElementById("buttonAddWebOrBook").style.visibility = "hidden";
       document.getElementById("formElementsQoutesAndLitterature").style.visibility = "hidden";
-      document.getElementById("descriptionsForTableP").style.visibility = "hidden";
+
       var tableRef = document.getElementById('table').getElementsByTagName('tbody')[0];
 
       // Insert a row in the table at the last row
