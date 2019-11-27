@@ -23,6 +23,7 @@ p{
 }
 
 #iframe{
+  background-color: none;
   position: absolute;
 }
 
