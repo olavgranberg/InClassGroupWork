@@ -14,6 +14,9 @@
   </ul>
   <button id="waitingRoomUpdate"> Opdater </button>
   </div>
+
+
+<!-- Select amount of tasks -->
   <div class="taskButtonsDiv" id="taskButtonsDiv">
     <h2> Select the number of tasks </h2>
   <button class="button1" id="button1">1</button>
@@ -24,31 +27,44 @@
 
   </div>
 
+
+  <!--        TASK            -->
+  <div class="taskDiv" id="taskDivId">
+    <h3>Tasks</h3>
+
+      <p id="taskABullet">a)</p><p id="taskAConteneditable" contenteditable="true"></p>
+  </br></br>
+      <p id="taskBBullet">b)</p><p id="taskBConteneditable" contenteditable="true"></p>
+  </br></br>
+      <p id="taskCBullet">c)</p><p id="taskCConteneditable" contenteditable="true"></p>
+  </br></br>
+      <p id="taskDBullet">d)</p><p id="taskDConteneditable" contenteditable="true"></p>
+  </br></br>
+      <p id="taskEBullet">e)</p><p id="taskEConteneditable" contenteditable="true"></p>
+
+
+      <button id="taskTransferButton" type="button" onclick="transferTasksToAnswer()">Continue</button>
+
+  </div>
+
+
+
+
   <div id="workspace">
   <h1 id="header"> This is your workspace </h1>
+
+
+  <!--
 <div class="roleDiv" id="roleDiv">
 
-  <h3 id="roleDivHeader"></h3>
+c<h3 id="roleDivHeader"></h3>
   <p id="roleDivDescription"></p>
 
 
 </div>
 
-<!--          TASK            -->
-<div class="taskDiv" id="taskDivId">
-  <h3>Tasks</h3>
 
-    <p id="taskABullet">a)</p><p id="taskAConteneditable" contenteditable="true"> </p>
-</br></br>
-    <p id="taskBBullet">b)</p><p id="taskBConteneditable" contenteditable="true"> </p>
-</br></br>
-    <p id="taskCBullet">c)</p><p id="taskCConteneditable" contenteditable="true"> </p>
-</br></br>
-    <p id="taskDBullet">d)</p><p id="taskDConteneditable" contenteditable="true"> </p>
-</br></br>
-    <p id="taskEBullet">e)</p><p id="taskEConteneditable" contenteditable="true"> </p>
 
-</div>
 
 <!--          PRESENTING            -->
 <div class="presentingDiv">
@@ -145,20 +161,25 @@
 <div class="answerDiv" id="answerDiv">
   <h3>Answers</h3>
   <div id='divContainingOnlyAnswers'>
+    <p id="taskABulletAnswer">a)</p>
 <div id= 'answerAdiv'>
-    <p id="taskABulletAnswer">a)</p><p id=textareaA class="answerContenteditableTrue" contenteditable="true"></p>
+    <p id=textareaA class="answerContenteditableTrue" contenteditable="true"></p>
     </div>
+    <p id="taskBBulletAnswer">b)</p>
 <div id= 'answerBdiv'>
-    <p id="taskBBulletAnswer">b)</p><p id=textareaB class="answerContenteditableTrue" contenteditable="true" ></p>
+    <p id=textareaB class="answerContenteditableTrue" contenteditable="true" ></p>
   </div>
+  <p id="taskCBulletAnswer">c)</p>
 <div id = 'answerCdiv'>
-    <p id="taskCBulletAnswer">c)</p><p id=textareaC class="answerContenteditableTrue" contenteditable="true"></p>
+    <p id=textareaC class="answerContenteditableTrue" contenteditable="true"></p>
   </div>
+  <p id="taskDBulletAnswer">d)</p>
 <div id='answerDdiv'>
-    <p id="taskDBulletAnswer">d)</p><p id=textareaD class="answerContenteditableTrue" contenteditable="true"></p>
+    <p id=textareaD class="answerContenteditableTrue" contenteditable="true"></p>
   </div>
+  <p id="taskEBulletAnswer">e)</p>
 <div id = answerEdiv>
-    <p id="taskEBulletAnswer">e)</p><p id=textareaE class="answerContenteditableTrue" contenteditable="true"></p>
+    <p id=textareaE class="answerContenteditableTrue" contenteditable="true"></p>
 </div>
 </div>
 <!-- TRAFIC LIGHT -->

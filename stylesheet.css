@@ -141,6 +141,7 @@ background-color: white;
 /* Task div style */
 .taskDiv{
 background-color: white;
+visibility:hidden; 
   border-style: solid;
   position: absolute;
   height: 60%;

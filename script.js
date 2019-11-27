@@ -3,6 +3,8 @@ let userId = Math.floor(Math.random() * 4) + 1;
 
 
 // If sentence that defines the users specific group role with a header and a paragraph
+
+/*
 let roleDivH3 = document.getElementById("roleDivHeader");
 let roleDivP = document.getElementById("roleDivDescription");
 if (userId===1){
@@ -19,7 +21,7 @@ if (userId===1){
   roleDivP.innerHTML = "A presenters role is to present the groups collaborative outcome/result. He can edit the “presenters textfield” but only add short sentences according to bullet points format";
 }
 
-
+*/
 
 // Variable that defines how many questions/tasks they're answering with a specifik ID
 
@@ -122,7 +124,7 @@ tasksCount=1;
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
 
-    document.getElementById("workspace").style.visibility = "visible";
+    document.getElementById("taskDivId").style.visibility = "visible";
       document.getElementById('answerAdiv').style.height = '160%';
 
 
@@ -133,7 +135,7 @@ tasksCount=2;
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
 
-    document.getElementById("workspace").style.visibility = "visible";
+    document.getElementById("taskDivId").style.visibility = "visible";
     document.getElementById('answerAdiv').style.height = '85%';
     document.getElementById('answerBdiv').style.height = '85%';
 
@@ -144,7 +146,7 @@ tasksCount=3;
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
 
-    document.getElementById("workspace").style.visibility = "visible";
+    document.getElementById("taskDivId").style.visibility = "visible";
     document.getElementById('answerAdiv').style.height = '55%';
     document.getElementById('answerBdiv').style.height = '55%';
     document.getElementById('answerCdiv').style.height = '55%';
@@ -157,7 +159,7 @@ tasksCount=4;
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
 
-  document.getElementById("workspace").style.visibility = "visible";
+  document.getElementById("taskDivId").style.visibility = "visible";
   document.getElementById('answerAdiv').style.height = '40%';
   document.getElementById('answerBdiv').style.height = '40%';
   document.getElementById('answerCdiv').style.height = '40%';
@@ -171,7 +173,7 @@ tasksCount=5;
   document.getElementById("taskButtonsDiv").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
 
-  document.getElementById("workspace").style.visibility = "visible";
+  document.getElementById("taskDivId").style.visibility = "visible";
   document.getElementById('answerAdiv').style.height = '33%';
   document.getElementById('answerBdiv').style.height = '33%';
   document.getElementById('answerCdiv').style.height = '33%';
@@ -181,9 +183,56 @@ tasksCount=5;
 });
 
 
+// ----------------- Transfer tasks to answer function------->
+
+function transferTasksToAnswer() {
+
+/*
+  let getInnerHtmlOfTaskA = document.getElementById("taskAConteneditable").innerHTML;
+  let getInnerHtmlOfTaskB = document.getElementById("taskBConteneditable").innerHTML;
+  let getInnerHtmlOfTaskC = document.getElementById("taskCConteneditable").innerHTML;
+  let getInnerHtmlOfTaskD = document.getElementById("taskDConteneditable").innerHTML;
+  let getInnerHtmlOfTaskE = document.getElementById("taskEConteneditable").innerHTML;
+*/
+  if (tasksCount === 1 && document.getElementById("taskAConteneditable").innerHTML != ""){
+      let getInnerHtmlOfTaskA = document.getElementById("taskAConteneditable").innerHTML;
+
+  document.getElementById("taskABulletAnswer").innerHTML="a)" + " " + getInnerHtmlOfTaskA;
+  document.getElementById("taskDivId").style.visibility = "hidden";
+  document.getElementById("workspace").style.visibility = "visible";
+
+} else if(tasksCount === 2 && document.getElementById("taskAConteneditable").innerHTML != ""
+&&  document.getElementById("taskBConteneditable").innerHTML != ""){
+  let getInnerHtmlOfTaskA = document.getElementById("taskAConteneditable").innerHTML;
+  let getInnerHtmlOfTaskB = document.getElementById("taskBConteneditable").innerHTML;
+
+  document.getElementById("taskABulletAnswer").innerHTML="A)" + " " + getInnerHtmlOfTaskA;
+  document.getElementById("taskBBulletAnswer").innerHTML="B)" + " " + getInnerHtmlOfTaskB;
+  document.getElementById("taskDivId").style.visibility = "hidden";
+  document.getElementById("workspace").style.visibility = "visible";
+
+} else if(tasksCount === 3 && document.getElementById("taskAConteneditable").innerHTML != ""
+&&  document.getElementById("taskBConteneditable").innerHTML != ""
+&&  document.getElementById("taskCConteneditable").innerHTML != ""){
+  let getInnerHtmlOfTaskA = document.getElementById("taskAConteneditable").innerHTML;
+  let getInnerHtmlOfTaskB = document.getElementById("taskBConteneditable").innerHTML;
+  let getInnerHtmlOfTaskC = document.getElementById("taskCConteneditable").innerHTML;
+
+  document.getElementById("taskABulletAnswer").innerHTML="A)" + " " + getInnerHtmlOfTaskA;
+  document.getElementById("taskBBulletAnswer").innerHTML="B)" + " " + getInnerHtmlOfTaskB;
+  document.getElementById("taskCBulletAnswer").innerHTML="C)" + " " + getInnerHtmlOfTaskC;
+  document.getElementById("taskDivId").style.visibility = "hidden";
+  document.getElementById("workspace").style.visibility = "visible";
+}
+else {
+alert('Ups, Looks like you forgot to fill out a Task!')
+}
 
 
-// --------------------- Create a discussion question --------------- //
+};
+
+
+// --------------------- Create a discussion question ---------------
 
 // Create a "close" button and append it to each list item
 var myULLList = document.getElementById("myUL");
@@ -547,14 +596,30 @@ document.getElementById("waitingRoomList").innerHTML = "";
 
 
   for (i = 0; i < webstrateClients.length; i++){
- var arrayText = webstrateClients[i];
+  var arrayText = webstrateClients[i];
   var node = document.createElement("LI");                 // Create a <li> node
   var textnode = document.createTextNode(arrayText);         // Create a text node
   node.appendChild(textnode);                              // Append the text to <li>
   document.getElementById("waitingRoomList").appendChild(node);
   }
-
-
-
-
 }, false);
+
+
+
+// Lyt på loaded --> den skal opdatere listen når jeg selv går ind på siden
+// derudover når nogle joiner
+// clientpart når nogle smutter
+// function (opdater listen) på loaded, clientjoin og client part
+
+// Tegn flowet --> vi skal beslutte os for, hvordan vi vil have flowet --> for at vide hvad der kan lade sig gøre
+// Virker ikke til, at der er en nem måde at understøtte forskellige permission på samme side (går imod designet)
+
+
+
+
+// Javascript --> set.attributes
+// 1. create pages --> with permission
+// create URL of tempplates
+// Create a copy of this URL and implement it
+// 2. Assign permission
+// 3. Add all of those to
