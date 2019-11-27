@@ -623,3 +623,21 @@ document.getElementById("waitingRoomList").innerHTML = "";
 // Create a copy of this URL and implement it
 // 2. Assign permission
 // 3. Add all of those to
+
+
+
+webstrate.on("loaded", function(webstrateId, clientId, user) {
+ 	let username = user.userId;
+    let usernameHolder = document.getElementById("usernameHolder");
+    let myUsername = document.createElement("p");
+	myUsername.id = clientId;
+	myUsername.setAttribute("style","display:block");
+    myUsername.innerText = username;
+    usernameHolder.appendChild(myUsername);
+});
+
+webstrate.on("clientPart", function(clientId) {
+	let partingUser = document.getElementById(clientId);
+	console.log(partingUser, clientId)
+	partingUser.parentNode.removeChild(partingUser);
+});
