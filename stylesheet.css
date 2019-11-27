@@ -8,6 +8,11 @@ p{
   display: inline;
 }
 
+#iframe{
+  background-color: none;
+  position: absolute;
+}
+
 /* Online waiting room */
 
 #waitingRoom{
@@ -22,10 +27,6 @@ p{
 
 }
 
-#iframe{
-  background-color: none;
-  position: absolute;
-}
 
 /* Initiator */
 .taskButtonsDiv{
