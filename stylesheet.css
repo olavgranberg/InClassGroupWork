@@ -20,7 +20,10 @@ p{
   text-align: center;
   background-color: lightblue;
 
+}
 
+#iframe{
+  position: absolute;
 }
 
 /* Initiator */
@@ -141,7 +144,7 @@ background-color: white;
 /* Task div style */
 .taskDiv{
 background-color: white;
-visibility:hidden; 
+visibility:hidden;
   border-style: solid;
   position: absolute;
   height: 60%;
