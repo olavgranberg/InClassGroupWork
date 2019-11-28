@@ -27,13 +27,14 @@ if (userId===1){
 // ------------------------------ getusername function ----------------------
 webstrate.on("loaded", function(webstrateId, clientId, user) {
  	let username = user.userId;
-    let usernameHolder = document.getElementById("waitingRoom");
+    let usernameHolder = document.getElementById("usernameHolder");
     let myUsername = document.createElement("p");
 	myUsername.id = clientId;
 	myUsername.setAttribute("style","display:block");
     myUsername.innerText = username;
     usernameHolder.appendChild(myUsername);
 });
+
 
 webstrate.on("clientPart", function(clientId) {
 	let partingUser = document.getElementById(clientId);
