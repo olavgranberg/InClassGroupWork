@@ -27,7 +27,7 @@ if (userId===1){
 // ------------------------------ getusername function ----------------------
 webstrate.on("loaded", function(webstrateId, clientId, user) {
  	let username = user.userId;
-    let usernameHolder = document.getElementById("usernameHolder");
+    let usernameHolder = document.getElementById("waitingRoom");
     let myUsername = document.createElement("p");
 	myUsername.id = clientId;
 	myUsername.setAttribute("style","display:block");
