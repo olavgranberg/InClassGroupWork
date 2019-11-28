@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reference</title>
+</head>
+<body>
+
+
+  <!--          REFERENCE            -->
+
+  <div class="qoutesAndLitteratureDiv">
+
+
+
+
+    <div id="formElementsQoutesAndLitterature">
+
+      <form id="referenceForm">
+
+        <input class="textInput" type="text" id="tablePQoute" onfocus="this.value=''"   value="Qoute: ANT er et vigtigt redskab">
+
+        <input class="textInput" type="text" id="tablePTitle" onfocus="this.value=''" value="Title: En introduktion til STS">
+
+          <input class="textInput" type="text" id="tablePAuthor" onfocus="this.value=''" value="Author: Fin Olesen">
+
+          <input class="textInput" type="text" id="tablePPageOrLink" onfocus="this.value=''" value="Pagenumber or link: 86">
+
+          <input class="textInput" type="text" id="tablePQouteYear" onfocus="this.value=''" value="Year: 2007">
+
+  <input type="button" id="buttonAddWebOrBook" value="Submit">
+
+      </form>
+
+
+  </div>
+
+    <h3 id="qoutesAndLitteratureHeader">Qoutes and litterature</h3>
+      <button id="buttonBook">Add reference</button>
+
+      <table id="table">
+    <tr>
+      <th>Qoute</th>
+
+      <th>Title</th>
+      <th>Author</th>
+      <th>Page or link</th>
+      <th>Year</th>
+      <th></th>
+    </tr>
+  </table>
+
+
+
+  </div>
+
+
+  </div>
+
+
+</div>
+
+
+<style>
+
+/* ReferenceDiv */
+.qoutesAndLitteratureDiv{
+background-color: white;
+    border:solid;
+    width: 47%;
+    height:30%;
+    margin-bottom: 30px;
+    position: absolute;
+    right:1%;
+    top: 69%;
+
+}
+.qoutesAndLitteratureDiv h3{
+  margin:10px;
+}
+#formElementsQoutesAndLitterature {
+
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top:1%;
+  visibility: hidden;
+
+
+}
+
+#formElementsQoutesAndLitterature input{
+padding-left: 5px;
+padding-right: 5px;
+  height: 30px;
+width:650px;
+  border: 3px solid black;
+  margin:3px;
+}
+
+
+
+
+#buttonAddWebOrBook{
+  cursor:pointer;
+}
+
+#tablePQoute{
+font-style: italic;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+td{
+max-width: 100px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+
+   }
+
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+
+<script>
+
+// ------------------------- QOUTES AND LITTERATURE -------------------------------- //
+
+
+//var x = document.getElementById("table"); x.style.display = "none"; //
+document.getElementById("buttonBook").addEventListener("click", function () {
+
+  document.getElementById("table").style.visibility = "hidden";
+  document.getElementById("buttonBook").style.visibility = "hidden";
+  document.getElementById("qoutesAndLitteratureHeader").style.visibility = "hidden";
+
+  document.getElementById("buttonAddWebOrBook").style.visibility = "visible";
+    document.getElementById("formElementsQoutesAndLitterature").style.visibility = "visible";
+
+
+
+
+});
+
+
+document.getElementById("buttonAddWebOrBook").addEventListener("click", function () {
+
+      document.getElementById("table").style.visibility = "visible";
+      document.getElementById("buttonBook").style.visibility = "visible";
+      document.getElementById("qoutesAndLitteratureHeader").style.visibility = "visible";
+      document.getElementById("buttonAddWebOrBook").style.visibility = "hidden";
+      document.getElementById("formElementsQoutesAndLitterature").style.visibility = "hidden";
+
+      var tableRef = document.getElementById('table').getElementsByTagName('tbody')[0];
+
+      // Insert a row in the table at the last row
+      var newRow   = tableRef.insertRow();
+
+      // Insert a cell in the row at index 0
+      var newCell  = newRow.insertCell(0);
+      var newCellTwo  = newRow.insertCell(1);
+        var newCellThree  = newRow.insertCell(2);
+          var newCellFour  = newRow.insertCell(3);
+            var newCellFive  = newRow.insertCell(4);
+            var newCellSix  = newRow.insertCell(5);
+
+
+var tablePText=document.getElementById('tablePQoute').value;
+var tablePTitleText=document.getElementById('tablePTitle').value;
+var tablePAuthorText=document.getElementById('tablePAuthor').value;
+var tablePPageOrLinkText=document.getElementById('tablePPageOrLink').value;
+var tablePQouteYearText=document.getElementById('tablePQouteYear').value;
+      // Append a text node to the cell
+      var newQoute  = document.createTextNode(tablePText);
+      var newTitle = document.createTextNode(tablePTitleText);
+      var newAuthor = document.createTextNode(tablePAuthorText);
+      var newPageOrLink = document.createTextNode(tablePPageOrLinkText);
+      var newYear = document.createTextNode(tablePQouteYearText);
+      var deleteButtonRow = document.createElement('BUTTON');
+      deleteButtonRow.className += "deleteButtonsInTable";
+      deleteButtonRow.innerHTML += "x";
+
+
+
+      deleteButtonRow.addEventListener('click', function() {
+        var i = deleteButtonRow.parentNode.parentNode.rowIndex;
+          document.getElementById("table").deleteRow(i);
+
+}, false);
+
+
+
+      newCell.appendChild(newQoute);
+      newCellTwo.appendChild(newTitle);
+      newCellThree.appendChild(newAuthor);
+      newCellFour.appendChild(newPageOrLink);
+      newCellFive.appendChild(newYear);
+      newCellSix.appendChild(deleteButtonRow);
+
+
+
+});
+
+buttonAddWebOrBook.addEventListener('click', function() {
+    document.getElementById("referenceForm").reset();
+});
+
+
+
+let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
+
+waitingRoomUpdate.addEventListener('click', function() {
+
+document.getElementById("waitingRoomList").innerHTML = "";
+
+  var webstrateClients = webstrate.clients;
+
+
+  for (i = 0; i < webstrateClients.length; i++){
+  var arrayText = webstrateClients[i];
+  var node = document.createElement("LI");                 // Create a <li> node
+  var textnode = document.createTextNode(arrayText);         // Create a text node
+  node.appendChild(textnode);                              // Append the text to <li>
+  document.getElementById("waitingRoomList").appendChild(node);
+  }
+}, false);
+
+
+
+</script>
+</body>
+</html>

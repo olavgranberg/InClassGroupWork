@@ -7,14 +7,14 @@
 </head>
 <body>
 
+<!--
+Presenter link = https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/
+Analyst link = https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/
+Reference link = https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/
+Answer link = https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/
 
-
-<!-- <iframe id ="iframe" src="https://demo.webstrates.net/new?prototypeUrl=https://github.com/olavgranberg/inClassGroupWorkPresenter/archive/master.zip" height="200" width="300"></iframe> -->
-<iframe id ="iframePresenter" src="https://demo.webstrates.net/happy-badger-42/?fbclid=IwAR3F1xhkHk5Lv32Cnle8tXFNi2M3ifZwNNGChWzcE0ukskxytTlWkSxm288" height="200" width="300"></iframe>
-<!-- <iframe id ="iframeAnswer" src="" height="200" width="300"</iframe>
-<iframe id ="iframeReference" src="" height="200" width="300" </iframe>
-<iframe id ="iframeAnalyst" src ="" height="200" width="300"</iframe>
 -->
+
 
 <div id="usernameHolder"></div>
   <div id="waitingRoom">
@@ -25,181 +25,22 @@
   </div>
 
 
-<!-- Select amount of tasks -->
-  <div class="taskButtonsDiv" id="taskButtonsDiv">
-    <h2> Select the number of tasks </h2>
-  <button class="button1" id="button1">1</button>
-  <button class="button2" id="button2">2</button>
-  <button class="button3" id="button3">3</button>
-  <button class="button4" id="button4">4</button>
-  <button class="button5" id="button5">5</button>
 
-  </div>
+<div id="workspace">
 
 
-  <!--        TASK            -->
-  <div class="taskDiv" id="taskDivId">
-    <h3>Tasks</h3>
-
-      <p id="taskABullet">a)</p><p id="taskAConteneditable" contenteditable="true"></p>
-  </br></br>
-      <p id="taskBBullet">b)</p><p id="taskBConteneditable" contenteditable="true"></p>
-  </br></br>
-      <p id="taskCBullet">c)</p><p id="taskCConteneditable" contenteditable="true"></p>
-  </br></br>
-      <p id="taskDBullet">d)</p><p id="taskDConteneditable" contenteditable="true"></p>
-  </br></br>
-      <p id="taskEBullet">e)</p><p id="taskEConteneditable" contenteditable="true"></p>
-
-
-      <button id="taskTransferButton" type="button" onclick="transferTasksToAnswer()">Continue</button>
-
-  </div>
-
-
-
-
-  <div id="workspace">
-  <h1 id="header"> This is your workspace </h1>
-
-
-  <!--
-<div class="roleDiv" id="roleDiv">
-
-c<h3 id="roleDivHeader"></h3>
-  <p id="roleDivDescription"></p>
-
+<iframe id ="iframe" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy" height="200" width="300"></iframe>
+ <iframe id ="iframe" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy" height="200" width="300"></iframe>
+<iframe id ="iframePresenter" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy" height="200" width="300"></iframe>
+<iframe id ="iframeAnswer" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy" height="200" width="300"></iframe>
 
 </div>
 
 
 
 
-<!--          PRESENTING            -->
-<div class="presentingDiv">
-
-  <h2 style="margin:5px">Presenting notes</h2>
-
-  <input type="text" id="myInputPresentingDiv" placeholder="Max 60 chars">
-  <span onclick="newElementPresentingDiv()" class="addBtnPresentingDiv">Add</span>
 
 
-  <ul id="myULPresentingDiv" class="myULPresentingDiv">
-
-  </ul>
-
-
-</div>
-
-
-<!--          DISCUSSION            -->
-<div class="discussionDiv" >
-  <h2 style="margin:5px">Discussion</h2>
-  <input type="text" id="myInput" placeholder="Write your discussion questions here..">
-  <span onclick="newElement()" class="addBtn">Add</span>
-
-
-  <ul id="myUL" class="myUL">
-
-  </ul>
-
-</div>
-
-
-
-<!--          REFERENCE            -->
-<!-- onclick=myFunction() -->
-<div class="qoutesAndLitteratureDiv">
-
-
-
-
-  <div id="formElementsQoutesAndLitterature">
-
-    <form id="referenceForm">
-
-      <input class="textInput" type="text" id="tablePQoute" onfocus="this.value=''"   value="Qoute: ANT er et vigtigt redskab">
-
-      <input class="textInput" type="text" id="tablePTitle" onfocus="this.value=''" value="Title: En introduktion til STS">
-
-        <input class="textInput" type="text" id="tablePAuthor" onfocus="this.value=''" value="Author: Fin Olesen">
-
-        <input class="textInput" type="text" id="tablePPageOrLink" onfocus="this.value=''" value="Pagenumber or link: 86">
-
-        <input class="textInput" type="text" id="tablePQouteYear" onfocus="this.value=''" value="Year: 2007">
-
-<input type="button" id="buttonAddWebOrBook" value="Submit">
-
-    </form>
-
-<!--
-  <p id="tablePQoute" contenteditable="true"> Qoute...</p>
-</br>
-  <p id="tablePTitle" contenteditable="true"> Title..</p>
-  </br>
-  <p id="tablePAuthor" contenteditable="true"> Author..</p>
-  </br>
-  <p id="tablePPageOrLink" contenteditable="true"> Page or link...</p>
-  </br>
-  <p id="tablePQouteYear" contenteditable="true"> Year</p>
--->
-</div>
-
-  <h3 id="qoutesAndLitteratureHeader">Qoutes and litterature</h3>
-    <button id="buttonBook">Add reference</button>
-
-    <table id="table">
-  <tr>
-    <th>Qoute</th>
-
-    <th>Title</th>
-    <th>Author</th>
-    <th>Page or link</th>
-    <th>Year</th>
-    <th></th>
-  </tr>
-</table>
-
-
-
-</div>
-
-
-
-<!--          ANSWER            -->
-<div class="answerDiv" id="answerDiv">
-  <h3>Answers</h3>
-  <div id='divContainingOnlyAnswers'>
-    <p id="taskABulletAnswer">a)</p>
-<div id= 'answerAdiv'>
-    <p id=textareaA class="answerContenteditableTrue" contenteditable="true"></p>
-    </div>
-    <p id="taskBBulletAnswer">b)</p>
-<div id= 'answerBdiv'>
-    <p id=textareaB class="answerContenteditableTrue" contenteditable="true" ></p>
-  </div>
-  <p id="taskCBulletAnswer">c)</p>
-<div id = 'answerCdiv'>
-    <p id=textareaC class="answerContenteditableTrue" contenteditable="true"></p>
-  </div>
-  <p id="taskDBulletAnswer">d)</p>
-<div id='answerDdiv'>
-    <p id=textareaD class="answerContenteditableTrue" contenteditable="true"></p>
-  </div>
-  <p id="taskEBulletAnswer">e)</p>
-<div id = answerEdiv>
-    <p id=textareaE class="answerContenteditableTrue" contenteditable="true"></p>
-</div>
-</div>
-<!-- TRAFIC LIGHT -->
-
-<div id='traficLight'>
-      <div class="green"></div>
-      <div class="yellow"></div>
-      <div class="red"></div>
-</div>
-
-</div>
 <script src="script.js"></script>
 </body>
 </html>
