@@ -91,6 +91,6 @@ waitingRoomUpdate.addEventListener('click', function() {
 let testButton = document.getElementById("testButton");
 testButton.addEventListener('click', function() {
 
-alert(document.getElementById("iframeAnswer").contentWindow.location.href);
+alert("Hej");
 
 });
