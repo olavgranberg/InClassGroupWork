@@ -36,6 +36,36 @@ body{
   visibility: hidden;
 }
 
+
+#analystRoleUnderstood{
+  position:absolute;
+  top: 8%;
+  right: 8%;
+
+}
+
+#presenterRoleUnderstood{
+  position:absolute;
+  top: 8%;
+  left: 8%;
+
+}
+
+#answerRoleUnderstood{
+  bottom: : 8%;
+  left: 8%;
+
+}
+
+#referenceRoleUnderstood{
+  bottom: 8%;
+  right: 8%;
+}
+
+
+
+
+
 #iframeAnswer{
   position: absolute;
   top: 5%;
