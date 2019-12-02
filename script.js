@@ -85,7 +85,7 @@ waitingRoomUpdate.addEventListener('click', function() {
  workspaceDiv.appendChild(iframeReference);
 
 
- alert(document.getElementById("iframeAnswer").contentWindow.location.href);
+ console.log(document.getElementById("iframeAnswer").contentWindow.location.href);
 
 
 });
