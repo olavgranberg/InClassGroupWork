@@ -35,3 +35,29 @@ body{
 #workspace{
   visibility: hidden;
 }
+
+#iframeAnswer{
+  position: absolute;
+  top: 8%;
+  right:2%;
+  height: 80%;
+  width: 300 px;
+
+}
+#iframePresenter{
+  position: absolute;
+  top:8%;
+  left:2%;
+  height: 30%;
+  width: 300 px;
+}
+#iframeAnalyst{
+  position: absolute;
+  height: 200px;
+  width: 300 px;
+}
+#iframeReferencer{
+  position: absolute;
+  height: 200px;
+  width: 300 px;
+}
