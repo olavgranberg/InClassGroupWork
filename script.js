@@ -66,22 +66,22 @@ waitingRoomUpdate.addEventListener('click', function() {
  workspaceDiv.appendChild(iframeAnswer);
 
  let iframePresenter = document.createElement("iframe");
- iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy");
- iframeAnswer.setAttribute("id", "iframePresenter");
+ iframePresenter.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy");
+ iframePresenter.setAttribute("id", "iframePresenter");
  workspaceDiv.appendChild(iframePresenter);
 
 
 
  let iframeAnalyst = document.createElement("iframe");
- iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy");
- iframeAnswer.setAttribute("id", "iframeAnalyst");
+ iframeAnalyst.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy");
+ iframeAnalyst.setAttribute("id", "iframeAnalyst");
  workspaceDiv.appendChild(iframeAnalyst);
 
 
 
  let iframeReference = document.createElement("iframe");
- iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy");
- iframeAnswer.setAttribute("id", "iframeReference");
+ iframeReference.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy");
+ iframeReference.setAttribute("id", "iframeReference");
  workspaceDiv.appendChild(iframeReference);
 
 
