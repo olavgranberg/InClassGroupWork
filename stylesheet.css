@@ -47,7 +47,7 @@ body{
 #iframePresenter{
   position: absolute;
   height: 45%;
-  width: 30% px;
+  width: 30%;
 }
 #iframeAnalyst{
   position: absolute;
@@ -56,8 +56,6 @@ body{
 }
 #iframeReferencer{
   position: absolute;
-  top: 8%;
-  left: 2%;
   height: 90%;
   width: 30%;
 }
