@@ -46,43 +46,43 @@ body{
 }
 
 #analystRole{
-  position:absolute;
   border: 5px solid blue;
   width: 30%;
   height: 30%;
   top: 18%;
   right: 2%;
+  position:absolute;
 
 }
 
 #presenterRole{
-  position:absolute;
   border: 5px solid yellow;
   width: 30%;
   height: 30%;
-
   top: 48%;
   left: 2%;
-
+  position:absolute;
 }
 
 #answerRole{
-  position:absolute;
+
   border: 5px solid green;
   width: 30%;
   height: 30%;
   top: : 8%;
   left: 2%;
+  position:absolute;
 
 }
 
 #referenceRole{
-  position:absolute;
+
   border: 5px solid red;
   width: 30%;
   height: 30%;
   top: 48%;
   right: 2%;
+  position:absolute;
 }
 
 
