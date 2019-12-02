@@ -26,13 +26,15 @@ if (userId===1){
 
 // ------------------------------ getusername function ----------------------
 webstrate.on("loaded", function(webstrateId, clientId, user) {
+
  	let username = user.userId;
-    let usernameHolder = document.getElementById("usernameHolder");
-    let myUsername = document.createElement("p");
+    let usernameHolder = document.getElementById("usernameHolderList");
+    let myUsername = document.createElement("li");
 	myUsername.id = clientId;
 	myUsername.setAttribute("style","display:block");
     myUsername.innerText = username;
     usernameHolder.appendChild(myUsername);
+
 });
 
 
