@@ -93,6 +93,6 @@ webstrate.on("clientPart", function(clientId) {
 
   document.getElementById("testButton").addEventListener("click", function() {
 
-alert(document.getElementById("iframeAnalyst").href.value;
+alert(document.getElementById("iframeAnalyst").href.value);
 
 });
