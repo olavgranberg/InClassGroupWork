@@ -60,7 +60,7 @@ waitingRoomUpdate.addEventListener('click', function() {
 
  let workspaceDiv = document.getElementById("workspace");
 
- let iframeAnswer = document.createElement("iframe");
+ let iframeAnswer = workspaceDiv.createElement("iframe");
  iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy");
  iframeAnswer.setAttribute("id", "iframeAnswer");
 
