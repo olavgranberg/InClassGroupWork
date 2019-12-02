@@ -86,7 +86,11 @@ waitingRoomUpdate.addEventListener('click', function() {
  workspaceDiv.appendChild(iframeReference);
 
 
- console.log(document.getElementById("iframeAnswer").contentWindow.location.href);
+});
 
+let testButton = document.getElementById("testButton");
+testButton.addEventListener('click', function() {
+
+alert(document.getElementById("iframeAnswer").contentWindow.location.href);
 
 });
