@@ -49,11 +49,13 @@ webstrate.on("clientPart", function(clientId) {
 
 
 // ----------------------------- Client ids -------------------
-let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
+  document.getElementById("waitingRoomUpdate").addEventListener("click", function() {
 
 // ----------------------- hide waitingroom and show workspace ----
 
-waitingRoomUpdate.addEventListener('click', function() {
+
+
+
   document.getElementById("waitingRoom").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
 
