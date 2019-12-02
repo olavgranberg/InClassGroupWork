@@ -46,22 +46,23 @@ body{
 }
 #iframePresenter{
   position: absolute;
-  height: 43%;
+  height: 45%;
   width: 30%;
   left:33%;
   top:5%;
 }
 #iframeAnalyst{
   position: absolute;
-  height: 43%;
+  height: 45%;
   width: 30%;
   left: 33%;
   top:50%;
+
 }
 #iframeReference{
   position: absolute;
   height: 90%;
-  width: 33%;
+  width: 30%;
   left:2%;
   top: 5%;
 }
