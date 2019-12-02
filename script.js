@@ -51,13 +51,6 @@ webstrate.on("clientPart", function(clientId) {
 // ----------------------------- Client ids -------------------
   document.getElementById("waitingRoomUpdate").addEventListener("click", function() {
 
-// ----------------------- hide waitingroom and show workspace ----
-
-
-
-
-  document.getElementById("waitingRoom").style.visibility = "hidden";
-  document.getElementById("workspace").style.visibility = "visible";
 
 //--------------------------- create iframes -------------------------
 
@@ -91,8 +84,16 @@ webstrate.on("clientPart", function(clientId) {
 });
 
 
-  document.getElementById("testButton").addEventListener("click", function() {
+  document.getElementById("Start").addEventListener("click", function() {
 
-alert(document.getElementById('iframeAnalyst').contentDocument.location);
-alert(document.getElementById('iframeAnalyst').src);
-});
+// ----------------------- hide waitingroom and show workspace ----
+
+
+  document.getElementById("waitingRoom").style.visibility = "hidden";
+  document.getElementById("workspace").style.visibility = "visible";
+
+let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
+iframeAnalyst.setAttribute("src", iframeAnalystUpdated);
+
+
+  });
