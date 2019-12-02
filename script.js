@@ -63,7 +63,28 @@ waitingRoomUpdate.addEventListener('click', function() {
  let iframeAnswer = document.createElement("iframe");
  iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy");
  iframeAnswer.setAttribute("id", "iframeAnswer");
-workspaceDiv.appendChild(iframeAnswer);
+ workspaceDiv.appendChild(iframeAnswer);
+
+ let iframePresenter = document.createElement("iframe");
+ iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy");
+ iframeAnswer.setAttribute("id", "iframeAnswer");
+ workspaceDiv.appendChild(iframePresenter);
+
+
+
+ let iframeAnalyst = document.createElement("iframe");
+ iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy");
+ iframeAnswer.setAttribute("id", "iframeAnswer");
+ workspaceDiv.appendChild(iframeAnalyst);
+
+
+
+ let iframeReference = document.createElement("iframe");
+ iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy");
+ iframeAnswer.setAttribute("id", "iframeAnswer");
+ workspaceDiv.appendChild(iframeReference);
+
+
 
 
 });
