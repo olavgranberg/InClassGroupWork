@@ -40,12 +40,10 @@ body{
 
 /* Styling Role dives */
 
-#hideThis{
-  width: 100%;
-  height: 100%;
-}
+
 
 #analystRole{
+  background-color: white;
   border: 5px solid blue;
   width: 30%;
   height: 30%;
@@ -56,6 +54,7 @@ body{
 }
 
 #presenterRole{
+  background-color: white;
   border: 5px solid yellow;
   width: 30%;
   height: 30%;
@@ -65,7 +64,7 @@ body{
 }
 
 #answerRole{
-
+  background-color: white;
   border: 5px solid green;
   width: 30%;
   height: 30%;
@@ -76,7 +75,7 @@ body{
 }
 
 #referenceRole{
-
+  background-color: white;
   border: 5px solid red;
   width: 30%;
   height: 30%;
