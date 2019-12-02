@@ -51,7 +51,7 @@ body{
   height: 30%;
   position:absolute;
   top: 8%;
-  right: 8%;
+  right: 4%;
 
 }
 
@@ -61,25 +61,27 @@ body{
   height: 30%;
   position:absolute;
   top: 8%;
-  left: 8%;
+  left: 4%;
 
 }
 
 #answerRole{
+  position:absolute;
   border: 5px solid red;
   width: 30%;
   height: 30%;
   top: : 48%;
-  left: 8%;
+  left: 4%;
 
 }
 
 #referenceRole{
+  position:absolute;
   border: 5px solid red;
   width: 30%;
   height: 30%;
   top: 48%;
-  right: 8%;
+  right: 4%;
 }
 
 
