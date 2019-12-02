@@ -125,7 +125,7 @@ webstrate.on("clientPart", function(clientId) {
 
 // ----------------------- hide waitingroom and show workspace ----
 
-
+  document.getElementById("hideThis").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
 
