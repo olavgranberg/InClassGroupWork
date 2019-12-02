@@ -54,12 +54,23 @@ webstrate.on("clientPart", function(clientId) {
 
 //--------------------------- create iframes -------------------------
 
+/*
  let workspaceDiv = document.getElementById("workspace");
 
  let iframeAnswer = document.createElement("iframe");
  iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy");
  iframeAnswer.setAttribute("id", "iframeAnswer");
  workspaceDiv.appendChild(iframeAnswer);
+
+
+<iframe id ="iframeAnswer" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy"></iframe>
+
+<iframe id ="iframeAnalyst src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy"></iframe>
+
+<iframe id ="iframeReference" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy"></iframe>
+
+<iframe id ="iframePresenter" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy"></iframe>
+
 
  let iframePresenter = document.createElement("iframe");
  iframePresenter.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy");
@@ -79,7 +90,7 @@ webstrate.on("clientPart", function(clientId) {
  iframeReference.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy");
  iframeReference.setAttribute("id", "iframeReference");
  workspaceDiv.appendChild(iframeReference);
-
+*/
 
 });
 
