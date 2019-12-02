@@ -40,6 +40,10 @@ body{
 
 /* Styling Role dives */
 
+#hideThis{
+  width: 100%;
+  height: 100%;
+}
 
 #analystRole{
   border: 5px solid red;
