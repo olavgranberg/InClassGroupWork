@@ -40,24 +40,24 @@ body{
   position: absolute;
   top: 8%;
   right:2%;
-  height: 80%;
-  width: 300 px;
+  height: 90%;
+  width: 30%;
 
 }
 #iframePresenter{
   position: absolute;
   top:8%;
   left:2%;
-  height: 30%;
-  width: 300 px;
+  height: 4%;
+  width: 30% px;
 }
 #iframeAnalyst{
   position: absolute;
-  height: 200px;
-  width: 300 px;
+  height: 45%;
+  width: 30%;
 }
 #iframeReferencer{
   position: absolute;
-  height: 200px;
-  width: 300 px;
+  height: 90%;
+  width: 30% ;
 }
