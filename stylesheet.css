@@ -37,8 +37,14 @@ body{
 }
 
 
+
+/* Styling Role dives */
+
+
 #analystRole{
-    border: 5px solid red;
+  border: 5px solid red;
+  width: 30%;
+  height: 30%;
   position:absolute;
   top: 8%;
   right: 8%;
@@ -47,6 +53,8 @@ body{
 
 #presenterRole{
   border: 5px solid red;
+  width: 30%;
+  height: 30%;
   position:absolute;
   top: 8%;
   left: 8%;
@@ -54,14 +62,18 @@ body{
 }
 
 #answerRole{
-    border: 5px solid red;
+  border: 5px solid red;
+  width: 30%;
+  height: 30%;
   bottom: : 8%;
   left: 8%;
 
 }
 
 #referenceRole{
-    border: 5px solid red;
+  border: 5px solid red;
+  width: 30%;
+  height: 30%;
   bottom: 8%;
   right: 8%;
 }
@@ -69,6 +81,7 @@ body{
 
 
 
+/* Styling iframes */
 
 #iframeAnswer{
   position: absolute;
