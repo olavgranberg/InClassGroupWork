@@ -51,12 +51,12 @@ webstrate.on("clientPart", function(clientId) {
 // ----------------------------- Client ids -------------------
 let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
 
+// ----------------------- hide waitingroom and show workspace ----
+
 waitingRoomUpdate.addEventListener('click', function() {
-
-  document.getElementById("workspace").style.visibility = "visible";
   document.getElementById("waitingRoom").style.visibility = "hidden";
+  document.getElementById("workspace").style.visibility = "visible";
 
-});
 //--------------------------- create iframes -------------------------
 
  let workspaceDiv = document.getElementById("workspace");
