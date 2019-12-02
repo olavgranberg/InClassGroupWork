@@ -25,7 +25,7 @@ if (userId===1){
 
 
 // ------------------------------ getusername function ----------------------
-/*webstrate.on("loaded", function(webstrateId, clientId, user) {
+webstrate.on("loaded", function(webstrateId, clientId, user) {
 
  	let username = user.userId;
     let usernameHolder = document.getElementById("usernameHolderList");
@@ -36,20 +36,6 @@ if (userId===1){
     usernameHolder.appendChild(myUsername);
 
 });
-*/
-
-webstrate.on("loaded", function(clientId) {
-
- 	let username = user.userId;
-    let usernameHolder = document.getElementById("usernameHolderList");
-    let myUsername = document.createElement("li");
-	myUsername.id = clientId;
-	myUsername.setAttribute("style","display:block");
-    myUsername.innerText = username;
-    usernameHolder.appendChild(myUsername);
-
-});
-
 
 
 webstrate.on("clientPart", function(clientId) {
@@ -60,14 +46,6 @@ webstrate.on("clientPart", function(clientId) {
 
 
 
-/*
-webstrate.on("clientPart", function(clientId) {
-	let partingUser = document.getElementById(clientId);
-	console.log(partingUser, clientId)
-	partingUser.parentNode.removeChild(partingUser);
-});
-
-*/
 
 
 // ----------------------------- Client ids -------------------
