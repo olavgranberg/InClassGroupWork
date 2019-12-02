@@ -64,6 +64,8 @@ waitingRoomUpdate.addEventListener('click', function() {
  iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy");
  iframeAnswer.setAttribute("id", "iframeAnswer");
  workspaceDiv.appendChild(iframeAnswer);
+ alert(document.getElementById("iframeAnswer").contentWindow.location.href);
+)
 
  let iframePresenter = document.createElement("iframe");
  iframePresenter.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy");
