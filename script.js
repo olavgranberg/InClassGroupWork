@@ -51,9 +51,7 @@ waitingRoomUpdate.addEventListener('click', function() {
 
   document.getElementById("workspace").style.visibility = "visible";
   document.getElementById("waitingRoom").style.visibility = "hidden";
-});
 
-/*
 document.getElementById("waitingRoomList").innerHTML = "";
 
   var webstrateClients = webstrate.clients;
@@ -66,4 +64,4 @@ document.getElementById("waitingRoomList").innerHTML = "";
   node.appendChild(textnode);                              // Append the text to <li>
   document.getElementById("waitingRoomList").appendChild(node);
   }
-*/
+});
