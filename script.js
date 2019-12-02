@@ -37,8 +37,8 @@ webstrate.on("loaded", function(webstrateId, clientId, user) {
 
 
 webstrate.on("clientPart", function(clientId) {
+  alert(clientId, user.userId, clientId.userId);
 	let partingUser = document.getElementById(clientId);
-	alert(partingUser, clientId);
 	partingUser.parentNode.removeChild(partingUser);
 });
 
