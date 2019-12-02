@@ -88,9 +88,8 @@ waitingRoomUpdate.addEventListener('click', function() {
 
 });
 
-let testButton = document.getElementById("testButton");
 
-testButton.addEventListener('click', function() {
+  document.getElementById("testButton").addEventListener("click", function() {
 
   alert("hej");
 
