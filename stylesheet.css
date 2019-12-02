@@ -51,7 +51,7 @@ body{
   height: 30%;
   position:absolute;
   top: 8%;
-  right: 4%;
+  right: 2%;
 
 }
 
@@ -60,8 +60,8 @@ body{
   width: 30%;
   height: 30%;
   position:absolute;
-  top: 8%;
-  left: 4%;
+  top: 48%;
+  left: 2%;
 
 }
 
@@ -70,8 +70,8 @@ body{
   border: 5px solid red;
   width: 30%;
   height: 30%;
-  top: : 48%;
-  left: 4%;
+  top: : 8%;
+  left: 2%;
 
 }
 
@@ -81,7 +81,7 @@ body{
   width: 30%;
   height: 30%;
   top: 48%;
-  right: 4%;
+  right: 2%;
 }
 
 
