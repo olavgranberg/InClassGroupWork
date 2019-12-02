@@ -47,14 +47,14 @@ webstrate.on("clientPart", function(clientId) {
 
 
 
-
+/*
 // ----------------------------- Client ids -------------------
   document.getElementById("waitingRoomUpdate").addEventListener("click", function() {
 
 
 //--------------------------- create iframes -------------------------
 
-/*
+
  let workspaceDiv = document.getElementById("workspace");
 
  let iframeAnswer = document.createElement("iframe");
@@ -62,14 +62,6 @@ webstrate.on("clientPart", function(clientId) {
  iframeAnswer.setAttribute("id", "iframeAnswer");
  workspaceDiv.appendChild(iframeAnswer);
 
-
-<iframe id ="iframeAnswer" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy"></iframe>
-
-<iframe id ="iframeAnalyst src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy"></iframe>
-
-<iframe id ="iframeReference" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy"></iframe>
-
-<iframe id ="iframePresenter" src="https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy"></iframe>
 
 
  let iframePresenter = document.createElement("iframe");
@@ -90,9 +82,10 @@ webstrate.on("clientPart", function(clientId) {
  iframeReference.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy");
  iframeReference.setAttribute("id", "iframeReference");
  workspaceDiv.appendChild(iframeReference);
-*/
+
 
 });
+*/
 
 
   document.getElementById("referenceRoleUnderstood").addEventListener("click", function() {
