@@ -95,5 +95,14 @@ webstrate.on("clientPart", function(clientId) {
 let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
 iframeAnalyst.setAttribute("src", iframeAnalystUpdated);
 
+let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
+iframeAnswer.setAttribute("src", iframeAnswerUpdated);
+
+let iframeReferenceUpdated = document.getElementById('iframeReference').contentDocument.location;
+iframeReference.setAttribute("src", iframeReferenceUpdated);
+
+let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
+iframePresenter.setAttribute("src", iframePresenterUpdated);
+
 
   });
