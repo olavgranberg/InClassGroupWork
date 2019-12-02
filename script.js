@@ -55,4 +55,24 @@ waitingRoomUpdate.addEventListener('click', function() {
 
   document.getElementById("workspace").style.visibility = "visible";
   document.getElementById("waitingRoom").style.visibility = "hidden";
+
+//--------------------------- create iframes -------------------------
+
+ let workspaceDiv = document.getElementById("workspace");
+
+ let iframeAnswer = document.createElement("iframe");
+ iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy");
+ iframeAnswer.setAttribute("id", "iframeAnswer");
+
+
+
 });
+
+
+function prepareFrame() {
+        var ifrm = document.createElement("iframe");
+        ifrm.setAttribute("src", "http://google.com/");
+        ifrm.style.width = "640px";
+        ifrm.style.height = "480px";
+        document.body.appendChild(ifrm);
+    }
