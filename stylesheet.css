@@ -37,27 +37,27 @@ body{
 }
 
 
-#analystRoleUnderstood{
+#analystRole{
   position:absolute;
   top: 8%;
   right: 8%;
 
 }
 
-#presenterRoleUnderstood{
+#presenterRole{
   position:absolute;
   top: 8%;
   left: 8%;
 
 }
 
-#answerRoleUnderstood{
+#answerRole{
   bottom: : 8%;
   left: 8%;
 
 }
 
-#referenceRoleUnderstood{
+#referenceRole{
   bottom: 8%;
   right: 8%;
 }
