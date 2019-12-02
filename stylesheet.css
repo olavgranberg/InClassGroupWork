@@ -58,6 +58,8 @@ body{
 }
 #iframeReferencer{
   position: absolute;
+  left: 2%;
+  top: 8%;
   height: 90%;
   width: 30% ;
 }
