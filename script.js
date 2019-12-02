@@ -94,5 +94,5 @@ webstrate.on("clientPart", function(clientId) {
   document.getElementById("testButton").addEventListener("click", function() {
 
 document.getElementById('iframeAnalyst').contentDocument.location;
-document.getElementById('iframeAnalyst').src;
+
 });
