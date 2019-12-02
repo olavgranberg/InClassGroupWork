@@ -56,6 +56,7 @@ waitingRoomUpdate.addEventListener('click', function() {
   document.getElementById("workspace").style.visibility = "visible";
   document.getElementById("waitingRoom").style.visibility = "hidden";
 
+}
 //--------------------------- create iframes -------------------------
 
  let workspaceDiv = document.getElementById("workspace");
