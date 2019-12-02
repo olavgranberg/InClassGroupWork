@@ -60,19 +60,10 @@ waitingRoomUpdate.addEventListener('click', function() {
 
  let workspaceDiv = document.getElementById("workspace");
 
- let iframeAnswer = workspaceDiv.createElement("iframe");
+ let iframeAnswer = document.createElement("iframe");
  iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy");
  iframeAnswer.setAttribute("id", "iframeAnswer");
-
+workspaceDiv.appendChild(iframeAnswer);
 
 
 });
-
-
-function prepareFrame() {
-        var ifrm = document.createElement("iframe");
-        ifrm.setAttribute("src", "http://google.com/");
-        ifrm.style.width = "640px";
-        ifrm.style.height = "480px";
-        document.body.appendChild(ifrm);
-    }
