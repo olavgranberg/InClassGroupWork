@@ -84,6 +84,39 @@ webstrate.on("clientPart", function(clientId) {
 });
 
 
+  document.getElementById("referenceRoleUnderstood").addEventListener("click", function() {
+
+    let iframeReferenceUpdated = document.getElementById('iframeReference').contentDocument.location;
+    iframeReference.setAttribute("src", iframeReferenceUpdated);
+
+  });
+
+  document.getElementById("answerRoleUnderstood").addEventListener("click", function() {
+
+
+    let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
+    iframeAnswer.setAttribute("src", iframeAnswerUpdated);
+
+  });
+
+  document.getElementById("presenterRoleUnderstood").addEventListener("click", function() {
+
+
+
+    let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
+    iframePresenter.setAttribute("src", iframePresenterUpdated);
+
+  });
+
+  document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
+
+
+    let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
+    iframeAnalyst.setAttribute("src", iframeAnalystUpdated);
+
+  });
+
+
   document.getElementById("Start").addEventListener("click", function() {
 
 // ----------------------- hide waitingroom and show workspace ----
@@ -92,17 +125,8 @@ webstrate.on("clientPart", function(clientId) {
   document.getElementById("waitingRoom").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
 
-let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-iframeAnalyst.setAttribute("src", iframeAnalystUpdated);
 
-let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
-iframeAnswer.setAttribute("src", iframeAnswerUpdated);
 
-let iframeReferenceUpdated = document.getElementById('iframeReference').contentDocument.location;
-iframeReference.setAttribute("src", iframeReferenceUpdated);
-
-let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
-iframePresenter.setAttribute("src", iframePresenterUpdated);
 
 
   });
