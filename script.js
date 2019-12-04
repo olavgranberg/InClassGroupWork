@@ -52,7 +52,7 @@ webstrate.on("clientPart", function(clientId) {
 
     let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
 
-      document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated + "?username=" + webstrate.user.userId);
+      document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated + "?=" + webstrate.user.userId);
 
   });
 
@@ -62,7 +62,7 @@ webstrate.on("clientPart", function(clientId) {
   document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?=" + webstrate.user.userId);
 
 
-
+// alert(window.location.search);
 
   });
 
