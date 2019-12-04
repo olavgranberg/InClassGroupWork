@@ -114,7 +114,7 @@ webstrate.on("clientPart", function(clientId) {
 
   document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
 
-
+    let iframeAnalyst = document.getElementById('iframeAnalyst');
     let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
     iframeAnalyst.setAttribute("src", iframeAnalystUpdated);
 
