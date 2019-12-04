@@ -52,7 +52,7 @@ webstrate.on("clientPart", function(clientId) {
 
     let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
 
-      document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated + "?=" + webstrate.user.userId);
+      document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated + "?" + webstrate.user.userId);
 
   });
 
