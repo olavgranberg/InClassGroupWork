@@ -91,7 +91,7 @@ webstrate.on("clientPart", function(clientId) {
   document.getElementById("referenceRoleUnderstood").addEventListener("click", function() {
 
     let iframeReferenceUpdated = document.getElementById('iframeReference').contentDocument.location;
-    iframeReference.setAttribute("src", iframeReferenceUpdated);
+      document.getElementById('iframeReference').setAttribute("src", iframeReferenceUpdated);
 
   });
 
@@ -99,7 +99,7 @@ webstrate.on("clientPart", function(clientId) {
 
 
     let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
-    iframeAnswer.setAttribute("src", iframeAnswerUpdated);
+      document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated);
 
   });
 
@@ -108,15 +108,15 @@ webstrate.on("clientPart", function(clientId) {
 
 
     let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
-    iframePresenter.setAttribute("src", iframePresenterUpdated);
+      document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated);
 
   });
 
   document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
 
-    let iframeAnalyst = document.getElementById('iframeAnalyst');
+
     let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-    iframeAnalyst.setAttribute("src", iframeAnalystUpdated);
+  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated);
 
 
 let params = new URLSearchParams(iframeAnalyst.search.slice(1));
