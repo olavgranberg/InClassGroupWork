@@ -52,10 +52,10 @@ webstrate.on("clientPart", function(clientId) {
 
   });
 
-  document.getElementById("analystRoleUnderstood").addEventListener("click", function(userId) {
+  document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
 
     let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?username=" + webstrate.userId);
+  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?username=" + webstrate.clientId);
 
 
 
