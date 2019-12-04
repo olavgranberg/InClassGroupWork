@@ -31,7 +31,9 @@ webstrate.on("clientPart", function(clientId) {
   document.getElementById("referenceRoleUnderstood").addEventListener("click", function() {
 
     let iframeReferenceUpdated = document.getElementById('iframeReference').contentDocument.location;
-      document.getElementById('iframeReference').setAttribute("src", iframeReferenceUpdated);
+
+
+              document.getElementById('iframeReference').setAttribute("src", iframeReferenceUpdated + "?username=" + webstrate.user.userId);
 
   });
 
@@ -39,7 +41,8 @@ webstrate.on("clientPart", function(clientId) {
 
 
     let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
-      document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated);
+
+        document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated + "?username=" + webstrate.user.userId);
 
   });
 
@@ -48,7 +51,8 @@ webstrate.on("clientPart", function(clientId) {
 
 
     let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
-      document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated);
+
+      document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated + "?username=" + webstrate.user.userId);
 
   });
 
