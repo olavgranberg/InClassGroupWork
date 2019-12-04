@@ -112,11 +112,12 @@ webstrate.on("clientPart", function(clientId) {
 
   });
 
-  document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
- 	let username = user.userId;
+  document.getElementById("analystRoleUnderstood").addEventListener("click", function(user) {
+
+    let username = user.userId;
 
     let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?username=");
+  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?username=" + username);
 
 
 
