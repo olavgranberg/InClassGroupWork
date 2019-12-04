@@ -119,9 +119,22 @@ webstrate.on("clientPart", function(clientId) {
   document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated);
 
 
-let params = new URLSearchParams(iframeAnalyst.search.slice(1));
-params.append('foo', 4);
+  var url = new URL(document.getElementById('iframeAnalyst'));
 
+  var query_string = url.search;
+
+  var search_params = new URLSearchParams(query_string);
+
+  search_params.append('id', '101');
+
+  search_params.append('id', '102');
+
+  url.search = search_params.toString();
+
+  var new_url = url.toString();
+
+  // output : http://demourl.com/path?id=100&id=101&id=102&topic=main
+  console.log(new_url);
 
   });
 
