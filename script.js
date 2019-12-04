@@ -30,38 +30,49 @@ webstrate.on("clientPart", function(clientId) {
 
   document.getElementById("referenceRoleUnderstood").addEventListener("click", function() {
 
-    let iframeReferenceUpdated = document.getElementById('iframeReference').contentDocument.location;
+  let username = webstrate.user.userId;
+  let iframeReference = document.createElement("iframe");
+  let iframeReferenceSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy" + "&" + username;
+  iframeReference.setAttribute("src", iframeReferenceSrc);
+  iframeReference.setAttribute("id", "iframeReference");
+  document.getElementById("workspace").appendChild(iframeReference);
 
-
-              document.getElementById('iframeReference').setAttribute("src", iframeReferenceUpdated + "?username=" + webstrate.user.userId);
 
   });
 
   document.getElementById("answerRoleUnderstood").addEventListener("click", function() {
 
+    let username = webstrate.user.userId;
+    let iframeAnswer = document.createElement("iframe");
+    let iframeAnswerSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy" + "&" + username;
+    iframeAnswer.setAttribute("src", iframeAnswerSrc);
+    iframeAnswer.setAttribute("id", "iframeAnswer");
+    document.getElementById("workspace").appendChild(iframeAnswer);
 
-    let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
-
-        document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated + "?username=" + webstrate.user.userId);
 
   });
 
   document.getElementById("presenterRoleUnderstood").addEventListener("click", function() {
 
 
-
-    let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
-
-      document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated + "?" + webstrate.user.userId);
+    let username = webstrate.user.userId;
+    let iframePresenter = document.createElement("iframe");
+    let iframePresenterSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy" + "&" + username;
+    iframePresenter.setAttribute("src", iframePresenterSrc);
+    iframePresenter.setAttribute("id", "iframePresenter");
+    document.getElementById("workspace").appendChild(iframePresenter);
 
   });
 
   document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
 
-    let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?=" + webstrate.user.userId);
 
-
+        let username = webstrate.user.userId;
+        let iframeAnalyst = document.createElement("iframe");
+        let iframeAnalystSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy" + "&" + username;
+        iframeAnalyst.setAttribute("src", iframeAnalystSrc);
+        iframeAnalyst.setAttribute("id", "iframeAnalyst");
+        document.getElementById("workspace").appendChild(iframeAnalyst);
 // alert(window.location.search);
 
   });
@@ -145,4 +156,51 @@ webstrate.on("clientPart", function(clientId) {
 
 
   });
+
+
+
+
+
+
+
+
+
+    document.getElementById("referenceRoleUnderstood").addEventListener("click", function() {
+
+      let iframeReferenceUpdated = document.getElementById('iframeReference').contentDocument.location;
+
+
+                document.getElementById('iframeReference').setAttribute("src", iframeReferenceUpdated + "?username=" + webstrate.user.userId);
+
+    });
+
+    document.getElementById("answerRoleUnderstood").addEventListener("click", function() {
+
+
+      let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
+
+          document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated + "?username=" + webstrate.user.userId);
+
+    });
+
+    document.getElementById("presenterRoleUnderstood").addEventListener("click", function() {
+
+
+
+      let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
+
+        document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated + "?" + webstrate.user.userId);
+
+    });
+
+    document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
+
+      let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
+    document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?=" + webstrate.user.userId);
+
+
+  // alert(window.location.search);
+
+    });
+
   */
