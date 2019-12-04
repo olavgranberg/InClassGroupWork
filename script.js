@@ -114,12 +114,13 @@ webstrate.on("clientPart", function(clientId) {
 
   document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
 
-let q ="Hejhejhej";
 
     let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + [&id=<newWebstrateId>);
+  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?username=" + username);
 
-  
+
+
+
   });
 
 
