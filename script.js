@@ -114,13 +114,12 @@ webstrate.on("clientPart", function(clientId) {
 
   document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
 
+let q ="Hejhejhej";
 
     let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?username=");
+  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + URLEncoder.encode(q, "UTF-8"));
 
-
-
-
+  
   });
 
 
