@@ -117,7 +117,7 @@ webstrate.on("clientPart", function(clientId) {
 let q ="Hejhejhej";
 
     let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + URLEncoder.encode(q, "UTF-8"));
+  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + [&id=<newWebstrateId>);
 
   
   });
