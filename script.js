@@ -117,11 +117,15 @@ webstrate.on("clientPart", function(clientId) {
 
     let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
     iframeAnalyst.setAttribute("src", iframeAnalystUpdated);
-    iframeAnalyst.searchParams.append('x', 42);
 
+
+let params = new URLSearchParams(iframeAnalyst.search.slice(1));
+params.append('foo', 4);
 
 
   });
+
+
 
 
   document.getElementById("Start").addEventListener("click", function() {
