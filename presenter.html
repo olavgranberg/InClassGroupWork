@@ -124,19 +124,28 @@
 
 <script>
 
-alert(window.location.search);
-/*
+// ----------- brugernavn og provider
+let input = window.location.search;
+
+let fields = input.split(":");
+alert(fields[0].substring(1));
+alert(fields[1]);
+
+
+
 webstrate.on('loaded', () => {
-  if (webstrate.version === 1) {
-    document.documentElement.setAttribute('data-auth',
-      JSON.stringify([
-        { username: 'kbadk', provider: 'github', permissions: 'rw' },
-        { username: 'midasnouwens', provider: 'au', permissions: 'rw' }
-      ]);
+//  if (webstrate.version === 1) {
+    let usernameAndProviderString = window.location.search;
+    let usernameString = usernameAndProviderString.split[0].substring(1);
+    let providerString = usernameAndProviderString.split[1];
+    document.documentElement.setAttribute('data-auth', JSON.stringify([
+        { username: usernameString, provider: providerString, permissions: 'rw' },
+        { username: " ", provider: " ", permissions: "r" }]);
     );
-  }
+//  }
 });
-*/
+
+
 
 
 // Create a "close" button and append it to each list item
