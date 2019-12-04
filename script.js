@@ -116,7 +116,7 @@ webstrate.on("clientPart", function(clientId) {
 
 
     let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?username=" + "hej");
+  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?username=");
 
 
 
