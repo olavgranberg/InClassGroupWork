@@ -50,7 +50,7 @@ webstrate.on("clientPart", function(clientId) {
     document.getElementById("workspace").appendChild(iframeAnswer);
 
     let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
-    ocument.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated + "&" + username);
+    document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated + "&" + username);
 
 
   });
