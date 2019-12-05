@@ -49,8 +49,7 @@ webstrate.on("clientPart", function(clientId) {
     iframeAnswer.setAttribute("id", "iframeAnswer");
     document.getElementById("workspace").appendChild(iframeAnswer);
 
-    let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
-    document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated);
+
 
 
   });
@@ -77,8 +76,6 @@ webstrate.on("clientPart", function(clientId) {
         iframeAnalyst.setAttribute("id", "iframeAnalyst");
         document.getElementById("workspace").appendChild(iframeAnalyst);
 
-        let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-        document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "&" + username);
 
 
   });
