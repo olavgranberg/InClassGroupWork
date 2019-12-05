@@ -44,7 +44,8 @@ body{
 
 #analystRole{
   background-color: white;
-  border: 5px solid blue;
+  border-style: thin
+  border: solid black;
   width: 30%;
   height: 30%;
   top: 8%;
@@ -55,7 +56,8 @@ body{
 
 #presenterRole{
   background-color: white;
-  border: 5px solid yellow;
+  border: solid black;
+  border-style: thin;
   width: 30%;
   height: 30%;
   top: 48%;
@@ -65,7 +67,8 @@ body{
 
 #answerRole{
   background-color: white;
-  border: 5px solid green;
+  border: solid black;
+  border-style: thin;
   width: 30%;
   height: 30%;
   top: 8%;
@@ -76,7 +79,8 @@ body{
 
 #referenceRole{
   background-color: white;
-  border: 5px solid red;
+  border: solid black;
+  border-style; thin;
   width: 30%;
   height: 30%;
   top: 48%;
