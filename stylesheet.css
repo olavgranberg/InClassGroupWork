@@ -8,6 +8,7 @@ body{
 
 #waitingRoom{
   border:solid;
+  border-width: thin;
   width: 30%;
   margin-bottom: 30px;
   position: absolute;
@@ -44,8 +45,8 @@ body{
 
 #analystRole{
   background-color: white;
-  border-style: thin
   border: solid black;
+  border-width: thin;
   width: 30%;
   height: 30%;
   top: 8%;
@@ -57,7 +58,7 @@ body{
 #presenterRole{
   background-color: white;
   border: solid black;
-  border-style: thin;
+  border-width: thin;
   width: 30%;
   height: 30%;
   top: 48%;
@@ -68,7 +69,7 @@ body{
 #answerRole{
   background-color: white;
   border: solid black;
-  border-style: thin;
+  border-width: thin;
   width: 30%;
   height: 30%;
   top: 8%;
@@ -80,7 +81,7 @@ body{
 #referenceRole{
   background-color: white;
   border: solid black;
-  border-style; thin;
+  border-width: thin;
   width: 30%;
   height: 30%;
   top: 48%;
