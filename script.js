@@ -71,7 +71,7 @@ webstrate.on("clientPart", function(clientId) {
 
         let username = webstrate.user.userId;
         let iframeAnalyst = document.createElement("iframe");
-        let iframeAnalystSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy";
+        let iframeAnalystSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy" + "&" + username;
         iframeAnalyst.setAttribute("src", iframeAnalystSrc);
         iframeAnalyst.setAttribute("id", "iframeAnalyst");
         document.getElementById("workspace").appendChild(iframeAnalyst);
@@ -85,16 +85,28 @@ webstrate.on("clientPart", function(clientId) {
 
   document.getElementById("Start").addEventListener("click", function() {
 
-// ----------------------- hide waitingroom and show workspace ----
+// ----------------------- hide waitingroom and show workspace ---------------------------------
 
   document.getElementById("hideThis").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
 
 
-
+// ------------------------ Makes sure, that every iframe is synchronized ---------------------
     let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
   document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated);
+
+
+  let iframeReferenceUpdated = document.getElementById('iframeReference').contentDocument.location;
+document.getElementById('iframeReference').setAttribute("src", iframeReferenceUpdated);
+
+let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
+document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated);
+
+
+let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
+document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated);
+
 
   });
 
