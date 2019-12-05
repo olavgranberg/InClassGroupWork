@@ -37,7 +37,7 @@ webstrate.on("clientPart", function(clientId) {
   iframeReference.setAttribute("id", "iframeReference");
   document.getElementById("workspace").appendChild(iframeReference);
 
-
+  document.getElementById("referenceRoleUnderstood").style.visibility = "hidden";
   });
 
   document.getElementById("answerRoleUnderstood").addEventListener("click", function() {
@@ -50,7 +50,7 @@ webstrate.on("clientPart", function(clientId) {
     document.getElementById("workspace").appendChild(iframeAnswer);
 
 
-
+    document.getElementById("answerRoleUnderstood").style.visibility = "hidden";
 
   });
 
@@ -64,6 +64,8 @@ webstrate.on("clientPart", function(clientId) {
     iframePresenter.setAttribute("id", "iframePresenter");
     document.getElementById("workspace").appendChild(iframePresenter);
 
+    document.getElementById("presenterRoleUnderstood").style.visibility = "hidden";
+
   });
 
   document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
@@ -76,7 +78,7 @@ webstrate.on("clientPart", function(clientId) {
         iframeAnalyst.setAttribute("id", "iframeAnalyst");
         document.getElementById("workspace").appendChild(iframeAnalyst);
 
-
+        document.getElementById("analystRoleUnderstood").style.visibility = "hidden";
 
   });
 
