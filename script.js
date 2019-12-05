@@ -93,10 +93,9 @@ webstrate.on("clientPart", function(clientId) {
 
 
 
-
-  let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
+    let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
   document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated);
-  
+
   });
 
 
