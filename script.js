@@ -49,6 +49,9 @@ webstrate.on("clientPart", function(clientId) {
     iframeAnswer.setAttribute("id", "iframeAnswer");
     document.getElementById("workspace").appendChild(iframeAnswer);
 
+    let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
+    ocument.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated + "&" + username);
+
 
   });
 
@@ -69,11 +72,14 @@ webstrate.on("clientPart", function(clientId) {
 
         let username = webstrate.user.userId;
         let iframeAnalyst = document.createElement("iframe");
-        let iframeAnalystSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy" + "&" + username;
+        let iframeAnalystSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy";
         iframeAnalyst.setAttribute("src", iframeAnalystSrc);
         iframeAnalyst.setAttribute("id", "iframeAnalyst");
         document.getElementById("workspace").appendChild(iframeAnalyst);
-// alert(window.location.search);
+
+        let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
+        ocument.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "&" + username);
+
 
   });
 

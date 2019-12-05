@@ -124,6 +124,10 @@
 
 <script>
 
+<html data-auth='[{"username": "olavgranberg", "provider": "github", "permissions": "arw"},
+ {"username": "anonymous", "provider": "", "permissions": "r"}]'>
+
+
 // ----------- brugernavn og provider
 let input = window.location.search;
 
@@ -134,19 +138,42 @@ alert(fields[1]);
 
 
 webstrate.on('loaded', () => {
-//  if (webstrate.version === 1) {
+  if (webstrate.version === 1) {
     let usernameAndProviderString = window.location.search;
-    let usernameString = usernameAndProviderString.split[0].substring(1);
-    let providerString = usernameAndProviderString.split[1];
-    document.documentElement.setAttribute('data-auth', JSON.stringify([
-        { username: usernameString, provider: providerString, permissions: 'rw' },
-        { username: " ", provider: " ", permissions: "r" }]);
+    let usernameString = usernameAndProviderString.split("%")[0].substring(1);
+    let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0,-1);
+
+
+    document.documentElement.setAttribute('data-auth', JSON.stringify('[
+        {username: usernameString, provider: providerString, permissions: "rw"}
+      ]');
     );
-//  }
+  };
 });
 
 
 
+alert(window.location.search);
+
+
+// ?olavgranberg%3Agithub
+
+/*
+
+webstrate.on('loaded', () => {
+//  if (webstrate.version === 1) {
+    let usernameAndProviderString = window.location.search;
+    let usernameString = usernameAndProviderString.split("%")[0].substring(1));
+    let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0,-1);
+
+
+    document.documentElement.setAttribute('data-auth', JSON.stringify([
+        { username: usernameString, provider: providerString, permissions: 'rw' }]);
+    );
+//  }
+});
+
+*/
 
 // Create a "close" button and append it to each list item
 var myULLListPresentingDiv = document.getElementById("myULPresentingDiv");
