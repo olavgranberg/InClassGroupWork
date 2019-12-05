@@ -44,7 +44,7 @@ webstrate.on("clientPart", function(clientId) {
 
     let username = webstrate.user.userId;
     let iframeAnswer = document.createElement("iframe");
-    let iframeAnswerSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy" + "&" + username;
+    let iframeAnswerSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy";
     iframeAnswer.setAttribute("src", iframeAnswerSrc);
     iframeAnswer.setAttribute("id", "iframeAnswer");
     document.getElementById("workspace").appendChild(iframeAnswer);
