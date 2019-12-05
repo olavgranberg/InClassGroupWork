@@ -95,6 +95,7 @@ body{
   right:2%;
   height: 90%;
   width: 33%;
+  background-color: white;
 
 }
 #iframePresenter{
@@ -103,6 +104,7 @@ body{
   width: 30%;
   left:33%;
   top:5%;
+  background-color: white;
 }
 #iframeAnalyst{
   position: absolute;
@@ -110,6 +112,7 @@ body{
   width: 30%;
   left: 33%;
   top:51%;
+  background-color: white;
 
 }
 #iframeReference{
@@ -118,4 +121,5 @@ body{
   width: 30%;
   left:2%;
   top: 5%;
+  background-color: white;
 }
