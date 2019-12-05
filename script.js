@@ -78,7 +78,7 @@ webstrate.on("clientPart", function(clientId) {
         document.getElementById("workspace").appendChild(iframeAnalyst);
 
         let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-        ocument.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "&" + username);
+        document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "&" + username);
 
 
   });
