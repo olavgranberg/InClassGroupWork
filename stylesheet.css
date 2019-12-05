@@ -15,8 +15,14 @@ body{
   left:33%;
   top: 10%;
   text-align: center;
-  background-color: lightblue;
+  background-color: white;
 
+}
+
+#start {
+  border: none;
+  background-color: #C6C5C5;
+  height: 35px;
 }
 
 /* Header */
@@ -53,7 +59,6 @@ body{
   right: 2%;
   position:absolute;
   padding: 2px;
-  margin-left: 2px;
 
 }
 
