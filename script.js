@@ -70,8 +70,8 @@ webstrate.on("clientPart", function(clientId) {
 
   document.getElementById("analystRoleUnderstood").addEventListener("click", function(user) {
 
-
         let username = webstrate.user.userId;
+        if(username != "anonymous:"){
         let iframeAnalyst = document.createElement("iframe");
         let iframeAnalystSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy" + "&" + username;
         iframeAnalyst.setAttribute("src", iframeAnalystSrc);
@@ -79,7 +79,11 @@ webstrate.on("clientPart", function(clientId) {
         document.getElementById("workspace").appendChild(iframeAnalyst);
 
         document.getElementById("analystRoleUnderstood").style.visibility = "hidden";
-  alert(username);
+
+        }
+        else{
+  alert(username + "can't enter");
+  }
   });
 
 
