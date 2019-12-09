@@ -9,7 +9,7 @@ webstrate.on("loaded", function(webstrateId, clientId, user) {
 
  	let username = user.userId;
   let usernameArray = [];
-  if (username =! usernameArray.includes(username);){
+  if (username =! usernameArray.includes(username){
 usernameArray.push(username);
     let usernameHolder = document.getElementById("usernameHolderList");
     let myUsername = document.createElement("li");
