@@ -28,9 +28,10 @@ webstrate.on("clientPart", function(clientId) {
 
 
 
-  document.getElementById("referenceRoleUnderstood").addEventListener("click", function() {
+  document.getElementById("referenceRoleUnderstood").addEventListener("click", function(user) {
 
   let username = webstrate.user.userId;
+    if(username != "anonymous:"){
   let iframeReference = document.createElement("iframe");
   let iframeReferenceSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy" + "&" + username;
   iframeReference.setAttribute("src", iframeReferenceSrc);
@@ -38,11 +39,18 @@ webstrate.on("clientPart", function(clientId) {
   document.getElementById("workspace").appendChild(iframeReference);
 
   document.getElementById("referenceRoleUnderstood").style.visibility = "hidden";
+
+}
+else{
+alert(username + "can't enter");
+}
+
   });
 
-  document.getElementById("answerRoleUnderstood").addEventListener("click", function() {
+  document.getElementById("answerRoleUnderstood").addEventListener("click", function(user) {
 
     let username = webstrate.user.userId;
+      if(username != "anonymous:"){
     let iframeAnswer = document.createElement("iframe");
     let iframeAnswerSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy" + "&" + username;
     iframeAnswer.setAttribute("src", iframeAnswerSrc);
@@ -51,13 +59,18 @@ webstrate.on("clientPart", function(clientId) {
 
 
     document.getElementById("answerRoleUnderstood").style.visibility = "hidden";
+  }
+  else{
+  alert(username + "can't enter");
+  }
 
   });
 
-  document.getElementById("presenterRoleUnderstood").addEventListener("click", function() {
+  document.getElementById("presenterRoleUnderstood").addEventListener("click", function(user) {
 
 
     let username = webstrate.user.userId;
+    if(username != "anonymous:"){
     let iframePresenter = document.createElement("iframe");
     let iframePresenterSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy" + "&" + username;
     iframePresenter.setAttribute("src", iframePresenterSrc);
@@ -65,6 +78,10 @@ webstrate.on("clientPart", function(clientId) {
     document.getElementById("workspace").appendChild(iframePresenter);
 
     document.getElementById("presenterRoleUnderstood").style.visibility = "hidden";
+  }
+  else{
+alert(username + "can't enter");
+}
 
   });
 
