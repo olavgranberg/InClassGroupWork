@@ -144,13 +144,11 @@ body{
 /* Header styling */
 
 
+}
+
 .topnav {
   overflow: hidden;
-  background-color: black;
-  width:100%;
-  left:0%;
-  top:0%;
-
+  background-color: #333;
 }
 
 .topnav a {
@@ -160,9 +158,6 @@ body{
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-}
-.floatleft a {
-  float:right;
 }
 
 .topnav a:hover {
