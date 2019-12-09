@@ -127,6 +127,18 @@
 <html data-auth='[{"username": "olavgranberg", "provider": "github", "permissions": "arw"},
  {"username": "anonymous", "provider": "", "permissions": "r"}]'>
 
+ webstrate.on('loaded', () => {
+     let usernameAndProviderString = window.location.search;
+     let usernameString = usernameAndProviderString.split("%")[0].substring(1);
+     let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0,-1);
+
+
+     document.documentElement.setAttribute('data-auth', JSON.stringify([
+         {username: usernameString, provider: providerString, permissions: "rw"}, {"username": "anonymous", "provider": "", "permissions": "r"}
+       ])
+     );
+
+ });
 
 // ----------- brugernavn og provider
 let input = window.location.search;
@@ -138,17 +150,16 @@ alert(fields[1]);
 
 
 webstrate.on('loaded', () => {
-  if (webstrate.version === 1) {
     let usernameAndProviderString = window.location.search;
     let usernameString = usernameAndProviderString.split("%")[0].substring(1);
     let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0,-1);
 
 
-    document.documentElement.setAttribute('data-auth', JSON.stringify('[
+    document.documentElement.setAttribute('data-auth', JSON.stringify([
         {username: usernameString, provider: providerString, permissions: "rw"}
-      ]');
+      ])
     );
-  };
+
 });
 
 
