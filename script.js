@@ -68,7 +68,7 @@ webstrate.on("clientPart", function(clientId) {
 
   });
 
-  document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
+  document.getElementById("analystRoleUnderstood").addEventListener("click", function(user) {
 
 if (webstrate.user.username =! "anonymous:"){
         let username = webstrate.user.userId;
@@ -80,7 +80,7 @@ if (webstrate.user.username =! "anonymous:"){
 
         document.getElementById("analystRoleUnderstood").style.visibility = "hidden";
       } else{
-      
+
         alert("You need to log in");
       }
 
