@@ -26,7 +26,10 @@ webstrate.on("clientPart", function(clientId) {
 
 
 function showStartButtonWhenReady() {
-  if(document.getElementById("referenceRoleUnderstood").style.visibility = "hidden" && document.getElementById("analystRoleUnderstood").style.visibility = "hidden" && document.getElementById("answerRoleUnderstood").style.visibility = "hidden" && document.getElementById("presenterRoleUnderstood").style.visibility = "hidden"){
+  if(document.getElementById("referenceRoleUnderstood").style.visibility == "hidden"
+  && document.getElementById("analystRoleUnderstood").style.visibility == "hidden"
+  && document.getElementById("answerRoleUnderstood").style.visibility == "hidden"
+  && document.getElementById("presenterRoleUnderstood").style.visibility == "hidden"){
     document.getElementById("Start").style.visibility = "visible";
   } else{
     return;
