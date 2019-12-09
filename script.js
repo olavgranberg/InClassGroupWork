@@ -9,6 +9,7 @@ webstrate.on("loaded", function(webstrateId, clientId, user) {
 
  	let username = user.userId;
   let usernameArray = [];
+  if (username =! usernameArray[i]){
 usernameArray.push(username);
     let usernameHolder = document.getElementById("usernameHolderList");
     let myUsername = document.createElement("li");
@@ -16,7 +17,9 @@ usernameArray.push(username);
 	myUsername.setAttribute("style","display:block");
     myUsername.innerText = username;
     usernameHolder.appendChild(myUsername);
-alert(usernameArray);
+  } else {
+console.log("A user just refreshed the website");
+}
 });
 
 
