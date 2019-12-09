@@ -42,7 +42,7 @@ webstrate.on("clientPart", function(clientId) {
 
 }
 else{
-alert(username + "can't enter");
+  alert("You must be logged in to https://webstrates.cs.au.dk/frontpage/");
 }
 
   });
@@ -61,7 +61,7 @@ alert(username + "can't enter");
     document.getElementById("answerRoleUnderstood").style.visibility = "hidden";
   }
   else{
-  alert(username + "can't enter");
+    alert("You must be logged in to https://webstrates.cs.au.dk/frontpage/");
   }
 
   });
@@ -80,7 +80,7 @@ alert(username + "can't enter");
     document.getElementById("presenterRoleUnderstood").style.visibility = "hidden";
   }
   else{
-alert(username + "can't enter");
+  alert("You must be logged in to https://webstrates.cs.au.dk/frontpage/");
 }
 
   });
@@ -99,7 +99,7 @@ alert(username + "can't enter");
 
         }
         else{
-  alert(username + "can't enter");
+  alert("You must be logged in to https://webstrates.cs.au.dk/frontpage/");
   }
   });
 
