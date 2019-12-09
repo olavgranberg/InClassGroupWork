@@ -80,7 +80,8 @@ if (webstrate.user.username =! "anonymous:"){
 
         document.getElementById("analystRoleUnderstood").style.visibility = "hidden";
       } else{
-        Alert("You need to log in");
+        console.log("")
+        alert("You need to log in");
       }
 
   });
