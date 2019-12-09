@@ -126,17 +126,17 @@ body{
   position: absolute;
   height: 44%;
   width: 30%;
-  left: 33%;
-  top:51%;
+  left: 2%;
+  top:5%;
   background-color: white;
 
 }
 #iframeReference{
   position: absolute;
-  height: 90%;
-  width: 30%;
+  height: 44%;
+  width: 65%;
   left:2%;
-  top: 5%;
+  top: 51%;
   background-color: white;
 }
 
