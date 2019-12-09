@@ -21,7 +21,7 @@ webstrate.on("loaded", function(webstrateId, clientId, user) {
 webstrate.on("clientPart", function(clientId) {
   let partingUser = document.getElementById(clientId);
 	console.log(partingUser, clientId);
-  document.getElementById(usernameHolderList).parentNode.removeChild(partingUser);
+	partingUser.parentNode.removeChild(partingUser);
 });
 
 
