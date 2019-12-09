@@ -23,6 +23,7 @@ body{
   border: none;
   background-color: #C6C5C5;
   height: 20px;
+  visibility: hidden;
 }
 
 /* Header */
