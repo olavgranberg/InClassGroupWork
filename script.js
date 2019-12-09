@@ -68,8 +68,8 @@ webstrate.on("clientPart", function(clientId) {
 
   });
 
-  document.getElementById("analystRoleUnderstood").addEventListener("click", function(username) {
-let username = webstrate.user.username;
+  document.getElementById("analystRoleUnderstood").addEventListener("click", function(user) {
+
 if (webstrate.user.username =! "anonymous:"){
         let username = webstrate.user.userId;
         let iframeAnalyst = document.createElement("iframe");
