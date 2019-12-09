@@ -70,7 +70,7 @@ webstrate.on("clientPart", function(clientId) {
 
   document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
 
-if (webstrate.user.username =! "anonymous"){
+if (webstrate.user.username =! "anonymous:"){
         let username = webstrate.user.userId;
         let iframeAnalyst = document.createElement("iframe");
         let iframeAnalystSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy" + "&" + username;
