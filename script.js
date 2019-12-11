@@ -26,39 +26,21 @@ webstrate.on("clientPart", function(clientId) {
 
 
 
-
+ let roleDelegationAnswer = document.getElementById("answerRoleTitle");
 let roleDelegationReference;
 let roleDelegationAnalyst;
 let roleDelegationPresenter;
 
 webstrate.on("clientJoin", function(clientId) {
-  // User with clientId has just joined the webstrate.
-  console.log(clientId);
+let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
+
+if(lis.length == 4 ){
+  alert("You're ready");
+}
 });
+// if(lis.length == 4 && lis[i] != "anonymous:")
 
 
-/*
-
-
-webstrate.on("clientJoin", function(clientId) {
-
-  let joiningUser = document.getElementById(clientId);
-
-  let username = webstrate.user.username;
-  alert(username);
-  alert(joininguser);
-
-
-});
- let roleDelegationAnswer = document.getElementById("answerRoleTitle");
-
-
-  if (username != "anonymous:" && roleDelegationAnswer.innerHTML == 'Hej'){
-    roleDelegationAnswer.innerHTML = "pølse :D";
-
-  } else{
-    return;
-  } */
 
 function showStartButtonWhenReady() {
   if(document.getElementById("referenceRoleUnderstood").style.visibility == "hidden"
