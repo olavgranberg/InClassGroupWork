@@ -70,7 +70,7 @@ let referenceIsDelegatedTo = document.querySelectorAll('li')[1];
 let presenterIsDelegatedTo = document.querySelectorAll('li')[0];
 let answerIsDelegatedTo = document.querySelectorAll('li')[1];
 
-document.getElementById("presenterRoleTitle").value = presenterIsDelegatedTo;
+document.getElementById("presenterRoleTitle").textContent = presenterIsDelegatedTo;
 document.getElementById("analystRoleTitle").innerHTML = analystIsDelegatedTo;
 document.getElementById("referenceRoleTitle").innerHTML = referenceIsDelegatedTo;
 document.getElementById("answerRoleTitle").innerHTML = answerIsDelegatedTo;
