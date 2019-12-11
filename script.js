@@ -16,8 +16,8 @@ webstrate.on("loaded", function(webstrateId, clientId, user) {
     myUsername.innerText = username;
     usernameHolder.appendChild(myUsername);
   } else{
-    return;
     alert("Fejl");
+    return;
   }
 
 });
