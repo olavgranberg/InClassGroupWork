@@ -32,10 +32,11 @@ let roleDelegationAnalyst;
 let roleDelegationPresenter;
 
 webstrate.on("clientJoin", function(clientId) {
+
   let joiningUser = document.getElementById(clientId);
-  console.log(joininguser);
+  alert(joininguser);
   let username = webstrate.user.username;
-  console.log(username);
+  alert(username);
 
 
 
