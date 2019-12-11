@@ -75,7 +75,7 @@ document.getElementById("analystRoleTitle").innerHTML = analystIsDelegatedTo.inn
 document.getElementById("referenceRoleTitle").innerHTML = referenceIsDelegatedTo.innerHTML;
 document.getElementById("answerRoleTitle").innerHTML = answerIsDelegatedTo.innerHTML;
 
-
+document.getElementById("delegateRoles").style.visibility = "hidden";
 
 });
 
@@ -95,8 +95,9 @@ function showStartButtonWhenReady() {
 
   document.getElementById("referenceRoleUnderstood").addEventListener("click", function(user) {
 
+let referenceIsDelegatedTo = document.querySelectorAll('li')[1].innerHTML;
   let username = webstrate.user.userId;
-    if(username != "anonymous:"){
+    if(username == referenceIsDelegatedTo){
   let iframeReference = document.createElement("iframe");
   let iframeReferenceSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy" + "&" + username;
   iframeReference.setAttribute("src", iframeReferenceSrc);
@@ -115,8 +116,10 @@ else{
 
   document.getElementById("answerRoleUnderstood").addEventListener("click", function(user) {
 
+    let answerIsDelegatedTo = document.querySelectorAll('li')[1].innerHTML;
+
     let username = webstrate.user.userId;
-      if(username != "anonymous:"){
+      if(username == answerIsDelegatedTo){
     let iframeAnswer = document.createElement("iframe");
     let iframeAnswerSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy" + "&" + username;
     iframeAnswer.setAttribute("src", iframeAnswerSrc);
@@ -134,10 +137,11 @@ else{
   });
 
   document.getElementById("presenterRoleUnderstood").addEventListener("click", function(user) {
+    let presenterIsDelegatedTo = document.querySelectorAll('li')[0].innerHTML;
 
 
     let username = webstrate.user.userId;
-    if(username != "anonymous:"){
+    if(username == presenterIsDelegatedTo){
     let iframePresenter = document.createElement("iframe");
     let iframePresenterSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy" + "&" + username;
     iframePresenter.setAttribute("src", iframePresenterSrc);
@@ -155,8 +159,10 @@ else{
 
   document.getElementById("analystRoleUnderstood").addEventListener("click", function(user) {
 
+        let analystIsDelegatedTo = document.querySelectorAll('li')[0].innerHTML;
+
         let username = webstrate.user.userId;
-        if(username != "anonymous:"){
+        if(username == analystIsDelegatedTo){
         let iframeAnalyst = document.createElement("iframe");
         let iframeAnalystSrc = "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy" + "&" + username;
         iframeAnalyst.setAttribute("src", iframeAnalystSrc);
