@@ -77,6 +77,11 @@ document.getElementById("answerRoleTitle").innerHTML = answerIsDelegatedTo.inner
 
 document.getElementById("delegateRoles").style.visibility = "hidden";
 
+document.getElementById("referenceRoleUnderstood").style.visibility = "visible";
+document.getElementById("answerRoleUnderstood").style.visibility = "visible";
+document.getElementById("presenterRoleUnderstood").style.visibility = "visible";
+document.getElementById("analystRoleUnderstood").style.visibility = "visible";
+
 });
 
 

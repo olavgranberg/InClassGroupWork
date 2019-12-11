@@ -18,6 +18,37 @@ body{
   background-color: white;
 
 }
+
+#referenceRoleUnderstood{
+  visibility: hidden;
+  border: none;
+  background-color: #C6C5C5;
+  height: 20px;
+  visibility: hidden;
+}
+#answerRoleUnderstood{
+  visibility: hidden;
+  border: none;
+  background-color: #C6C5C5;
+  height: 20px;
+  visibility: hidden;
+}
+#presenterRoleUnderstood{
+  visibility: hidden;
+  border: none;
+  background-color: #C6C5C5;
+  height: 20px;
+  visibility: hidden;
+}
+#analystRoleUnderstood{
+  visibility: hidden;
+  border: none;
+  background-color: #C6C5C5;
+  height: 20px;
+  visibility: hidden;
+}
+
+
 #delegateRoles{
   visibility: hidden;
   border: none;
