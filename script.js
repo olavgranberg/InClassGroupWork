@@ -24,6 +24,22 @@ webstrate.on("clientPart", function(clientId) {
 	partingUser.parentNode.removeChild(partingUser);
 });
 
+let roleDelegationAnswer = document.getElementById("answerRoleTitle").innerHTML;
+let roleDelegationReference;
+let roleDelegationAnalyst;
+let roleDelegationPresenter;
+
+webstrate.on("clientJoin") function delegateUser(clientId){
+  let username = webstrate.user.userId;
+  if (username != "anonymous:" && roleDelegationAnswer == ''){
+    roleDelegationAnswer.innerHTML(username);
+
+  } else{
+    return;
+  }
+
+}
+
 
 function showStartButtonWhenReady() {
   if(document.getElementById("referenceRoleUnderstood").style.visibility == "hidden"
