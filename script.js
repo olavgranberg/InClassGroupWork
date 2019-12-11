@@ -9,7 +9,6 @@ webstrate.on("loaded", function(webstrateId, clientId, user) {
 
  	let username = user.userId;
     let usernameHolder = document.getElementById("usernameHolderList");
-    alert(username);
     if(username != "anonymous:"){
     let myUsername = document.createElement("li");
 	myUsername.id = clientId;
