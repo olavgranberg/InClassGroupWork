@@ -63,16 +63,7 @@ if(lis.length == 2){
   document.getElementById("delegateRoles").style.visibility = "hidden";
 }
 });
-//if(lis.length == 4 && lis[i] != "anonymous:") if(lis.length == 4 ){
-//  alert("You're ready");
-// }
 
-document.getElementById("delegateRoles").addEventListener("click", function() {
-var ul = document.querySelector('ul');
-for (var i = ul.children.length; i >= 0; i--) {
-    ul.appendChild(ul.children[Math.random() * i | 0]);
-}
-});
 
 
 
