@@ -29,7 +29,7 @@ let roleDelegationReference;
 let roleDelegationAnalyst;
 let roleDelegationPresenter;
 
-webstrate.on("clientJoin", function delegateUser(clientId){
+webstrate.on("clientJoin", function (clientId){
   let username = webstrate.user.userId;
   if (username != "anonymous:" && roleDelegationAnswer == ''){
     roleDelegationAnswer.innerHTML(username);
