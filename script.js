@@ -24,15 +24,15 @@ webstrate.on("clientPart", function(clientId) {
 	partingUser.parentNode.removeChild(partingUser);
 });
 
-let roleDelegationAnswer = document.getElementById("answerRoleTitle").innerHTML;
+let roleDelegationAnswer = document.getElementById("answerRoleTitle");
 let roleDelegationReference;
 let roleDelegationAnalyst;
 let roleDelegationPresenter;
 
-webstrate.on("clientJoin", function (clientId){
+webstrate.on("clientJoin", function(clientId) {
   let username = webstrate.user.userId;
-  if (username != "anonymous:" && roleDelegationAnswer == ''){
-    roleDelegationAnswer.innerHTML(username);
+  if (username != "anonymous:" && roleDelegationAnswer.innerHTML == ''){
+    roleDelegationAnswer.innerHTML=username;
 
   } else{
     return;
