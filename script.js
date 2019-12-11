@@ -37,7 +37,10 @@ webstrate.on("clientJoin", function(clientId) {
   let username = webstrate.user.username;
   console.log(username);
 
-  let roleDelegationAnswer = document.getElementById("answerRoleTitle");
+
+
+});
+/*   let roleDelegationAnswer = document.getElementById("answerRoleTitle");
 
 
   if (username != "anonymous:" && roleDelegationAnswer.innerHTML == 'Hej'){
@@ -45,10 +48,7 @@ webstrate.on("clientJoin", function(clientId) {
 
   } else{
     return;
-  }
-
-});
-
+  } */
 
 function showStartButtonWhenReady() {
   if(document.getElementById("referenceRoleUnderstood").style.visibility == "hidden"
