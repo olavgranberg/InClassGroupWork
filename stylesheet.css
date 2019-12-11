@@ -139,12 +139,12 @@ body{
     padding: 2px;
 }
 .roleDescriptions p{
-  padding-left: :8px;
-    padding-right: :8px;
+  padding-left: 10px;
+    padding-right: 10px;
 }
 .roleDescriptions h2{
-  padding-left: :8px;
-    padding-right: :8px;
+  padding-left: 10px;
+    padding-right: 8px;
 }
 
 
