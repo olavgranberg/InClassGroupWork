@@ -109,7 +109,7 @@ let referenceIsDelegatedTo = document.querySelectorAll('li')[1].innerHTML;
 
 }
 else{
-  alert("This role is assigned to" + referenceIsDelegatedTo);
+  alert("This role is assigned to " + referenceIsDelegatedTo);
 }
 
   });
@@ -131,7 +131,7 @@ else{
     showStartButtonWhenReady()
   }
   else{
-    alert("This role is assigned to" + answerIsDelegatedTo);
+    alert("This role is assigned to " + answerIsDelegatedTo);
   }
 
   });
@@ -152,7 +152,7 @@ else{
     showStartButtonWhenReady()
   }
   else{
-  alert("This role is assigned to" + presenterIsDelegatedTo);
+  alert("This role is assigned to " + presenterIsDelegatedTo);
 }
 
   });
@@ -174,7 +174,7 @@ else{
 
         }
         else{
-  alert("This role is assigned to" + analystIsDelegatedTo);
+  alert("This role is assigned to " + analystIsDelegatedTo);
   }
   });
 
