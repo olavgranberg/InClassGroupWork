@@ -38,7 +38,7 @@ webstrate.on("clientJoin", function (clientId){
     return;
   }
 
-}
+});
 
 
 function showStartButtonWhenReady() {
