@@ -109,7 +109,7 @@ let referenceIsDelegatedTo = document.querySelectorAll('li')[1].innerHTML;
 
 }
 else{
-  alert("You must be logged in to https://webstrates.cs.au.dk/frontpage/");
+  alert("This role is assigned to" + referenceIsDelegatedTo);
 }
 
   });
@@ -131,7 +131,7 @@ else{
     showStartButtonWhenReady()
   }
   else{
-    alert("You must be logged in to https://webstrates.cs.au.dk/frontpage/");
+    alert("This role is assigned to" + answerIsDelegatedTo);
   }
 
   });
@@ -152,7 +152,7 @@ else{
     showStartButtonWhenReady()
   }
   else{
-  alert("You must be logged in to https://webstrates.cs.au.dk/frontpage/");
+  alert("This role is assigned to" + presenterIsDelegatedTo);
 }
 
   });
@@ -174,7 +174,7 @@ else{
 
         }
         else{
-  alert("You must be logged in to https://webstrates.cs.au.dk/frontpage/");
+  alert("This role is assigned to" + analystIsDelegatedTo);
   }
   });
 
