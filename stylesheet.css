@@ -55,7 +55,7 @@ body{
   border: solid black;
   border-width: thin;
   width: 30%;
-  height: 30%;
+  height: 40%;
   top: 8%;
   right: 2%;
   position:absolute;
@@ -68,8 +68,8 @@ body{
   border: solid black;
   border-width: thin;
   width: 30%;
-  height: 30%;
-  top: 48%;
+  height: 40%;
+  bottom: 8%;
   left: 2%;
   position:absolute;
     padding: 2px;
@@ -80,7 +80,7 @@ body{
   border: solid black;
   border-width: thin;
   width: 30%;
-  height: 30%;
+  height: 40%;
   top: 8%;
   left: 2%;
   position:absolute;
@@ -93,8 +93,8 @@ body{
   border: solid black;
   border-width: thin;
   width: 30%;
-  height: 30%;
-  top: 48%;
+  height: 40%;
+  bottom: 8%;
   right: 2%;
   position:absolute;
     padding: 2px;
