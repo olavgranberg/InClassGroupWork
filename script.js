@@ -48,11 +48,6 @@ webstrate.on("clientPart", function(clientId) {
 
 
 
- let roleDelegationAnswer = document.getElementById("answerRoleTitle");
-let roleDelegationReference;
-let roleDelegationAnalyst;
-let roleDelegationPresenter;
-
 webstrate.on("loaded", function(webstrateId, clientId, user) {
 let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
 
@@ -69,6 +64,19 @@ var ul = document.querySelector('ul');
 for (var i = ul.children.length; i >= 0; i--) {
     ul.appendChild(ul.children[Math.random() * i | 0]);
 }
+
+let analystIsDelegatedTo = document.querySelectorAll('li')[0];
+let referenceIsDelegatedTo = document.querySelectorAll('li')[1];
+let presenterIsDelegatedTo = document.querySelectorAll('li')[0];
+let answerIsDelegatedTo = document.querySelectorAll('li')[1];
+
+document.getElementById("presenterRoleTitle").innerHTML = presenterIsDelegatedTo;
+document.getElementById("analystRoleTitle").innerHTML = analystIsDelegatedTo;
+document.getElementById("referenceRoleTitle").innerHTML = referenceIsDelegatedTo;
+document.getElementById("answerRoleTitle").innerHTML = answerIsDelegatedTo;
+
+
+
 });
 
 
