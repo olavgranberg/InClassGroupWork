@@ -26,12 +26,13 @@ webstrate.on("clientPart", function(clientId) {
 
 
 
-let roleDelegationAnswer = document.getElementById("answerRoleTitle");
+
 let roleDelegationReference;
 let roleDelegationAnalyst;
 let roleDelegationPresenter;
 
 webstrate.on("clientJoin", function(clientId) {
+  let roleDelegationAnswer = document.getElementById("answerRoleTitle");
   let username = webstrate.user.username;
   if (username != "anonymous:" && roleDelegationAnswer.innerHTML === 'Hej'){
     roleDelegationAnswer.innerHTML = "pølse :D";
