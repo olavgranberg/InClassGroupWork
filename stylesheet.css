@@ -18,6 +18,13 @@ body{
   background-color: white;
 
 }
+#delegateRoles{
+  visibility: hidden;
+  border: none;
+  background-color: #C6C5C5;
+  height: 20px;
+  visibility: hidden;
+}
 
 #Start {
   border: none;
@@ -62,6 +69,7 @@ body{
   padding: 2px;
 
 }
+
 
 #presenterRole{
   background-color: white;

@@ -33,9 +33,9 @@ let roleDelegationPresenter;
 
 webstrate.on("clientJoin", function(clientId) {
 let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
-console.log(lis.length+1);
-if(lis.length == 4 ){
-  alert("You're ready!")
+
+if(lis.length == 3 ){
+  document.getElementById("delegateRoles").style.visibility = "visible";
 } else{
   return;
 }
