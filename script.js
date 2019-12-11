@@ -8,12 +8,17 @@ let userId = Math.floor(Math.random() * 4) + 1;
 webstrate.on("loaded", function(webstrateId, clientId, user) {
 
  	let username = user.userId;
+  if(username =! "anonymous:"){
     let usernameHolder = document.getElementById("usernameHolderList");
     let myUsername = document.createElement("li");
 	myUsername.id = clientId;
 	myUsername.setAttribute("style","display:block");
     myUsername.innerText = username;
     usernameHolder.appendChild(myUsername);
+    }
+    else{
+      alert("Only logged in users can join this workspace")
+    }
 
 });
 
