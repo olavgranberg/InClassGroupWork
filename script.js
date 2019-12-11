@@ -43,7 +43,8 @@ webstrate.on("clientPart", function(clientId) {
   if(lis.length == 2){
     document.getElementById("delegateRoles").style.visibility = "visible";
     } else{
-    document.getElementById("delegateRoles").style.visibility = "hidden";}
+    document.getElementById("delegateRoles").style.visibility = "hidden";
+  }
   });
 
 
