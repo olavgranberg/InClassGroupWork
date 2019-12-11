@@ -32,16 +32,25 @@ let roleDelegationAnalyst;
 let roleDelegationPresenter;
 
 webstrate.on("clientJoin", function(clientId) {
+  // User with clientId has just joined the webstrate.
+  console.log(clientId);
+});
+
+
+/*
+
+
+webstrate.on("clientJoin", function(clientId) {
 
   let joiningUser = document.getElementById(clientId);
-  alert(joininguser);
+
   let username = webstrate.user.username;
   alert(username);
-
+  alert(joininguser);
 
 
 });
-/*   let roleDelegationAnswer = document.getElementById("answerRoleTitle");
+ let roleDelegationAnswer = document.getElementById("answerRoleTitle");
 
 
   if (username != "anonymous:" && roleDelegationAnswer.innerHTML == 'Hej'){
