@@ -25,6 +25,7 @@ webstrate.on("loaded", function(webstrateId, clientId, user) {
 
 
 webstrate.on("clientPart", function(clientId) {
+  let username = user.userId;
   if(username != "anonymous:"){
   let partingUser = document.getElementById(clientId);
 	console.log(partingUser, clientId);
