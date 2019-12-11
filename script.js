@@ -33,6 +33,13 @@ webstrate.on("clientPart", function(clientId) {
 }else{
   return;
 }
+if(lis.length == 2){
+  document.getElementById("delegateRoles").style.visibility = "visible";
+  }
+  else{
+  document.getElementById("delegateRoles").style.visibility = "hidden";
+  }
+}
 });
 
 
@@ -48,7 +55,7 @@ let lis = document.getElementById("usernameHolderList").getElementsByTagName("li
 if(lis.length == 2){
   document.getElementById("delegateRoles").style.visibility = "visible";
 } else{
-  return;
+  document.getElementById("delegateRoles").style.visibility = "hidden";
 }
 });
 //if(lis.length == 4 && lis[i] != "anonymous:") if(lis.length == 4 ){
