@@ -30,9 +30,10 @@ webstrate.on("clientPart", function(clientId) {
   let partingUser = document.getElementById(clientId);
 	console.log(partingUser, clientId);
 	partingUser.parentNode.removeChild(partingUser);
-}else{
+  }
+  else{
   return;
-}
+  }
 
 
 });
@@ -65,6 +66,12 @@ if(lis.length == 2){
 //if(lis.length == 4 && lis[i] != "anonymous:") if(lis.length == 4 ){
 //  alert("You're ready");
 // }
+
+document.getElementById("delegateRoles").addEventListener("click", function() {
+var ul = document.querySelector('ul');
+for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+};
 
 
 
