@@ -32,9 +32,15 @@ let roleDelegationAnalyst;
 let roleDelegationPresenter;
 
 webstrate.on("clientJoin", function(clientId) {
-  let roleDelegationAnswer = document.getElementById("answerRoleTitle");
+  let joiningUser = document.getElementById(clientId);
+  console.log(joininguser);
   let username = webstrate.user.username;
-  if (username != "anonymous:" && roleDelegationAnswer.innerHTML === 'Hej'){
+  console.log(username);
+
+  let roleDelegationAnswer = document.getElementById("answerRoleTitle");
+
+
+  if (username != "anonymous:" && roleDelegationAnswer.innerHTML == 'Hej'){
     roleDelegationAnswer.innerHTML = "pølse :D";
 
   } else{
