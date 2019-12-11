@@ -63,14 +63,14 @@ if(lis.length == 2){
 }
 });
 
-/*
+
 document.getElementById("delegateRoles").addEventListener("click", function() {
 var ul = document.querySelector('ul');
 for (var i = ul.children.length; i >= 0; i--) {
     ul.appendChild(ul.children[Math.random() * i | 0]);
 }
 });
-*/
+
 
 function showStartButtonWhenReady() {
   if(document.getElementById("referenceRoleUnderstood").style.visibility == "hidden"
