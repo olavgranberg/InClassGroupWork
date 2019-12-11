@@ -34,7 +34,7 @@ let roleDelegationPresenter;
 webstrate.on("clientJoin", function(clientId) {
   let username = webstrate.user.username;
   if (username != "anonymous:" && roleDelegationAnswer === 'Hej'){
-    roleDelegationAnswer = username;
+    roleDelegationAnswer = "pølse :D";
 
   } else{
     return;
