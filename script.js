@@ -33,12 +33,12 @@ let roleDelegationPresenter;
 
 webstrate.on("clientJoin", function(clientId) {
 let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
+console.log(lis.length);
 
-if(lis.length == 4 ){
-  alert("You're ready");
-}
 });
-// if(lis.length == 4 && lis[i] != "anonymous:")
+// if(lis.length == 4 && lis[i] != "anonymous:") if(lis.length == 4 ){
+//  alert("You're ready");
+// }
 
 
 
