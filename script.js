@@ -39,7 +39,6 @@ if(lis.length == 2){
   else{
   document.getElementById("delegateRoles").style.visibility = "hidden";
   }
-}
 });
 
 
