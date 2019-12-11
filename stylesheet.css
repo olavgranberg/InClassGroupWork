@@ -20,6 +20,18 @@ body{
 
 }
 
+#PresentationOfWorkSpace{
+  left: 35%;
+  width: 30%;
+  position: absolute;
+  background-color:white;
+  box-shadow: 1px 2px;
+  top: 50%;
+  border:solid;
+  border-width: thin;
+
+}
+
 #referenceRoleUnderstood{
   visibility: hidden;
   border: none;
