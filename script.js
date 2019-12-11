@@ -34,7 +34,7 @@ let roleDelegationPresenter;
 webstrate.on("clientJoin", function(clientId) {
 let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
 
-if(lis.length == 1 && lis[i] != "anonymous:" ){
+if(lis.length == 1){
   document.getElementById("delegateRoles").style.visibility = "visible";
 } else{
   return;
