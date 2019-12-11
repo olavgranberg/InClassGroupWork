@@ -53,7 +53,7 @@ let roleDelegationReference;
 let roleDelegationAnalyst;
 let roleDelegationPresenter;
 
-webstrate.on("clientJoin", function(clientId) {
+webstrate.on("loaded", function(webstrateId, clientId, user) {
 let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
 
 if(lis.length == 2){
@@ -63,8 +63,14 @@ if(lis.length == 2){
 }
 });
 
-
-
+/*
+document.getElementById("delegateRoles").addEventListener("click", function() {
+var ul = document.querySelector('ul');
+for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+}
+});
+*/
 
 function showStartButtonWhenReady() {
   if(document.getElementById("referenceRoleUnderstood").style.visibility == "hidden"
