@@ -24,15 +24,17 @@ webstrate.on("clientPart", function(clientId) {
 	partingUser.parentNode.removeChild(partingUser);
 });
 
-let roleDelegationAnswer = document.getElementById("answerRoleTitle");
+
+
+let roleDelegationAnswer = document.getElementById("answerRoleTitle").innerHTML;
 let roleDelegationReference;
 let roleDelegationAnalyst;
 let roleDelegationPresenter;
 
 webstrate.on("clientJoin", function(clientId) {
-  let username = webstrate.user.userId;
-  if (username != "anonymous:" && roleDelegationAnswer.innerHTML == 'Hej'){
-    roleDelegationAnswer.innerHTML=username;
+  let username = webstrate.user.username;
+  if (username != "anonymous:" && roleDelegationAnswer === 'Hej'){
+    roleDelegationAnswer = username;
 
   } else{
     return;
