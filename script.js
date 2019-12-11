@@ -35,7 +35,6 @@ webstrate.on("clientPart", function(clientId) {
   return;
   }
 
-
 });
 
 webstrate.on("clientPart", function(clientId) {
