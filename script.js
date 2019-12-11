@@ -39,7 +39,7 @@ webstrate.on("clientPart", function(clientId) {
 
 webstrate.on("clientPart", function(clientId) {
   let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
-  if(lis.length == 4){
+  if(lis.length == 2){
     document.getElementById("delegateRoles").style.visibility = "visible";
     } else{
     document.getElementById("delegateRoles").style.visibility = "hidden";
@@ -51,7 +51,7 @@ webstrate.on("clientPart", function(clientId) {
 webstrate.on("loaded", function(webstrateId, clientId, user) {
 let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
 
-if(lis.length == 4){
+if(lis.length == 2){
   document.getElementById("delegateRoles").style.visibility = "visible";
 } else{
   document.getElementById("delegateRoles").style.visibility = "hidden";
@@ -67,8 +67,8 @@ for (var i = ul.children.length; i >= 0; i--) {
 
 let analystIsDelegatedTo = document.querySelectorAll('li')[0];
 let referenceIsDelegatedTo = document.querySelectorAll('li')[1];
-let presenterIsDelegatedTo = document.querySelectorAll('li')[2];
-let answerIsDelegatedTo = document.querySelectorAll('li')[3];
+let presenterIsDelegatedTo = document.querySelectorAll('li')[0];
+let answerIsDelegatedTo = document.querySelectorAll('li')[1];
 
 document.getElementById("presenterRoleTitle").innerHTML = presenterIsDelegatedTo.innerHTML;
 document.getElementById("analystRoleTitle").innerHTML = analystIsDelegatedTo.innerHTML;
