@@ -166,6 +166,10 @@ body{
     padding-right: 10px;
 }
 
+.roleDescriptions h3 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 /* Styling iframes */
 
