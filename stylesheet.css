@@ -32,6 +32,15 @@ body{
   padding: 2px;
 
 }
+#PresentationOfWorkSpace h2{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#PresentationOfWorkSpace p {
+  padding-left: 10px;
+    padding-right: 10px
+}
 
 #referenceRoleUnderstood{
   visibility: hidden;
