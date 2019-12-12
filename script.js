@@ -193,6 +193,7 @@ else{
   document.getElementById("hideThis").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
+  document.getElementById("PresentationOfWorkSpace").style.visibility = "hidden";
 
 
 // ------------------------ Makes sure, that every iframe is synchronized ---------------------
