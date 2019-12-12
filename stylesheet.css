@@ -1,69 +1,45 @@
 /* Workspace */
-
-body{
+body {
   background-color: grey;
 }
 
 /* Online waiting room */
-
-#waitingRoom{
-  border:solid;
+#waitingRoom {
+  border: solid;
   border-width: thin;
   width: 30%;
   margin-bottom: 30px;
   position: absolute;
-  left:35%;
+  left: 35%;
   top: 8%;
   text-align: center;
   background-color: white;
   box-shadow: 1px 2px;
-
 }
 
-#PresentationOfWorkSpace{
+#PresentationOfWorkSpace {
   left: 35%;
   width: 30%;
   position: absolute;
-  background-color:white;
+  background-color: white;
   box-shadow: 1px 2px;
   top: 30%;
   border: solid;
   border-width: thin;
   padding: 2px;
-
 }
-#PresentationOfWorkSpace h2{
+
+#PresentationOfWorkSpace h2 {
   padding-left: 10px;
   padding-right: 10px;
 }
 
 #PresentationOfWorkSpace p {
   padding-left: 10px;
-    padding-right: 10px
+  padding-right: 10px
 }
 
-#referenceRoleUnderstood{
-  visibility: hidden;
-  border: none;
-  background-color: #C6C5C5;
-  height: 20px;
-  visibility: hidden;
-}
-#answerRoleUnderstood{
-  visibility: hidden;
-  border: none;
-  background-color: #C6C5C5;
-  height: 20px;
-  visibility: hidden;
-}
-#presenterRoleUnderstood{
-  visibility: hidden;
-  border: none;
-  background-color: #C6C5C5;
-  height: 20px;
-  visibility: hidden;
-}
-#analystRoleUnderstood{
+#referenceRoleUnderstood {
   visibility: hidden;
   border: none;
   background-color: #C6C5C5;
@@ -71,8 +47,31 @@ body{
   visibility: hidden;
 }
 
+#answerRoleUnderstood {
+  visibility: hidden;
+  border: none;
+  background-color: #C6C5C5;
+  height: 20px;
+  visibility: hidden;
+}
 
-#delegateRoles{
+#presenterRoleUnderstood {
+  visibility: hidden;
+  border: none;
+  background-color: #C6C5C5;
+  height: 20px;
+  visibility: hidden;
+}
+
+#analystRoleUnderstood {
+  visibility: hidden;
+  border: none;
+  background-color: #C6C5C5;
+  height: 20px;
+  visibility: hidden;
+}
+
+#delegateRoles {
   visibility: hidden;
   border: none;
   background-color: #C6C5C5;
@@ -88,30 +87,24 @@ body{
 }
 
 /* Header */
-#header{
-  color:white;
-  text-align:center;
-
+#header {
+  color: white;
+  text-align: center;
 }
+
 #roleDivHeader {
   text-align: center;
   padding-bottom: 10px;
-  margin:2px;
+  margin: 2px;
   padding: 2px;
-
 }
 
-#workspace{
+#workspace {
   visibility: hidden;
 }
 
-
-
 /* Styling Role dives */
-
-
-
-#analystRole{
+#analystRole {
   background-color: white;
   border: solid black;
   border-width: thin;
@@ -119,14 +112,12 @@ body{
   height: 42%;
   top: 8%;
   right: 2%;
-  position:absolute;
+  position: absolute;
   padding: 2px;
   box-shadow: 1px 2px;
-
 }
 
-
-#presenterRole{
+#presenterRole {
   background-color: white;
   border: solid black;
   border-width: thin;
@@ -134,12 +125,12 @@ body{
   height: 42%;
   bottom: 4%;
   left: 2%;
-  position:absolute;
-    padding: 2px;
-    box-shadow: 1px 2px;
+  position: absolute;
+  padding: 2px;
+  box-shadow: 1px 2px;
 }
 
-#answerRole{
+#answerRole {
   background-color: white;
   border: solid black;
   border-width: thin;
@@ -147,13 +138,12 @@ body{
   height: 42%;
   top: 8%;
   left: 2%;
-  position:absolute;
-    padding: 2px;
-    box-shadow: 1px 2px;
-
+  position: absolute;
+  padding: 2px;
+  box-shadow: 1px 2px;
 }
 
-#referenceRole{
+#referenceRole {
   background-color: white;
   border: solid black;
   border-width: thin;
@@ -161,17 +151,19 @@ body{
   height: 42%;
   bottom: 4%;
   right: 2%;
-  position:absolute;
-    padding: 2px;
-    box-shadow: 1px 2px;
+  position: absolute;
+  padding: 2px;
+  box-shadow: 1px 2px;
 }
-.roleDescriptions p{
+
+.roleDescriptions p {
   padding-left: 10px;
-    padding-right: 10px;
+  padding-right: 10px;
 }
-.roleDescriptions h2{
+
+.roleDescriptions h2 {
   padding-left: 10px;
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .roleDescriptions h3 {
@@ -180,50 +172,45 @@ body{
 }
 
 /* Styling iframes */
-
-#iframeAnswer{
+#iframeAnswer {
   position: absolute;
   top: 5%;
-  right:2%;
+  right: 2%;
   height: 90%;
   width: 33%;
   background-color: white;
-
 }
-#iframePresenter{
+
+#iframePresenter {
   position: absolute;
   height: 44%;
   width: 31%;
-  left:33%;
-  top:5%;
+  left: 33%;
+  top: 5%;
   background-color: white;
 }
-#iframeAnalyst{
+
+#iframeAnalyst {
   position: absolute;
   height: 44%;
   width: 30%;
   left: 2%;
-  top:5%;
+  top: 5%;
   background-color: white;
-
 }
-#iframeReference{
+
+#iframeReference {
   position: absolute;
   height: 44%;
   width: 62%;
-  left:2%;
+  left: 2%;
   top: 51%;
   background-color: white;
 }
 
-
 /* Header styling */
-
-
-
 .topnav {
   overflow: hidden;
-
 }
 
 .topnav a {
