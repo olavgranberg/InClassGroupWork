@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<html data-auth="[{&quot;username&quot;: &quot;olavgranberg&quot;, &quot;provider&quot;: &quot;github&quot;, &quot;permissions&quot;: &quot;arw&quot;}, {&quot;username&quot;: &quot;bjarkebeske&quot;, &quot;provider&quot;: &quot;au&quot;, &quot;permissions&quot;: &quot;arw&quot;},
+ {&quot;username&quot;: &quot;anonymous&quot;, &quot;provider&quot;: &quot;&quot;, &quot;permissions&quot;: &quot;r&quot;}]">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Reference</title>
+  <title>reference</title>
 </head>
+
 <body>
 
 
@@ -14,150 +15,189 @@
 
 
 
-    <div id="formElementsQoutesAndLitterature">
+    <div id="formElementsQoutesAndLitterature" style="visibility: hidden;">
 
       <form id="referenceForm">
 
-        <input class="textInput" type="text" id="tablePQoute" onfocus="this.value=''"   value="Qoute: ANT er et vigtigt redskab">
+        <input class="textInput" type="text" id="tablePQoute" onfocus="this.value=''" value="Quote: ...">
 
-        <input class="textInput" type="text" id="tablePTitle" onfocus="this.value=''" value="Title: En introduktion til STS">
+        <input class="textInput" type="text" id="tablePTitle" onfocus="this.value=''" value="Title: ... ">
 
-          <input class="textInput" type="text" id="tablePAuthor" onfocus="this.value=''" value="Author: Fin Olesen">
+        <input class="textInput" type="text" id="tablePAuthor" onfocus="this.value=''" value="Author: ... ">
 
-          <input class="textInput" type="text" id="tablePPageOrLink" onfocus="this.value=''" value="Pagenumber or link: 86">
+        <input class="textInput" type="text" id="tablePPageOrLink" onfocus="this.value=''" value="Pagenumber or link: ...">
 
-          <input class="textInput" type="text" id="tablePQouteYear" onfocus="this.value=''" value="Year: 2007">
+        <input class="textInput" type="text" id="tablePQouteYear" onfocus="this.value=''" value="Year: ...">
 
-  <input type="button" id="buttonAddWebOrBook" value="Submit">
+        <input type="button" id="buttonAddWebOrBook" value="Submit" style="visibility: hidden;">
 
       </form>
 
 
+    </div>
+
+    <h3 id="qoutesAndLitteratureHeader" style="visibility: visible;">Quotes and litterature</h3>
+
+    <button id="buttonBook" style="visibility: visible;">Add reference</button>
+
+    <table id="table" style="visibility: visible;">
+      <tbody>
+        <tr>
+          <th>Quote</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Page or link</th>
+          <th>Year</th>
+          <th></th>
+        </tr>
+      </tbody>
+    </table>
+
+
+
   </div>
 
-    <h3 id="qoutesAndLitteratureHeader">Qoutes and litterature</h3>
-      <button id="buttonBook">Add reference</button>
 
-      <table id="table">
-    <tr>
-      <th>Qoute</th>
-
-      <th>Title</th>
-      <th>Author</th>
-      <th>Page or link</th>
-      <th>Year</th>
-      <th></th>
-    </tr>
-  </table>
+  <style>
+    /* ReferenceDiv */
+    .qoutesAndLitteratureDiv {
+      background-color: white;
 
 
+      position: absolute;
+      height: 95%;
+      width: 95%;
+      top: 2.5%;
+      left: 2.5%
+    }
 
-  </div>
+    .qoutesAndLitteratureDiv h3 {
+      margin: 10px;
+    }
 
+    #formElementsQoutesAndLitterature {
 
-  </div>
-
-
-</div>
-
-
-<style>
-
-/* ReferenceDiv */
-.qoutesAndLitteratureDiv{
-background-color: white;
-    border:solid;
-    position: absolute;
-    height: 90%;
-    width: 90%;
-    marign: 20px;
-
-}
-.qoutesAndLitteratureDiv h3{
-  margin:10px;
-}
-#formElementsQoutesAndLitterature {
-
-  width: 100px;
-  height: 50px;
-  position: absolute;
-  top:1%;
-  visibility: hidden;
+      width: 90%;
+      height: 50%;
+      position: absolute;
+      top: 1%;
+      visibility: hidden;
 
 
-}
+    }
 
-#formElementsQoutesAndLitterature input{
-padding-left: 5px;
-padding-right: 5px;
-  height: 30px;
-width:650px;
-  border: 3px solid black;
-  margin:3px;
-}
+    #formElementsQoutesAndLitterature input {
+      padding-left: 5px;
+      padding-right: 5px;
+      height: 90%;
+      width: 90%;
+      border: solid black;
+      border-width: thin;
+      margin: 3px;
+    }
+
+
+    #buttonAddWebOrBook {
+      cursor: pointer;
+      background-colour: #C6C5C5;
+      border: none;
 
 
 
+    }
 
-#buttonAddWebOrBook{
-  cursor:pointer;
-}
+    #buttonBook {
+      border-style: none;
+      background-colour: #C6C5C5;
+      height: 35px;
+      margin-buttom: 2px;
+      padding-buttom: 2px;
 
-#tablePQoute{
-font-style: italic;
-}
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-
-}
-td{
-max-width: 100px;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-
-   }
+    }
 
 
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-</style>
-
-<script>
-
-// ------------------------- QOUTES AND LITTERATURE -------------------------------- //
+    #tablePQoute {
+      font-style: italic;
+    }
 
 
-//var x = document.getElementById("table"); x.style.display = "none"; //
-document.getElementById("buttonBook").addEventListener("click", function () {
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 90%;
+      overflow: auto;
 
-  document.getElementById("table").style.visibility = "hidden";
-  document.getElementById("buttonBook").style.visibility = "hidden";
-  document.getElementById("qoutesAndLitteratureHeader").style.visibility = "hidden";
+    }
 
-  document.getElementById("buttonAddWebOrBook").style.visibility = "visible";
-    document.getElementById("formElementsQoutesAndLitterature").style.visibility = "visible";
+    tr {
+      width: 90%;
+      overflow: auto;
+    }
+
+    td,
+    th {
+      max-width: 90%;
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      width: 10%;
+      overflow: auto;
+    }
+
+    td {
+      max-width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: auto;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+
+  <script>
+    // Fetch username and provider from parsed URL
+
+    webstrate.on('loaded', () => {
+      let usernameAndProviderString = window.location.search;
+      let usernameString = usernameAndProviderString.split("%")[0].substring(1);
+      let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0, -1);
+
+
+      document.documentElement.setAttribute('data-auth', JSON.stringify([{
+        username: usernameString,
+        provider: providerString,
+        permissions: "rw"
+      }, {
+        "username": "anonymous",
+        "provider": "",
+        "permissions": "r"
+      }]));
+
+    });
+
+    // ------------------------- QOUTES AND LITTERATURE -------------------------------- //
+
+
+    //var x = document.getElementById("table"); x.style.display = "none"; //
+    document.getElementById("buttonBook").addEventListener("click", function() {
+
+      document.getElementById("table").style.visibility = "hidden";
+      document.getElementById("buttonBook").style.visibility = "hidden";
+      document.getElementById("qoutesAndLitteratureHeader").style.visibility = "hidden";
+
+      document.getElementById("buttonAddWebOrBook").style.visibility = "visible";
+      document.getElementById("formElementsQoutesAndLitterature").style.visibility = "visible";
 
 
 
 
-});
+    });
 
 
-document.getElementById("buttonAddWebOrBook").addEventListener("click", function () {
+    document.getElementById("buttonAddWebOrBook").addEventListener("click", function() {
 
       document.getElementById("table").style.visibility = "visible";
       document.getElementById("buttonBook").style.visibility = "visible";
@@ -168,24 +208,24 @@ document.getElementById("buttonAddWebOrBook").addEventListener("click", function
       var tableRef = document.getElementById('table').getElementsByTagName('tbody')[0];
 
       // Insert a row in the table at the last row
-      var newRow   = tableRef.insertRow();
+      var newRow = tableRef.insertRow();
 
       // Insert a cell in the row at index 0
-      var newCell  = newRow.insertCell(0);
-      var newCellTwo  = newRow.insertCell(1);
-        var newCellThree  = newRow.insertCell(2);
-          var newCellFour  = newRow.insertCell(3);
-            var newCellFive  = newRow.insertCell(4);
-            var newCellSix  = newRow.insertCell(5);
+      var newCell = newRow.insertCell(0);
+      var newCellTwo = newRow.insertCell(1);
+      var newCellThree = newRow.insertCell(2);
+      var newCellFour = newRow.insertCell(3);
+      var newCellFive = newRow.insertCell(4);
+      var newCellSix = newRow.insertCell(5);
 
 
-var tablePText=document.getElementById('tablePQoute').value;
-var tablePTitleText=document.getElementById('tablePTitle').value;
-var tablePAuthorText=document.getElementById('tablePAuthor').value;
-var tablePPageOrLinkText=document.getElementById('tablePPageOrLink').value;
-var tablePQouteYearText=document.getElementById('tablePQouteYear').value;
+      var tablePText = document.getElementById('tablePQoute').value;
+      var tablePTitleText = document.getElementById('tablePTitle').value;
+      var tablePAuthorText = document.getElementById('tablePAuthor').value;
+      var tablePPageOrLinkText = document.getElementById('tablePPageOrLink').value;
+      var tablePQouteYearText = document.getElementById('tablePQouteYear').value;
       // Append a text node to the cell
-      var newQoute  = document.createTextNode(tablePText);
+      var newQoute = document.createTextNode(tablePText);
       var newTitle = document.createTextNode(tablePTitleText);
       var newAuthor = document.createTextNode(tablePAuthorText);
       var newPageOrLink = document.createTextNode(tablePPageOrLinkText);
@@ -198,9 +238,9 @@ var tablePQouteYearText=document.getElementById('tablePQouteYear').value;
 
       deleteButtonRow.addEventListener('click', function() {
         var i = deleteButtonRow.parentNode.parentNode.rowIndex;
-          document.getElementById("table").deleteRow(i);
+        document.getElementById("table").deleteRow(i);
 
-}, false);
+      }, false);
 
 
 
@@ -213,34 +253,12 @@ var tablePQouteYearText=document.getElementById('tablePQouteYear').value;
 
 
 
-});
+    });
 
-buttonAddWebOrBook.addEventListener('click', function() {
-    document.getElementById("referenceForm").reset();
-});
-
-
-
-let waitingRoomUpdate = document.getElementById("waitingRoomUpdate");
-
-waitingRoomUpdate.addEventListener('click', function() {
-
-document.getElementById("waitingRoomList").innerHTML = "";
-
-  var webstrateClients = webstrate.clients;
-
-
-  for (i = 0; i < webstrateClients.length; i++){
-  var arrayText = webstrateClients[i];
-  var node = document.createElement("LI");                 // Create a <li> node
-  var textnode = document.createTextNode(arrayText);         // Create a text node
-  node.appendChild(textnode);                              // Append the text to <li>
-  document.getElementById("waitingRoomList").appendChild(node);
-  }
-}, false);
-
-
-
-</script>
+    buttonAddWebOrBook.addEventListener('click', function() {
+      document.getElementById("referenceForm").reset();
+    });
+  </script>
 </body>
+
 </html>

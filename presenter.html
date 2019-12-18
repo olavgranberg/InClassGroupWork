@@ -1,240 +1,198 @@
+<html data-auth="[{&quot;username&quot;: &quot;olavgranberg&quot;, &quot;provider&quot;: &quot;github&quot;, &quot;permissions&quot;: &quot;arw&quot;},{&quot;username&quot;: &quot;bjarkebeske&quot;, &quot;provider&quot;: &quot;au&quot;, &quot;permissions&quot;: &quot;arw&quot;},
+ {&quot;username&quot;: &quot;anonymous&quot;, &quot;provider&quot;: &quot;&quot;, &quot;permissions&quot;: &quot;r&quot;}]">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Presenter</title>
-</head>
+<head></head>
+
 <body>
-
-<div class="presentingDiv">
-
-  <h2 style="margin: 5px;">Presenting notes</h2>
-
-  <input type="text" id="myInputPresentingDiv" placeholder="Max 60 chars">
-  <span onclick="newElementPresentingDiv()" class="addBtnPresentingDiv">Add</span>
+  <title>kais2019inclassgroupworkpresenter</title>
 
 
-  <ul id="myULPresentingDiv" class="myULPresentingDiv">
+  <div class="presentingDiv">
 
-</ul>
+    <h2 style="margin: 5px;">Presenting notes</h2>
 
-</div>
-
-
-<style>
-
-  * {
-    box-sizing: border-box;
-  }
-
-.presentingDiv{
-  background-color: white;
-  border-style: solid;
-  position: absolute;
-  height: 90%;
-  width: 90%;
-  marign: 20px;
-
-}
-
-/* Remove margins and padding from the list */
-.presentingDiv ul {
-  margin-top: 10%;
-  padding: 0;
+    <input type="text" id="myInputPresentingDiv" placeholder="Max 60 chars">
+    <span onclick="newElementPresentingDiv()" class="addBtnPresentingDiv">Add</span>
 
 
-}
+    <ul id="myULPresentingDiv" class="myULPresentingDiv"></ul>
+  </div>
 
-/* Style the list items */
-.presentingDiv ul li {
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
-  background-color: white;
-
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Style the close button */
-.closemyNodelistPresentingDiv {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.closemyNodelistPresentingDiv:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-/* Style the header */
-.headerPresentingDiv {
-  background-color: #f44336;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-
-/* Clear floats after the header */
-.presentingDiv .headerPresentingDiv:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
-.presentingDiv input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
-
-/* Style the "Add" button */
-.addBtnPresentingDiv {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
-}
-
-.addBtnPresentingDiv:hover {
-  background-color: #bbb;
-}
-
-</style>
-
-<script>
-
-<html data-auth='[{"username": "olavgranberg", "provider": "github", "permissions": "arw"},
- {"username": "anonymous", "provider": "", "permissions": "r"}]'>
-
- webstrate.on('loaded', () => {
-     let usernameAndProviderString = window.location.search;
-     let usernameString = usernameAndProviderString.split("%")[0].substring(1);
-     let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0,-1);
-
-
-     document.documentElement.setAttribute('data-auth', JSON.stringify([
-         {username: usernameString, provider: providerString, permissions: "rw"}, {"username": "anonymous", "provider": "", "permissions": "r"}
-       ])
-     );
-
- });
-
-// ----------- brugernavn og provider
-let input = window.location.search;
-
-let fields = input.split(":");
-alert(fields[0].substring(1));
-alert(fields[1]);
-
-
-
-webstrate.on('loaded', () => {
-    let usernameAndProviderString = window.location.search;
-    let usernameString = usernameAndProviderString.split("%")[0].substring(1);
-    let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0,-1);
-
-
-    document.documentElement.setAttribute('data-auth', JSON.stringify([
-        {username: usernameString, provider: providerString, permissions: "rw"}
-      ])
-    );
-
-});
-
-
-
-alert(window.location.search);
-
-
-// ?olavgranberg%3Agithub
-
-/*
-
-webstrate.on('loaded', () => {
-//  if (webstrate.version === 1) {
-    let usernameAndProviderString = window.location.search;
-    let usernameString = usernameAndProviderString.split("%")[0].substring(1));
-    let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0,-1);
-
-
-    document.documentElement.setAttribute('data-auth', JSON.stringify([
-        { username: usernameString, provider: providerString, permissions: 'rw' }]);
-    );
-//  }
-});
-
-*/
-
-// Create a "close" button and append it to each list item
-var myULLListPresentingDiv = document.getElementById("myULPresentingDiv");
-var myNodelistPresentingDiv = myULLListPresentingDiv.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelistPresentingDiv.length; i++) {
-  var spanmyNodelistPresentingDiv = document.createElement("SPAN");
-  var txtmyNodelistPresentingDiv = document.createTextNode("\u00D7");
-  span.className = "closemyNodelistPresentingDiv";
-  span.appendChild(txtmyNodelistPresentingDiv);
-  myNodelistPresentingDiv[i].appendChild(spanmyNodelistPresentingDiv);
-}
-
-// Click on a close button to hide the current list item
-var closemyNodelistPresentingDiv = document.getElementsByClassName("closemyNodelistPresentingDiv");
-var i;
-for (i = 0; i < closemyNodelistPresentingDiv.length; i++) {
-  closemyNodelistPresentingDiv[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-
-// Create a new list item when clicking on the "Add" button
-function newElementPresentingDiv() {
-  var li = document.createElement("li");
-  var inputValuemyNodelistPresentingDiv ='• ' + document.getElementById("myInputPresentingDiv").value;
-  var t = document.createTextNode(inputValuemyNodelistPresentingDiv);
-  li.appendChild(t);
-  if (inputValuemyNodelistPresentingDiv === '• ') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myULPresentingDiv").appendChild(li);
-  }
-  document.getElementById("myInputPresentingDiv").value = "";
-
-  var spanmyNodelistPresentingDiv = document.createElement("SPAN");
-  var txtmyNodelistPresentingDiv = document.createTextNode("\u00D7");
-  spanmyNodelistPresentingDiv.className = "closemyNodelistPresentingDiv";
-  spanmyNodelistPresentingDiv.appendChild(txtmyNodelistPresentingDiv);
-  li.appendChild(spanmyNodelistPresentingDiv);
-
-  for (i = 0; i < closemyNodelistPresentingDiv.length; i++) {
-    closemyNodelistPresentingDiv[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+  <style>
+    * {
+      box-sizing: border-box;
     }
-  }
-}
-</script>
+
+    .presentingDiv {
+      background-color: white;
+
+      position: absolute;
+      height: 95%;
+      width: 95%;
+      left: 2.5%;
+      top: 2.5%;
+
+
+    }
+
+    /* Remove margins and padding from the list */
+    .presentingDiv ul {
+      margin-top: 10%;
+      padding: 0;
+
+
+    }
+
+    /* Style the list items */
+    .presentingDiv ul li {
+      position: relative;
+      padding: 12px 8px 12px 40px;
+      list-style-type: none;
+      background: #eee;
+      font-size: 18px;
+      transition: 0.2s;
+      background-color: white;
+
+      /* make the list items unselectable */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* Style the close button */
+    .closemyNodelistPresentingDiv {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 16px 12px 16px;
+    }
+
+    .closemyNodelistPresentingDiv:hover {
+      background-color: #f44336;
+      color: white;
+    }
+
+    /* Style the header */
+    .headerPresentingDiv {
+      background-color: #f44336;
+      padding: 30px 40px;
+      color: white;
+      text-align: center;
+    }
+
+    /* Clear floats after the header */
+    .presentingDiv .headerPresentingDiv:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Style the input */
+    .presentingDiv input {
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      width: 75%;
+      padding: 10px;
+      float: left;
+      font-size: 16px;
+    }
+
+    /* Style the "Add" button */
+    .addBtnPresentingDiv {
+      padding: 10px;
+      width: 25%;
+      background: #d9d9d9;
+      color: #555;
+      float: left;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0;
+    }
+
+    .addBtnPresentingDiv:hover {
+      background-color: #bbb;
+    }
+  </style>
+
+  <script>
+    // Fetch username and provider from parsed URL
+    webstrate.on('loaded', () => {
+      let usernameAndProviderString = window.location.search;
+      let usernameString = usernameAndProviderString.split("%")[0].substring(1);
+      let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0, -1);
+
+
+      document.documentElement.setAttribute('data-auth', JSON.stringify([{
+        username: usernameString,
+        provider: providerString,
+        permissions: "rw"
+      }, {
+        "username": "anonymous",
+        "provider": "",
+        "permissions": "r"
+      }]));
+
+    });
+
+    // Create a "close" button and append it to each list item
+    var myULLListPresentingDiv = document.getElementById("myULPresentingDiv");
+    var myNodelistPresentingDiv = myULLListPresentingDiv.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelistPresentingDiv.length; i++) {
+      var spanmyNodelistPresentingDiv = document.createElement("SPAN");
+      var txtmyNodelistPresentingDiv = document.createTextNode("\u00D7");
+      span.className = "closemyNodelistPresentingDiv";
+      span.appendChild(txtmyNodelistPresentingDiv);
+      myNodelistPresentingDiv[i].appendChild(spanmyNodelistPresentingDiv);
+    }
+
+    // Click on a close button to hide the current list item
+    var closemyNodelistPresentingDiv = document.getElementsByClassName("closemyNodelistPresentingDiv");
+    var i;
+    for (i = 0; i < closemyNodelistPresentingDiv.length; i++) {
+      closemyNodelistPresentingDiv[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+
+
+      }
+    }
+
+
+    // Create a new list item when clicking on the "Add" button
+    function newElementPresentingDiv() {
+      var myNodelistPresentingDiv = myULLListPresentingDiv.getElementsByTagName("LI");
+      var li = document.createElement("li");
+      var inputValuemyNodelistPresentingDiv = '• ' + document.getElementById("myInputPresentingDiv").value;
+      var t = document.createTextNode(inputValuemyNodelistPresentingDiv);
+      li.appendChild(t);
+      if (inputValuemyNodelistPresentingDiv === '• ') {
+        alert("You must write something!");
+      } else if (document.getElementsByTagName("LI").length > 4) {
+        alert("You can maximum create 5 list elements!");
+      } else {
+        document.getElementById("myULPresentingDiv").appendChild(li);
+      }
+      document.getElementById("myInputPresentingDiv").value = "";
+
+      var spanmyNodelistPresentingDiv = document.createElement("SPAN");
+      var txtmyNodelistPresentingDiv = document.createTextNode("\u00D7");
+      spanmyNodelistPresentingDiv.className = "closemyNodelistPresentingDiv";
+      spanmyNodelistPresentingDiv.appendChild(txtmyNodelistPresentingDiv);
+      li.appendChild(spanmyNodelistPresentingDiv);
+
+      for (i = 0; i < closemyNodelistPresentingDiv.length; i++) {
+        closemyNodelistPresentingDiv[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
+
 </html>
