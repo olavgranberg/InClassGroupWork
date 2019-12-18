@@ -82,10 +82,10 @@ document.getElementById("delegateRoles").addEventListener("click", function() {
   let presenterIsDelegatedTo = document.querySelectorAll('li')[0];
   let answerIsDelegatedTo = document.querySelectorAll('li')[0];
 
-  document.getElementById("presenterRoleTitle").innerHTML = "=" + presenterIsDelegatedTo.innerHTML;
-  document.getElementById("analystRoleTitle").innerHTML = "=" + analystIsDelegatedTo.innerHTML;;
-  document.getElementById("referenceRoleTitle").innerHTML = "=" + referenceIsDelegatedTo.innerHTML;;
-  document.getElementById("answerRoleTitle").innerHTML = "=" + answerIsDelegatedTo.innerHTML;;
+  document.getElementById("presenterRoleTitle").innerHTML = presenterIsDelegatedTo.innerHTML;
+  document.getElementById("analystRoleTitle").innerHTML = analystIsDelegatedTo.innerHTML;;
+  document.getElementById("referenceRoleTitle").innerHTML = referenceIsDelegatedTo.innerHTML;;
+  document.getElementById("answerRoleTitle").innerHTML =  answerIsDelegatedTo.innerHTML;;
 
   document.getElementById("delegateRoles").style.visibility = "hidden";
 
