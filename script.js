@@ -1,7 +1,18 @@
-// Variable that pretends the user has been giving a specifik ID
-let userId = Math.floor(Math.random() * 4) + 1;
+
+// Function that fetch username and provider from the parsed URL and defines the webstrates' permissions
+webstrate.on('loaded', () => {
+    let usernameAndProviderString = window.location.search;
+    let usernameString = usernameAndProviderString.split("%")[0].substring(1);
+    let providerString = usernameAndProviderString.split("%")[1].substring(2).slice(0,-1);
 
 
+    document.documentElement.setAttribute('data-auth', JSON.stringify([
+        {username: usernameString, provider: providerString, permissions: "rw"},
+        {"username": "anonymous", "provider": "", "permissions": "r"}
+      ])
+    );
+
+});
 
 
 // ------------------------------ getusername function ----------------------
@@ -22,7 +33,7 @@ webstrate.on("loaded", function(webstrateId, clientId, user) {
 
 });
 
-
+// Remove clients from our client list, that leaves the website
 webstrate.on("clientPart", function(clientId) {
 
   let username = webstrate.user.userId;
@@ -36,9 +47,10 @@ webstrate.on("clientPart", function(clientId) {
 
 });
 
+// Function that count the non-anonymous client list length when users leave the website
 webstrate.on("clientPart", function(clientId) {
   let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
-  if (lis.length == 2) {
+  if (lis.length == 4) {
     document.getElementById("delegateRoles").style.visibility = "visible";
   } else {
     document.getElementById("delegateRoles").style.visibility = "hidden";
@@ -46,18 +58,19 @@ webstrate.on("clientPart", function(clientId) {
 });
 
 
+// Function that count the non-anonymous client list length when users enters the website
 
 webstrate.on("loaded", function(webstrateId, clientId, user) {
   let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
 
-  if (lis.length == 2) {
+  if (lis.length == 4) {
     document.getElementById("delegateRoles").style.visibility = "visible";
   } else {
     document.getElementById("delegateRoles").style.visibility = "hidden";
   }
 });
 
-
+// Shuffle the client list, delegate roles to the users and show the "I've understood my role" buttons
 document.getElementById("delegateRoles").addEventListener("click", function() {
   var ul = document.querySelector('ul');
   for (var i = ul.children.length; i >= 0; i--) {
@@ -66,8 +79,8 @@ document.getElementById("delegateRoles").addEventListener("click", function() {
 
   let analystIsDelegatedTo = document.querySelectorAll('li')[0];
   let referenceIsDelegatedTo = document.querySelectorAll('li')[1];
-  let presenterIsDelegatedTo = document.querySelectorAll('li')[0];
-  let answerIsDelegatedTo = document.querySelectorAll('li')[1];
+  let presenterIsDelegatedTo = document.querySelectorAll('li')[2];
+  let answerIsDelegatedTo = document.querySelectorAll('li')[3];
 
   document.getElementById("presenterRoleTitle").innerHTML = presenterIsDelegatedTo.innerHTML;
   document.getElementById("analystRoleTitle").innerHTML = analystIsDelegatedTo.innerHTML;
@@ -83,12 +96,14 @@ document.getElementById("delegateRoles").addEventListener("click", function() {
 
 });
 
-
+// Function that checks if all the delegate roles buttons has been clicked
 function showStartButtonWhenReady() {
   if (document.getElementById("referenceRoleUnderstood").style.visibility == "hidden" &&
     document.getElementById("analystRoleUnderstood").style.visibility == "hidden" &&
     document.getElementById("answerRoleUnderstood").style.visibility == "hidden" &&
     document.getElementById("presenterRoleUnderstood").style.visibility == "hidden") {
+
+// If delegate roles button has been clicked, show start button
     document.getElementById("Start").style.visibility = "visible";
   } else {
     return;
@@ -96,6 +111,8 @@ function showStartButtonWhenReady() {
 
 }
 
+
+// 4 functions which created iframes with username specific urls for each role
 
 document.getElementById("referenceRoleUnderstood").addEventListener("click", function(user) {
 
@@ -119,7 +136,7 @@ document.getElementById("referenceRoleUnderstood").addEventListener("click", fun
 
 document.getElementById("answerRoleUnderstood").addEventListener("click", function(user) {
 
-  let answerIsDelegatedTo = document.querySelectorAll('li')[1].innerHTML;
+  let answerIsDelegatedTo = document.querySelectorAll('li')[3].innerHTML;
 
   let username = webstrate.user.userId;
   if (username == answerIsDelegatedTo) {
@@ -139,7 +156,7 @@ document.getElementById("answerRoleUnderstood").addEventListener("click", functi
 });
 
 document.getElementById("presenterRoleUnderstood").addEventListener("click", function(user) {
-  let presenterIsDelegatedTo = document.querySelectorAll('li')[0].innerHTML;
+  let presenterIsDelegatedTo = document.querySelectorAll('li')[2].innerHTML;
 
 
   let username = webstrate.user.userId;
@@ -180,12 +197,12 @@ document.getElementById("analystRoleUnderstood").addEventListener("click", funct
 
 
 
-
+// When 4 clients is online and the roles has been delegated, update iframe URLS with user specific data and enter workspace
 document.getElementById("Start").addEventListener("click", function() {
 
   // ----------------------- hide waitingroom and show workspace ---------------------------------
 
-  document.getElementById("hideThis").style.visibility = "hidden";
+  document.getElementById("roleDescriptions").style.visibility = "hidden";
   document.getElementById("waitingRoom").style.visibility = "hidden";
   document.getElementById("workspace").style.visibility = "visible";
   document.getElementById("PresentationOfWorkSpace").style.visibility = "hidden";
@@ -208,114 +225,3 @@ document.getElementById("Start").addEventListener("click", function() {
 
 
 });
-
-
-// If sentence that defines the users specific group role with a header and a paragraph
-
-/*
-let roleDivH3 = document.getElementById("roleDivHeader");
-let roleDivP = document.getElementById("roleDivDescription");
-if (userId===1){
-  roleDivH3.innerHTML = "References responsible";
-  roleDivP.innerHTML = "The job is to ensure that the needed litteratur, references and quotes are added to the project. Making the answers trustworthy and reliable.";
-} else if (userId===2){
-  roleDivH3.innerHTML = "Analyst";
-  roleDivP.innerHTML = "The analysts roles is to note findings and subjects for further discussion during the collaborative open discussions. Furthermore the analysts perspective must be critic and nuanced.";
-}else if (userId===3){
-  roleDivH3.innerHTML = "Secretary";
-  roleDivP.innerHTML = "A secretary is responsible for taking notes of relevant points from the discussion and writing down the answers for the questions. The note-take can only answer the available alphabetic/numeric bullet points referring to the lectors questions.";
-}else{
-  roleDivH3.innerHTML = "Presenter";
-  roleDivP.innerHTML = "A presenters role is to present the groups collaborative outcome/result. He can edit the “presenters textfield” but only add short sentences according to bullet points format";
-}
-
-*/
-
-
-
-/*
-// ----------------------------- Client ids -------------------
-  document.getElementById("waitingRoomUpdate").addEventListener("click", function() {
-
-
-//--------------------------- create iframes -------------------------
-
-
- let workspaceDiv = document.getElementById("workspace");
-
- let iframeAnswer = document.createElement("iframe");
- iframeAnswer.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanswers/?copy");
- iframeAnswer.setAttribute("id", "iframeAnswer");
- workspaceDiv.appendChild(iframeAnswer);
-
-
-
- let iframePresenter = document.createElement("iframe");
- iframePresenter.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkpresenter/?copy");
- iframePresenter.setAttribute("id", "iframePresenter");
- workspaceDiv.appendChild(iframePresenter);
-
-
-
- let iframeAnalyst = document.createElement("iframe");
- iframeAnalyst.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkanalyst/?copy");
- iframeAnalyst.setAttribute("id", "iframeAnalyst");
- workspaceDiv.appendChild(iframeAnalyst);
-
-
-
- let iframeReference = document.createElement("iframe");
- iframeReference.setAttribute("src", "https://webstrates.cs.au.dk/kais2019inclassgroupworkreference/?copy");
- iframeReference.setAttribute("id", "iframeReference");
- workspaceDiv.appendChild(iframeReference);
-
-
-});
-
-
-
-
-
-
-
-
-
-  document.getElementById("referenceRoleUnderstood").addEventListener("click", function() {
-
-    let iframeReferenceUpdated = document.getElementById('iframeReference').contentDocument.location;
-
-
-              document.getElementById('iframeReference').setAttribute("src", iframeReferenceUpdated + "?username=" + webstrate.user.userId);
-
-  });
-
-  document.getElementById("answerRoleUnderstood").addEventListener("click", function() {
-
-
-    let iframeAnswerUpdated = document.getElementById('iframeAnswer').contentDocument.location;
-
-        document.getElementById('iframeAnswer').setAttribute("src", iframeAnswerUpdated + "?username=" + webstrate.user.userId);
-
-  });
-
-  document.getElementById("presenterRoleUnderstood").addEventListener("click", function() {
-
-
-
-    let iframePresenterUpdated = document.getElementById('iframePresenter').contentDocument.location;
-
-      document.getElementById('iframePresenter').setAttribute("src", iframePresenterUpdated + "?" + webstrate.user.userId);
-
-  });
-
-  document.getElementById("analystRoleUnderstood").addEventListener("click", function() {
-
-    let iframeAnalystUpdated = document.getElementById('iframeAnalyst').contentDocument.location;
-  document.getElementById('iframeAnalyst').setAttribute("src", iframeAnalystUpdated + "?=" + webstrate.user.userId);
-
-
-// alert(window.location.search);
-
-  });
-
-*/

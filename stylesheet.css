@@ -98,12 +98,12 @@ body {
   margin: 2px;
   padding: 2px;
 }
-
+/* workspace containing iframes */
 #workspace {
   visibility: hidden;
 }
 
-/* Styling Role dives */
+/* Styling Role iframes */
 #analystRole {
   background-color: white;
   border: solid black;
