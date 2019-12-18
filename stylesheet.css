@@ -159,13 +159,13 @@ body {
 .roleDescriptions p {
   padding-left: 10px;
   padding-right: 10px;
-
+display:inline;
 }
 
 .roleDescriptions h2 {
   padding-left: 10px;
   padding-right: 10px;
-  
+  display:inline;
 }
 
 .roleDescriptions h3 {
