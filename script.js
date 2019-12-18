@@ -50,7 +50,7 @@ webstrate.on("clientPart", function(clientId) {
 // Function that count the non-anonymous client list length when users leave the website
 webstrate.on("clientPart", function(clientId) {
   let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
-  if (lis.length == 1) {
+  if (lis.length == 4) {
     document.getElementById("delegateRoles").style.visibility = "visible";
   } else {
     document.getElementById("delegateRoles").style.visibility = "hidden";
@@ -63,7 +63,7 @@ webstrate.on("clientPart", function(clientId) {
 webstrate.on("loaded", function(webstrateId, clientId, user) {
   let lis = document.getElementById("usernameHolderList").getElementsByTagName("li");
 
-  if (lis.length == 1) {
+  if (lis.length == 4) {
     document.getElementById("delegateRoles").style.visibility = "visible";
   } else {
     document.getElementById("delegateRoles").style.visibility = "hidden";
@@ -78,9 +78,9 @@ document.getElementById("delegateRoles").addEventListener("click", function() {
   }
 
   let analystIsDelegatedTo = document.querySelectorAll('li')[0];
-  let referenceIsDelegatedTo = document.querySelectorAll('li')[0];
-  let presenterIsDelegatedTo = document.querySelectorAll('li')[0];
-  let answerIsDelegatedTo = document.querySelectorAll('li')[0];
+  let referenceIsDelegatedTo = document.querySelectorAll('li')[1];
+  let presenterIsDelegatedTo = document.querySelectorAll('li')[2];
+  let answerIsDelegatedTo = document.querySelectorAll('li')[3];
 
   document.getElementById("presenterRoleTitle").innerHTML = presenterIsDelegatedTo.innerHTML;
   document.getElementById("analystRoleTitle").innerHTML = analystIsDelegatedTo.innerHTML;;
