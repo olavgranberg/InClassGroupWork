@@ -174,28 +174,28 @@ body {
 /* Styling iframes */
 #iframeAnswer {
   position: absolute;
-  top: 5%;
+  top: 8%;
   right: 2%;
-  height: 90%;
-  width: 33%;
+  height: 87%;
+  width: 30%;
   background-color: white;
 }
 
 #iframePresenter {
   position: absolute;
-  height: 44%;
+  height: 41%;
   width: 31%;
   left: 33%;
-  top: 5%;
+  top: 8%;
   background-color: white;
 }
 
 #iframeAnalyst {
   position: absolute;
-  height: 44%;
+  height: 41%;
   width: 30%;
   left: 2%;
-  top: 5%;
+  top: 8%;
   background-color: white;
 }
 
